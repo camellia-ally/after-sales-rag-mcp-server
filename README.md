@@ -1,6 +1,6 @@
 # 售后客服 RAG 问答系统
 
-这是在 Modular RAG MCP Server 基础上扩展的学习项目。当前实例使用公开售后帮助文档，支持文档摄取、Dense + BM25 混合检索、RRF 融合、重排、带引用的答案生成、拒答评测与 MCP 工具调用。原项目的说明保存在 [上游 README](docs/archive/README_upstream.md)；本页描述此工作区的实际入口和结果。
+这是在 [Modular RAG MCP Server](https://github.com/jerry-ai-dev/MODULAR-RAG-MCP-SERVER) 基础上扩展的学习项目。当前实例使用公开售后帮助文档，支持文档摄取、Dense + BM25 混合检索、RRF 融合、重排、带引用的答案生成、拒答评测与 MCP 工具调用。原项目的说明保存在 [上游 README](docs/archive/README_upstream.md)；本页描述此工作区的实际入口和结果。
 
 ## 当前能力与边界
 
