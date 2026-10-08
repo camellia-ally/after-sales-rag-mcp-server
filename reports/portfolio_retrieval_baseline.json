@@ -1,0 +1,624 @@
+{
+  "evaluator_name": "CustomEvaluator",
+  "test_set_path": "tests/fixtures/golden_test_set_portfolio.json",
+  "total_elapsed_ms": 90865.3,
+  "aggregate_metrics": {
+    "hit_rate": 0.9412,
+    "mrr": 0.9118
+  },
+  "query_count": 34,
+  "query_results": [
+    {
+      "case_id": "portfolio_q01",
+      "query": "GPT-4-turbo 的上下文长度是多少？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "6ea14443_0010_97f1de33",
+        "6ea14443_0009_82c403ba",
+        "6ea14443_0051_5ea41f6e",
+        "6ea14443_0055_dfeb7df2",
+        "6ea14443_0016_606d8da5"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 2480.7
+    },
+    {
+      "case_id": "portfolio_q02",
+      "query": "大语言模型为什么能成为AI应用开发的大一统基座模型？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "6ea14443_0020_b9678762",
+        "6ea14443_0019_21b18b6f",
+        "6ea14443_0031_19988b45",
+        "6ea14443_0102_248653f6",
+        "6ea14443_0001_a6b054ec"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 586.8
+    },
+    {
+      "case_id": "portfolio_q03",
+      "query": "LangServe 在 LangChain 框架中主要提供什么功能？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "6ea14443_0030_d148b07f",
+        "6ea14443_0029_509427a5",
+        "6ea14443_0028_2cffbed8",
+        "6ea14443_0027_093b36d4",
+        "6ea14443_0122_3e9e3ce0"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 595.4
+    },
+    {
+      "case_id": "portfolio_q05",
+      "query": "System Prompt 和 User Prompt 的主要区别是什么？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "6ea14443_0049_691540f3",
+        "6ea14443_0050_6937c07f",
+        "6ea14443_0048_403302c2",
+        "6ea14443_0055_dfeb7df2",
+        "6ea14443_0229_212eb2e7"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 21708.3
+    },
+    {
+      "case_id": "portfolio_q06",
+      "query": "在使用文心千帆API时，如何正确配置用户角色和系统角色的prompt？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "6ea14443_0059_ac1aaed3",
+        "6ea14443_0060_21446d93",
+        "6ea14443_0055_dfeb7df2",
+        "6ea14443_0061_9bbcfc28",
+        "6ea14443_0057_85ff66f8"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 649.1
+    },
+    {
+      "case_id": "portfolio_q07",
+      "query": "设计高效Prompt时应遵循哪两个关键原则？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "6ea14443_0144_a2129d69",
+        "6ea14443_0070_6646ddf9",
+        "6ea14443_0115_2ce7e1ce",
+        "6ea14443_0172_e781131c",
+        "6ea14443_0152_fc0dc691"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 0.5
+      },
+      "elapsed_ms": 593.2
+    },
+    {
+      "case_id": "portfolio_q12",
+      "query": "embed_documents方法的返回值是什么类型？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "6ea14443_0120_c3daf1ff",
+        "6ea14443_0119_ff1961d0",
+        "6ea14443_0118_edbce7f4",
+        "6ea14443_0121_1a11288e",
+        "6ea14443_0090_f3b00e7a"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 529.7
+    },
+    {
+      "case_id": "portfolio_q13",
+      "query": "LCEL是什么？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "6ea14443_0131_7466347e",
+        "6ea14443_0029_509427a5",
+        "6ea14443_0132_5dc2dff4",
+        "6ea14443_0130_a7a6c7ad",
+        "6ea14443_0027_093b36d4"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 570.9
+    },
+    {
+      "case_id": "portfolio_q16",
+      "query": "在设计Prompt时，为什么需要指定完成任务所需的步骤？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "6ea14443_0173_160e1d8d",
+        "6ea14443_0076_c61e1c9d",
+        "6ea14443_0142_ebc09ac8",
+        "6ea14443_0171_83b64266",
+        "6ea14443_0177_d134dd6c"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 625.0
+    },
+    {
+      "case_id": "portfolio_q18",
+      "query": "评估大模型回答时，逻辑性维度主要考察什么方面？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "6ea14443_0193_aff7e27a",
+        "6ea14443_0210_0112c9a5",
+        "6ea14443_0209_8c0230a0",
+        "6ea14443_0198_6f2836a5",
+        "6ea14443_0212_fd6c7764"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 612.2
+    },
+    {
+      "case_id": "portfolio_q20",
+      "query": "知识查找正确性评估的核心目的是什么？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "6ea14443_0214_628771e8",
+        "6ea14443_0209_8c0230a0",
+        "6ea14443_0192_b0a4b27d",
+        "6ea14443_0216_23b278c2",
+        "6ea14443_0212_fd6c7764"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 623.0
+    },
+    {
+      "case_id": "portfolio_q21",
+      "query": "如何获取 DataWhale 总仓库的所有开源项目的 readme？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "6ea14443_0224_bdd75d65",
+        "6ea14443_0227_9dbcd8b6",
+        "6ea14443_0226_91ea7f53",
+        "6ea14443_0232_ad8f007a",
+        "6ea14443_0225_f0caf8f6"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 679.6
+    },
+    {
+      "case_id": "portfolio_q22",
+      "query": "在 RAG 流程中，文本分割的 chunk_size 和 chunk_overlap 分别代表什么？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "6ea14443_0234_9dc5a0eb",
+        "6ea14443_0105_5db2387f",
+        "6ea14443_0104_dfb3ff6e",
+        "6ea14443_0106_ce6b0429",
+        "6ea14443_0239_37305c71"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 587.2
+    },
+    {
+      "case_id": "portfolio_q25",
+      "query": "在构建天机系统的交互界面时，使用了哪个库来创建 Web 界面？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "6ea14443_0264_f6ef58fe",
+        "6ea14443_0154_696786a7",
+        "6ea14443_0262_a2f2411d",
+        "6ea14443_0273_004d250b",
+        "6ea14443_0255_52b2a8d1"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 5600.4
+    },
+    {
+      "case_id": "portfolio_q27",
+      "query": "为什么需要一个框架来支持RAG策略的实现？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "fcf98471_0005_e8623bc2",
+        "6ea14443_0027_093b36d4",
+        "6ea14443_0026_47691deb",
+        "fcf98471_0013_367d910c",
+        "fcf98471_0012_021bb363"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 597.7
+    },
+    {
+      "case_id": "portfolio_q29",
+      "query": "有哪些方法可以检测大语言模型生成内容中的幻觉？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "fcf98471_0074_eaaa0008",
+        "6ea14443_0214_628771e8",
+        "6ea14443_0209_8c0230a0",
+        "6ea14443_0081_d74055e3",
+        "6ea14443_0192_b0a4b27d"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      },
+      "elapsed_ms": 708.3
+    },
+    {
+      "case_id": "portfolio_q30",
+      "query": "SelfCheckGPT如何解决无法访问模型隐藏状态的问题？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "fcf98471_0021_f7a337cb",
+        "fcf98471_0009_c08677e8",
+        "6ea14443_0077_b64d797f",
+        "6ea14443_0056_a70c714d",
+        "6ea14443_0019_21b18b6f"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 598.9
+    },
+    {
+      "case_id": "portfolio_q31",
+      "query": "什么是答案相关性（Answer Relevance）？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "fcf98471_0049_a84313ee",
+        "fcf98471_0026_4c41aaad",
+        "fcf98471_0048_e553d4b0",
+        "fcf98471_0046_f03def5b",
+        "fcf98471_0034_6c4d05a3"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 0.5
+      },
+      "elapsed_ms": 510.3
+    },
+    {
+      "case_id": "portfolio_q32",
+      "query": "如何判断一个答案是否忠实于上下文？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "fcf98471_0032_c9e5f030",
+        "fcf98471_0058_d5fdad91",
+        "fcf98471_0028_837f18d3",
+        "6ea14443_0174_0dc40fbe",
+        "6ea14443_0177_d134dd6c"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 537.4
+    },
+    {
+      "case_id": "portfolio_q33",
+      "query": "在评估上下文相关性时，LLM会执行什么操作？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "fcf98471_0038_e1454109",
+        "fcf98471_0028_837f18d3",
+        "6ea14443_0177_d134dd6c",
+        "6ea14443_0187_8c515ff7",
+        "6ea14443_0181_8fcadab5"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 21571.7
+    },
+    {
+      "case_id": "portfolio_q34",
+      "query": "为了评估忠实性，研究者是如何构建数据集的？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "fcf98471_0044_fb556820",
+        "fcf98471_0043_d48f66b4",
+        "fcf98471_0041_57524465",
+        "6ea14443_0164_4c2902c0",
+        "fcf98471_0027_ee56334a"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 717.3
+    },
+    {
+      "case_id": "portfolio_q35",
+      "query": "答案相关性衡量的目的是什么？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "fcf98471_0049_a84313ee",
+        "fcf98471_0048_e553d4b0",
+        "fcf98471_0026_4c41aaad",
+        "fcf98471_0046_f03def5b",
+        "6ea14443_0205_b96ec173"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 21624.9
+    },
+    {
+      "case_id": "portfolio_q37",
+      "query": "Ragas框架如何评估答案的忠实度？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "fcf98471_0060_bbbd0a5c",
+        "fcf98471_0057_619ab3bb",
+        "fcf98471_0061_422f002c",
+        "fcf98471_0012_021bb363",
+        "fcf98471_0000_d012e1b6"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 586.2
+    },
+    {
+      "case_id": "portfolio_q38",
+      "query": "2022年国际机器学习会议中关于改进语言模型的研究主题是什么？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "fcf98471_0065_d34478cd",
+        "fcf98471_0066_90b177ae",
+        "6ea14443_0080_2b964566",
+        "fcf98471_0071_33c9b660",
+        "6ea14443_0048_403302c2"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 638.3
+    },
+    {
+      "case_id": "portfolio_q40",
+      "query": "WikiEval数据集中的表格2主要展示什么内容？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "fcf98471_0077_d49f5d67",
+        "fcf98471_0061_422f002c",
+        "fcf98471_0052_da1acf43",
+        "fcf98471_0059_bbcf3bc2",
+        "fcf98471_0041_57524465"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 564.9
+    },
+    {
+      "case_id": "portfolio_q41",
+      "query": "如何通过动手学大模型应用开发项目快速入门大模型应用开发？该项目是否提供了关于Prompt Engineering的具体实践方法？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "6ea14443_0000_babdea98",
+        "6ea14443_0003_52f5ff7d",
+        "6ea14443_0001_a6b054ec",
+        "6ea14443_0032_d050f138",
+        "6ea14443_0152_fc0dc691"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 639.8
+    },
+    {
+      "case_id": "portfolio_q42",
+      "query": "在构建检索问答链时，如何加载已有的向量数据库？该过程是否涉及使用特定的Embedding模型？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "6ea14443_0141_af1ef833",
+        "6ea14443_0159_975f3384",
+        "6ea14443_0167_4d5f6bbb",
+        "6ea14443_0238_9eceaad7",
+        "6ea14443_0035_76f0c88d"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 642.2
+    },
+    {
+      "case_id": "portfolio_q43",
+      "query": "人情世故大模型系统-天机项目是如何利用RAG模型回答‘如何给长辈敬酒？’这一问题的？该系统是否依赖于预先提供的聊天历史？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "6ea14443_0284_bcac8189",
+        "6ea14443_0275_4e942ef5",
+        "6ea14443_0259_9fb14258",
+        "6ea14443_0257_04421f64",
+        "6ea14443_0263_8c3af1a0"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 695.8
+    },
+    {
+      "case_id": "portfolio_q44",
+      "query": "Ragas框架的主要功能是什么？它是否能够评估大模型在处理罕见知识时的表现？",
+      "answerability": "partial",
+      "retrieved_chunk_ids": [
+        "fcf98471_0000_d012e1b6",
+        "fcf98471_0012_021bb363",
+        "6ea14443_0022_7c8b764b",
+        "6ea14443_0166_f056bf86",
+        "fcf98471_0011_3d1250a3"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 655.1
+    },
+    {
+      "case_id": "portfolio_q45",
+      "query": "Chimnabai Clock Tower是在哪一年建成的？它的建筑风格是什么？",
+      "answerability": "answerable",
+      "retrieved_chunk_ids": [
+        "fcf98471_0082_328f2430",
+        "fcf98471_0081_0b5e2b8e",
+        "6ea14443_0053_b0865488",
+        "6ea14443_0146_b73647d0",
+        "6ea14443_0244_42d833b5"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 604.3
+    },
+    {
+      "case_id": "portfolio_q51",
+      "query": "Chimnabai Clock Tower是哪一年建成的，采用什么建筑风格？资料是否记录了它目前每天对游客开放的具体时间？",
+      "answerability": "partial",
+      "retrieved_chunk_ids": [
+        "fcf98471_0082_328f2430",
+        "fcf98471_0081_0b5e2b8e",
+        "6ea14443_0053_b0865488",
+        "6ea14443_0124_9c73fdfa",
+        "6ea14443_0174_0dc40fbe"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 608.6
+    },
+    {
+      "case_id": "portfolio_q52",
+      "query": "加载已有的Chroma向量数据库时应该使用什么Embedding？资料是否给出了改用不同Embedding后Hit@5提升了多少？",
+      "answerability": "partial",
+      "retrieved_chunk_ids": [
+        "6ea14443_0141_af1ef833",
+        "6ea14443_0167_4d5f6bbb",
+        "6ea14443_0113_08aed22b",
+        "6ea14443_0186_4ab2af9a",
+        "6ea14443_0238_9eceaad7"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 608.5
+    },
+    {
+      "case_id": "portfolio_q53",
+      "query": "LangServe的主要用途是什么？资料是否给出了LangChain应用部署到阿里云后的平均QPS？",
+      "answerability": "partial",
+      "retrieved_chunk_ids": [
+        "6ea14443_0030_d148b07f",
+        "6ea14443_0029_509427a5",
+        "6ea14443_0027_093b36d4",
+        "6ea14443_0000_babdea98",
+        "6ea14443_0222_1853e7be"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0
+      },
+      "elapsed_ms": 708.2
+    },
+    {
+      "case_id": "portfolio_q54",
+      "query": "Ragas主要从哪些维度评估RAG系统？论文是否报告了它在中文法律问答数据集上的具体准确率？",
+      "answerability": "partial",
+      "retrieved_chunk_ids": [
+        "fcf98471_0012_021bb363",
+        "6ea14443_0192_b0a4b27d",
+        "6ea14443_0215_4a402d3a",
+        "6ea14443_0199_d21f207a",
+        "6ea14443_0166_f056bf86"
+      ],
+      "generated_answer": null,
+      "metrics": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      },
+      "elapsed_ms": 604.4
+    }
+  ]
+}

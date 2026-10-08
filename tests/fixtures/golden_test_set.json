@@ -1,0 +1,56 @@
+{
+  "description": "Retrieval golden test set manually labeled from chinese_long_doc.pdf. It is used to establish the Hybrid Search Hit Rate and MRR baseline.",
+  "version": "1.1",
+  "test_cases": [
+    {
+      "query": "为什么RAG系统要采用两阶段检索？",
+      "expected_chunk_ids": [
+        "3b3f7354_0030_ed46ecc3",
+        "3b3f7354_0004_1c53144f",
+        "3b3f7354_0018_52e40e24",
+        "3b3f7354_0014_0c25ba94",
+        "3b3f7354_0016_0c25ba94",
+        "3b3f7354_0025_b1989053"
+      ],
+      "expected_sources": [
+        "chinese_long_doc.pdf"
+      ]
+    },
+    {
+      "query": "稠密检索和稀疏检索有什么区别？",
+      "expected_chunk_ids": [
+        "3b3f7354_0017_c44fbac7"
+      ],
+      "expected_sources": [
+        "chinese_long_doc.pdf"
+      ]
+    },
+    {
+      "query": "如何评估RAG系统的质量？",
+      "expected_chunk_ids": [
+        "3b3f7354_0023_7a946c10"
+      ],
+      "expected_sources": [
+        "chinese_long_doc.pdf"
+      ]
+    },
+    {
+      "query": "文档分块策略需要考虑哪些因素？",
+      "expected_chunk_ids": [
+        "3b3f7354_0019_db9cb0b2"
+      ],
+      "expected_sources": [
+        "chinese_long_doc.pdf"
+      ]
+    },
+    {
+      "query": "MCP协议提供哪些核心接口？",
+      "expected_chunk_ids": [
+        "3b3f7354_0021_1802de77"
+      ],
+      "expected_sources": [
+        "chinese_long_doc.pdf"
+      ]
+    }
+  ]
+}

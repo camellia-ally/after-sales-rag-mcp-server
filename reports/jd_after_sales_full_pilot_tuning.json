@@ -1,0 +1,172 @@
+{
+  "source_report": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\reports\\jd_after_sales_full_pilot_dev.json",
+  "selection_rule": "highest chunk Hit@5, then all-required@5, then MRR@5; tie prefers k=60",
+  "scores": {
+    "5": {
+      "chunk_hit_at_5": 1.0,
+      "chunk_mrr_at_5": 1.0,
+      "all_required_chunks_at_5": 1.0,
+      "cases": [
+        {
+          "case_id": "dev_l01",
+          "category": "lexical",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": null
+        },
+        {
+          "case_id": "dev_l02",
+          "category": "lexical",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": null
+        },
+        {
+          "case_id": "dev_s01",
+          "category": "semantic",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": null
+        },
+        {
+          "case_id": "dev_s02",
+          "category": "semantic",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": null
+        },
+        {
+          "case_id": "dev_c01",
+          "category": "cross_document",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": true
+        },
+        {
+          "case_id": "dev_c02",
+          "category": "cross_document",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": true
+        },
+        {
+          "case_id": "dev_n01",
+          "category": "exception",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": null
+        },
+        {
+          "case_id": "dev_n02",
+          "category": "exception",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": null
+        }
+      ]
+    },
+    "20": {
+      "chunk_hit_at_5": 1.0,
+      "chunk_mrr_at_5": 1.0,
+      "all_required_chunks_at_5": 1.0,
+      "cases": [
+        {
+          "case_id": "dev_l01",
+          "category": "lexical",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": null
+        },
+        {
+          "case_id": "dev_l02",
+          "category": "lexical",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": null
+        },
+        {
+          "case_id": "dev_s01",
+          "category": "semantic",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": null
+        },
+        {
+          "case_id": "dev_s02",
+          "category": "semantic",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": null
+        },
+        {
+          "case_id": "dev_c01",
+          "category": "cross_document",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": true
+        },
+        {
+          "case_id": "dev_c02",
+          "category": "cross_document",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": true
+        },
+        {
+          "case_id": "dev_n01",
+          "category": "exception",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": null
+        },
+        {
+          "case_id": "dev_n02",
+          "category": "exception",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": null
+        }
+      ]
+    },
+    "60": {
+      "chunk_hit_at_5": 1.0,
+      "chunk_mrr_at_5": 1.0,
+      "all_required_chunks_at_5": 1.0,
+      "cases": [
+        {
+          "case_id": "dev_l01",
+          "category": "lexical",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": null
+        },
+        {
+          "case_id": "dev_l02",
+          "category": "lexical",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": null
+        },
+        {
+          "case_id": "dev_s01",
+          "category": "semantic",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": null
+        },
+        {
+          "case_id": "dev_s02",
+          "category": "semantic",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": null
+        },
+        {
+          "case_id": "dev_c01",
+          "category": "cross_document",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": true
+        },
+        {
+          "case_id": "dev_c02",
+          "category": "cross_document",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": true
+        },
+        {
+          "case_id": "dev_n01",
+          "category": "exception",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": null
+        },
+        {
+          "case_id": "dev_n02",
+          "category": "exception",
+          "chunk_rank": 1,
+          "all_required_chunks_at_5": null
+        }
+      ]
+    }
+  },
+  "selected_rrf_k": 60
+}

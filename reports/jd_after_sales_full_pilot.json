@@ -1,0 +1,158 @@
+{
+  "status": "complete_pilot",
+  "label_status": "agent_draft; human review required",
+  "collection": "jd_after_sales",
+  "rrf_k": 60,
+  "retrieval": {
+    "n": 50,
+    "summary": {
+      "dense": {
+        "n": 50,
+        "hit_at_5": 0.94,
+        "mrr_at_5": 0.9,
+        "top_1": 0.88,
+        "chunk_hit_at_5": 0.92,
+        "chunk_mrr_at_5": 0.895,
+        "chunk_top_1": 0.88,
+        "all_required_at_5": 0.8125,
+        "all_required_chunks_at_5": 0.8125
+      },
+      "bm25": {
+        "n": 50,
+        "hit_at_5": 0.88,
+        "mrr_at_5": 0.8267,
+        "top_1": 0.78,
+        "chunk_hit_at_5": 0.88,
+        "chunk_mrr_at_5": 0.8267,
+        "chunk_top_1": 0.78,
+        "all_required_at_5": 0.625,
+        "all_required_chunks_at_5": 0.5625
+      },
+      "rrf": {
+        "n": 50,
+        "hit_at_5": 0.94,
+        "mrr_at_5": 0.8767,
+        "top_1": 0.82,
+        "chunk_hit_at_5": 0.92,
+        "chunk_mrr_at_5": 0.8667,
+        "chunk_top_1": 0.82,
+        "all_required_at_5": 0.875,
+        "all_required_chunks_at_5": 0.875
+      },
+      "rrf_rerank": {
+        "n": 50,
+        "hit_at_5": 0.98,
+        "mrr_at_5": 0.9567,
+        "top_1": 0.94,
+        "chunk_hit_at_5": 0.98,
+        "chunk_mrr_at_5": 0.9567,
+        "chunk_top_1": 0.94,
+        "all_required_at_5": 0.9375,
+        "all_required_chunks_at_5": 0.9375
+      }
+    },
+    "by_category": {
+      "hybrid": {
+        "dense": {
+          "n": 16,
+          "chunk_hit_at_5": 0.9375,
+          "chunk_top_1": 0.8125,
+          "chunk_mrr_at_5": 0.8594,
+          "all_required_chunks_at_5": 0.8125
+        },
+        "bm25": {
+          "n": 16,
+          "chunk_hit_at_5": 1.0,
+          "chunk_top_1": 0.875,
+          "chunk_mrr_at_5": 0.9375,
+          "all_required_chunks_at_5": 0.5625
+        },
+        "rrf": {
+          "n": 16,
+          "chunk_hit_at_5": 1.0,
+          "chunk_top_1": 0.875,
+          "chunk_mrr_at_5": 0.9375,
+          "all_required_chunks_at_5": 0.875
+        },
+        "rrf_rerank": {
+          "n": 16,
+          "chunk_hit_at_5": 1.0,
+          "chunk_top_1": 0.875,
+          "chunk_mrr_at_5": 0.9271,
+          "all_required_chunks_at_5": 0.9375
+        }
+      },
+      "keyword": {
+        "dense": {
+          "n": 17,
+          "chunk_hit_at_5": 0.8824,
+          "chunk_top_1": 0.8824,
+          "chunk_mrr_at_5": 0.8824,
+          "all_required_chunks_at_5": null
+        },
+        "bm25": {
+          "n": 17,
+          "chunk_hit_at_5": 0.9412,
+          "chunk_top_1": 0.8235,
+          "chunk_mrr_at_5": 0.8725,
+          "all_required_chunks_at_5": null
+        },
+        "rrf": {
+          "n": 17,
+          "chunk_hit_at_5": 0.9412,
+          "chunk_top_1": 0.8824,
+          "chunk_mrr_at_5": 0.9118,
+          "all_required_chunks_at_5": null
+        },
+        "rrf_rerank": {
+          "n": 17,
+          "chunk_hit_at_5": 1.0,
+          "chunk_top_1": 1.0,
+          "chunk_mrr_at_5": 1.0,
+          "all_required_chunks_at_5": null
+        }
+      },
+      "semantic": {
+        "dense": {
+          "n": 17,
+          "chunk_hit_at_5": 0.9412,
+          "chunk_top_1": 0.9412,
+          "chunk_mrr_at_5": 0.9412,
+          "all_required_chunks_at_5": null
+        },
+        "bm25": {
+          "n": 17,
+          "chunk_hit_at_5": 0.7059,
+          "chunk_top_1": 0.6471,
+          "chunk_mrr_at_5": 0.6765,
+          "all_required_chunks_at_5": null
+        },
+        "rrf": {
+          "n": 17,
+          "chunk_hit_at_5": 0.8235,
+          "chunk_top_1": 0.7059,
+          "chunk_mrr_at_5": 0.7549,
+          "all_required_chunks_at_5": null
+        },
+        "rrf_rerank": {
+          "n": 17,
+          "chunk_hit_at_5": 0.9412,
+          "chunk_top_1": 0.9412,
+          "chunk_mrr_at_5": 0.9412,
+          "all_required_chunks_at_5": null
+        }
+      }
+    },
+    "mean_extra_rerank_ms": 400.3
+  },
+  "refusal": {
+    "n_answerable": 6,
+    "n_unanswerable": 10,
+    "unanswerable_refusal_rate": 1.0,
+    "answerable_false_refusal_rate": 0.0
+  },
+  "stage_reports": {
+    "retrieval": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\reports\\jd_after_sales_full_pilot_retrieval.json",
+    "refusal": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\reports\\jd_after_sales_full_pilot_refusal.json"
+  }
+}

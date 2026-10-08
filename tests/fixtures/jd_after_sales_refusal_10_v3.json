@@ -1,0 +1,295 @@
+{
+  "name": "jd_after_sales_refusal_10_v3",
+  "collection": "jd_after_sales",
+  "label_status": "agent_draft; human review required",
+  "test_cases": [
+    {
+      "case_id": "jd_after_sales_q28",
+      "query": "我的订单 JD123456 今天退款到账了吗？",
+      "answerability": "unanswerable",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "source_article_ids": [],
+      "reference_answer": "无法访问该订单或支付账户，不能判断实际到账状态。",
+      "category": "private_order_state",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q29",
+      "query": "我的快递现在到哪个配送站了？",
+      "answerability": "unanswerable",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "source_article_ids": [],
+      "reference_answer": "无法读取实时物流轨迹，不能判断当前位置。",
+      "category": "live_tracking",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q30",
+      "query": "服务单还没审核，直接告诉我准确退货仓库地址。",
+      "answerability": "unanswerable",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "source_article_ids": [],
+      "reference_answer": "公开帮助页没有该服务单的具体退货地址；需等待审核后从短信或服务单查看。",
+      "category": "private_order_state",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q37",
+      "query": "今天天气怎么样？",
+      "answerability": "unanswerable",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "source_article_ids": [],
+      "reference_answer": "知识库没有实时天气数据。",
+      "category": "out_of_scope",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q38",
+      "query": "帮我写一首关于秋天的诗。",
+      "answerability": "unanswerable",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "source_article_ids": [],
+      "reference_answer": "售后帮助知识库没有写诗依据。",
+      "category": "out_of_scope",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q39",
+      "query": "我的售后服务单现在审核通过了吗？",
+      "answerability": "unanswerable",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "source_article_ids": [],
+      "reference_answer": "无法访问该服务单的实时审核状态。",
+      "category": "private_order_state",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q40",
+      "query": "我这单退款今天几点能到账？",
+      "answerability": "unanswerable",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "source_article_ids": [],
+      "reference_answer": "无法访问具体订单的退款进度。",
+      "category": "private_order_state",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q41",
+      "query": "没有提供商品型号、订单信息和是否激活，请只回答我的这台笔记本能或不能7天无理由退货。",
+      "answerability": "unanswerable",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "source_article_ids": [],
+      "reference_answer": "缺少型号、购买及激活状态，不能判定该商品的具体资格。",
+      "category": "missing_product_state",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "refuse_exact_compensation",
+      "query": "我自行寄回商品后，京东今天会给我补偿多少元逆向运费？请给准确金额。",
+      "answerability": "unanswerable",
+      "category": "missing_order_state",
+      "expected_sources": [],
+      "expected_chunk_ids": [],
+      "reference_answer": "????????????????????????????",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "refuse_latest_promotion",
+      "query": "京东今年双十一的最新退货特殊政策是什么？请给出具体条款。",
+      "answerability": "unanswerable",
+      "category": "missing_policy",
+      "expected_sources": [],
+      "expected_chunk_ids": [],
+      "reference_answer": "????????????????????",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "control_dev_l01",
+      "query": "手机数码类售后条款里，含 SN 或 CDKEY 激活信息的游戏软件能退换吗？",
+      "answerability": "answerable",
+      "category": "keyword",
+      "expected_sources": [
+        "325-915_手机数码类售后细则.md"
+      ],
+      "expected_chunk_ids": [
+        "9756eab8_0000_bb5c2382"
+      ],
+      "reference_answer": "含授权或激活信息的游戏软件为特殊商品，不予退换货；质量问题应联系厂家售后。",
+      "evidence": [
+        {
+          "source": "325-915_手机数码类售后细则.md",
+          "quote": "序列号SN",
+          "matching_chunk_ids": [
+            "9756eab8_0000_bb5c2382"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "control_hold_l01",
+      "query": "京东自营瑞士表无需订购配件时，正常维修要多少个工作日？",
+      "answerability": "answerable",
+      "category": "keyword",
+      "expected_sources": [
+        "325-932_钟表首饰类售后细则.md"
+      ],
+      "expected_chunk_ids": [
+        "c53519a1_0000_56ad6045"
+      ],
+      "reference_answer": "正常维修周期为60个工作日。",
+      "evidence": [
+        {
+          "source": "325-932_钟表首饰类售后细则.md",
+          "quote": "瑞士表60个工作日",
+          "matching_chunk_ids": [
+            "c53519a1_0000_56ad6045"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "control_dev_s01",
+      "query": "包裹还在路上，订单里申请退货的入口用不了，可能是什么原因？",
+      "answerability": "answerable",
+      "category": "semantic",
+      "expected_sources": [
+        "118-310_无法申请售后原因.md"
+      ],
+      "expected_chunk_ids": [
+        "1cd87195_0000_074adffc"
+      ],
+      "reference_answer": "配送途中可能无法申请售后，可尝试取消订单。",
+      "evidence": [
+        {
+          "source": "118-310_无法申请售后原因.md",
+          "quote": "配送途中无法申请售后",
+          "matching_chunk_ids": [
+            "1cd87195_0000_074adffc"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "control_hold_s01",
+      "query": "物流显示送到了，但我和家人都没拿到包裹，该怎么办？",
+      "answerability": "answerable",
+      "category": "semantic",
+      "expected_sources": [
+        "108-385_显示签收但未收到货.md"
+      ],
+      "expected_chunk_ids": [
+        "2b9ea08b_0000_c04af3a5"
+      ],
+      "reference_answer": "先确认代收情况；可能是配送员误操作，长时间未收到可联系京东客服。",
+      "evidence": [
+        {
+          "source": "108-385_显示签收但未收到货.md",
+          "quote": "配送人员误操作",
+          "matching_chunk_ids": [
+            "2b9ea08b_0000_c04af3a5"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "control_dev_c01",
+      "query": "京东E卡多付款通常何时原路退回？处理成功后京东会发短信吗？",
+      "answerability": "answerable",
+      "category": "hybrid",
+      "expected_sources": [
+        "130-479_多付款项退款.md",
+        "130-487_退款成功提醒.md"
+      ],
+      "expected_chunk_ids": [
+        "240a9a0f_0000_a759ee9c",
+        "cf4b7091_0000_b8650c30"
+      ],
+      "reference_answer": "一般在第二个工作日18:00前原路退回，节假日顺延；处理成功会有京东短信。",
+      "evidence": [
+        {
+          "source": "130-479_多付款项退款.md",
+          "quote": "京东E卡",
+          "matching_chunk_ids": [
+            "240a9a0f_0000_a759ee9c"
+          ]
+        },
+        {
+          "source": "130-487_退款成功提醒.md",
+          "quote": "短信告知",
+          "matching_chunk_ids": [
+            "cf4b7091_0000_b8650c30"
+          ]
+        }
+      ],
+      "review_status": "agent_draft",
+      "required_sources": [
+        "130-479_多付款项退款.md",
+        "130-487_退款成功提醒.md"
+      ],
+      "required_chunk_ids": [
+        "240a9a0f_0000_a759ee9c",
+        "cf4b7091_0000_b8650c30"
+      ]
+    },
+    {
+      "case_id": "control_hold_c01",
+      "query": "按照京东自营手机数码类售后细则，手机出现质量问题，签收后多久能换货？寄回运费谁出？",
+      "answerability": "answerable",
+      "category": "hybrid",
+      "expected_sources": [
+        "325-915_手机数码类售后细则.md",
+        "131-496_自营售后运费说明.md"
+      ],
+      "expected_chunk_ids": [
+        "9756eab8_0000_bb5c2382",
+        "8a63259b_0000_d9b41f16"
+      ],
+      "reference_answer": "手机数码类质量问题通常15日内可换货；非客户原因返回运费由京东承担。",
+      "evidence": [
+        {
+          "source": "325-915_手机数码类售后细则.md",
+          "quote": "15日内可换货",
+          "matching_chunk_ids": [
+            "9756eab8_0000_bb5c2382"
+          ]
+        },
+        {
+          "source": "131-496_自营售后运费说明.md",
+          "quote": "非客户原因",
+          "matching_chunk_ids": [
+            "8a63259b_0000_d9b41f16"
+          ]
+        }
+      ],
+      "review_status": "agent_draft",
+      "required_sources": [
+        "325-915_手机数码类售后细则.md",
+        "131-496_自营售后运费说明.md"
+      ],
+      "required_chunk_ids": [
+        "9756eab8_0000_bb5c2382",
+        "8a63259b_0000_d9b41f16"
+      ]
+    }
+  ]
+}

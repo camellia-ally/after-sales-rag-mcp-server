@@ -1,0 +1,2448 @@
+{
+  "label_status": "agent_draft; human review required",
+  "metric_unit": "source document and evidence chunk (any expected item)",
+  "rrf_k": 60,
+  "n_cross_document": 2,
+  "cases_with_suspect_image_chunks": 5,
+  "candidate_pool": "same hybrid search, top 10 for RRF and reranker",
+  "summary": {
+    "dense": {
+      "n": 8,
+      "hit_at_5": 1.0,
+      "mrr_at_5": 0.9375,
+      "top_1": 0.875,
+      "chunk_hit_at_5": 1.0,
+      "chunk_mrr_at_5": 0.9375,
+      "chunk_top_1": 0.875,
+      "all_required_at_5": 1.0,
+      "all_required_chunks_at_5": 1.0
+    },
+    "bm25": {
+      "n": 8,
+      "hit_at_5": 1.0,
+      "mrr_at_5": 0.875,
+      "top_1": 0.75,
+      "chunk_hit_at_5": 1.0,
+      "chunk_mrr_at_5": 0.875,
+      "chunk_top_1": 0.75,
+      "all_required_at_5": 0.5,
+      "all_required_chunks_at_5": 0.5
+    },
+    "rrf": {
+      "n": 8,
+      "hit_at_5": 1.0,
+      "mrr_at_5": 1.0,
+      "top_1": 1.0,
+      "chunk_hit_at_5": 1.0,
+      "chunk_mrr_at_5": 1.0,
+      "chunk_top_1": 1.0,
+      "all_required_at_5": 1.0,
+      "all_required_chunks_at_5": 1.0
+    },
+    "rrf_rerank": {
+      "n": 8,
+      "hit_at_5": 1.0,
+      "mrr_at_5": 1.0,
+      "top_1": 1.0,
+      "chunk_hit_at_5": 1.0,
+      "chunk_mrr_at_5": 1.0,
+      "chunk_top_1": 1.0,
+      "all_required_at_5": 1.0,
+      "all_required_chunks_at_5": 1.0
+    }
+  },
+  "by_category": {
+    "cross_document": {
+      "dense": {
+        "n": 2,
+        "chunk_hit_at_5": 1.0,
+        "chunk_mrr_at_5": 1.0
+      },
+      "bm25": {
+        "n": 2,
+        "chunk_hit_at_5": 1.0,
+        "chunk_mrr_at_5": 0.75
+      },
+      "rrf": {
+        "n": 2,
+        "chunk_hit_at_5": 1.0,
+        "chunk_mrr_at_5": 1.0
+      },
+      "rrf_rerank": {
+        "n": 2,
+        "chunk_hit_at_5": 1.0,
+        "chunk_mrr_at_5": 1.0
+      }
+    },
+    "exception": {
+      "dense": {
+        "n": 2,
+        "chunk_hit_at_5": 1.0,
+        "chunk_mrr_at_5": 0.75
+      },
+      "bm25": {
+        "n": 2,
+        "chunk_hit_at_5": 1.0,
+        "chunk_mrr_at_5": 1.0
+      },
+      "rrf": {
+        "n": 2,
+        "chunk_hit_at_5": 1.0,
+        "chunk_mrr_at_5": 1.0
+      },
+      "rrf_rerank": {
+        "n": 2,
+        "chunk_hit_at_5": 1.0,
+        "chunk_mrr_at_5": 1.0
+      }
+    },
+    "lexical": {
+      "dense": {
+        "n": 2,
+        "chunk_hit_at_5": 1.0,
+        "chunk_mrr_at_5": 1.0
+      },
+      "bm25": {
+        "n": 2,
+        "chunk_hit_at_5": 1.0,
+        "chunk_mrr_at_5": 1.0
+      },
+      "rrf": {
+        "n": 2,
+        "chunk_hit_at_5": 1.0,
+        "chunk_mrr_at_5": 1.0
+      },
+      "rrf_rerank": {
+        "n": 2,
+        "chunk_hit_at_5": 1.0,
+        "chunk_mrr_at_5": 1.0
+      }
+    },
+    "semantic": {
+      "dense": {
+        "n": 2,
+        "chunk_hit_at_5": 1.0,
+        "chunk_mrr_at_5": 1.0
+      },
+      "bm25": {
+        "n": 2,
+        "chunk_hit_at_5": 1.0,
+        "chunk_mrr_at_5": 0.75
+      },
+      "rrf": {
+        "n": 2,
+        "chunk_hit_at_5": 1.0,
+        "chunk_mrr_at_5": 1.0
+      },
+      "rrf_rerank": {
+        "n": 2,
+        "chunk_hit_at_5": 1.0,
+        "chunk_mrr_at_5": 1.0
+      }
+    }
+  },
+  "mean_retrieval_ms": 344.3,
+  "mean_extra_rerank_ms": 406.6,
+  "cases": [
+    {
+      "case_id": "dev_l01",
+      "query": "手机数码类售后条款里，含 SN 或 CDKEY 激活信息的游戏软件能退换吗？",
+      "category": "lexical",
+      "expected_sources": [
+        "325-915_手机数码类售后细则.md"
+      ],
+      "expected_chunk_ids": [
+        "9756eab8_0000_bb5c2382"
+      ],
+      "required_chunk_ids": [],
+      "dense_candidates": [
+        {
+          "chunk_id": "9756eab8_0000_bb5c2382",
+          "source": "325-915_手机数码类售后细则.md"
+        },
+        {
+          "chunk_id": "60cfc4d7_0000_e4310bf0",
+          "source": "325-930_母婴玩具乐器类售后细则.md"
+        },
+        {
+          "chunk_id": "17b5030f_0000_9bd98e59",
+          "source": "325-920_软件办公类售后细则.md"
+        },
+        {
+          "chunk_id": "0d47aecb_0000_0b6b57d8",
+          "source": "127-778_商品退换货资格查询.md"
+        },
+        {
+          "chunk_id": "3940b46f_0001_c844cc01",
+          "source": "126-406_售后服务总则.md"
+        },
+        {
+          "chunk_id": "115866fd_0000_aeda9afc",
+          "source": "325-922_运动健康类售后细则.md"
+        },
+        {
+          "chunk_id": "f46d6db6_0000_6628f49e",
+          "source": "325-933_汽车用品类售后细则.md"
+        },
+        {
+          "chunk_id": "0ea8e9ab_0000_44ef30de",
+          "source": "325-919_电脑类售后细则.md"
+        },
+        {
+          "chunk_id": "3940b46f_0000_0153406b",
+          "source": "126-406_售后服务总则.md"
+        },
+        {
+          "chunk_id": "af0c812c_0000_6babbbec",
+          "source": "325-929_食品饮料类售后细则.md"
+        },
+        {
+          "chunk_id": "69d47790_0000_67c540f8",
+          "source": "325-925_家具厨具家装类售后细则.md"
+        },
+        {
+          "chunk_id": "861cfb73_0000_86e44d51",
+          "source": "325-921_图书音像教育类售后细则.md"
+        },
+        {
+          "chunk_id": "c53519a1_0001_56d4cfe2",
+          "source": "325-932_钟表首饰类售后细则.md"
+        },
+        {
+          "chunk_id": "9756eab8_0001_49e427ae",
+          "source": "325-915_手机数码类售后细则.md"
+        },
+        {
+          "chunk_id": "742d231b_0000_72268d78",
+          "source": "325-927_奢侈品类售后细则.md"
+        },
+        {
+          "chunk_id": "49464d7b_0000_822b5700",
+          "source": "325-914_个护化妆类售后细则.md"
+        },
+        {
+          "chunk_id": "b45902f8_0000_f45e1d72",
+          "source": "325-926_礼品箱包类售后细则.md"
+        },
+        {
+          "chunk_id": "1d74d496_0000_eb05090b",
+          "source": "325-928_服饰鞋帽类售后细则.md"
+        },
+        {
+          "chunk_id": "cf4b7091_0000_b8650c30",
+          "source": "130-487_退款成功提醒.md"
+        },
+        {
+          "chunk_id": "cc911888_0001_cc635127",
+          "source": "325-924_家用电器类售后细则.md"
+        }
+      ],
+      "bm25_candidates": [
+        {
+          "chunk_id": "9756eab8_0000_bb5c2382",
+          "source": "325-915_手机数码类售后细则.md"
+        },
+        {
+          "chunk_id": "9756eab8_0001_49e427ae",
+          "source": "325-915_手机数码类售后细则.md"
+        },
+        {
+          "chunk_id": "15046f08_0000_c4613877",
+          "source": "123-268_退换货进度查询.md"
+        },
+        {
+          "chunk_id": "17b5030f_0000_9bd98e59",
+          "source": "325-920_软件办公类售后细则.md"
+        },
+        {
+          "chunk_id": "1cd87195_0000_074adffc",
+          "source": "118-310_无法申请售后原因.md"
+        },
+        {
+          "chunk_id": "ecdc82f9_0000_8fc06c86",
+          "source": "104-137_物流信息查询.md"
+        },
+        {
+          "chunk_id": "2b9ea08b_0000_c04af3a5",
+          "source": "108-385_显示签收但未收到货.md"
+        },
+        {
+          "chunk_id": "c063faf9_0001_a1c88253",
+          "source": "126-300_自营上门取件费用.md"
+        },
+        {
+          "chunk_id": "3940b46f_0001_c844cc01",
+          "source": "126-406_售后服务总则.md"
+        },
+        {
+          "chunk_id": "0ea8e9ab_0001_358e7119",
+          "source": "325-919_电脑类售后细则.md"
+        },
+        {
+          "chunk_id": "730c1ac2_0000_6f4f301e",
+          "source": "325-931_生鲜类拒收售后细则.md"
+        },
+        {
+          "chunk_id": "1d74d496_0000_eb05090b",
+          "source": "325-928_服饰鞋帽类售后细则.md"
+        },
+        {
+          "chunk_id": "b45902f8_0000_f45e1d72",
+          "source": "325-926_礼品箱包类售后细则.md"
+        },
+        {
+          "chunk_id": "3940b46f_0000_0153406b",
+          "source": "126-406_售后服务总则.md"
+        },
+        {
+          "chunk_id": "49464d7b_0000_822b5700",
+          "source": "325-914_个护化妆类售后细则.md"
+        },
+        {
+          "chunk_id": "115866fd_0000_aeda9afc",
+          "source": "325-922_运动健康类售后细则.md"
+        },
+        {
+          "chunk_id": "861cfb73_0000_86e44d51",
+          "source": "325-921_图书音像教育类售后细则.md"
+        },
+        {
+          "chunk_id": "0ea8e9ab_0000_44ef30de",
+          "source": "325-919_电脑类售后细则.md"
+        },
+        {
+          "chunk_id": "69d47790_0000_67c540f8",
+          "source": "325-925_家具厨具家装类售后细则.md"
+        },
+        {
+          "chunk_id": "742d231b_0000_72268d78",
+          "source": "325-927_奢侈品类售后细则.md"
+        }
+      ],
+      "suspect_image_chunk_ids": [],
+      "retrieval_ms": 1243.0,
+      "rerank_ms": 400.6,
+      "dense": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "9756eab8_0000_bb5c2382",
+            "source": "325-915_手机数码类售后细则.md"
+          },
+          {
+            "chunk_id": "60cfc4d7_0000_e4310bf0",
+            "source": "325-930_母婴玩具乐器类售后细则.md"
+          },
+          {
+            "chunk_id": "17b5030f_0000_9bd98e59",
+            "source": "325-920_软件办公类售后细则.md"
+          },
+          {
+            "chunk_id": "0d47aecb_0000_0b6b57d8",
+            "source": "127-778_商品退换货资格查询.md"
+          },
+          {
+            "chunk_id": "3940b46f_0001_c844cc01",
+            "source": "126-406_售后服务总则.md"
+          }
+        ]
+      },
+      "bm25": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "9756eab8_0000_bb5c2382",
+            "source": "325-915_手机数码类售后细则.md"
+          },
+          {
+            "chunk_id": "9756eab8_0001_49e427ae",
+            "source": "325-915_手机数码类售后细则.md"
+          },
+          {
+            "chunk_id": "15046f08_0000_c4613877",
+            "source": "123-268_退换货进度查询.md"
+          },
+          {
+            "chunk_id": "17b5030f_0000_9bd98e59",
+            "source": "325-920_软件办公类售后细则.md"
+          },
+          {
+            "chunk_id": "1cd87195_0000_074adffc",
+            "source": "118-310_无法申请售后原因.md"
+          }
+        ]
+      },
+      "rrf": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "9756eab8_0000_bb5c2382",
+            "source": "325-915_手机数码类售后细则.md"
+          },
+          {
+            "chunk_id": "17b5030f_0000_9bd98e59",
+            "source": "325-920_软件办公类售后细则.md"
+          },
+          {
+            "chunk_id": "3940b46f_0001_c844cc01",
+            "source": "126-406_售后服务总则.md"
+          },
+          {
+            "chunk_id": "9756eab8_0001_49e427ae",
+            "source": "325-915_手机数码类售后细则.md"
+          },
+          {
+            "chunk_id": "115866fd_0000_aeda9afc",
+            "source": "325-922_运动健康类售后细则.md"
+          }
+        ]
+      },
+      "rrf_rerank": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "9756eab8_0000_bb5c2382",
+            "source": "325-915_手机数码类售后细则.md"
+          },
+          {
+            "chunk_id": "17b5030f_0000_9bd98e59",
+            "source": "325-920_软件办公类售后细则.md"
+          },
+          {
+            "chunk_id": "9756eab8_0001_49e427ae",
+            "source": "325-915_手机数码类售后细则.md"
+          },
+          {
+            "chunk_id": "3940b46f_0001_c844cc01",
+            "source": "126-406_售后服务总则.md"
+          },
+          {
+            "chunk_id": "3940b46f_0000_0153406b",
+            "source": "126-406_售后服务总则.md"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "dev_l02",
+      "query": "生鲜订单的“坏损包退”要求魔镜等级达到 S2 吗？",
+      "category": "lexical",
+      "expected_sources": [
+        "325-931_生鲜类拒收售后细则.md"
+      ],
+      "expected_chunk_ids": [
+        "730c1ac2_0000_6f4f301e"
+      ],
+      "required_chunk_ids": [],
+      "dense_candidates": [
+        {
+          "chunk_id": "730c1ac2_0000_6f4f301e",
+          "source": "325-931_生鲜类拒收售后细则.md"
+        },
+        {
+          "chunk_id": "af0c812c_0000_6babbbec",
+          "source": "325-929_食品饮料类售后细则.md"
+        },
+        {
+          "chunk_id": "763ff3f5_0000_c20e420b",
+          "source": "127-427_自营商品7天无理由退货标准.md"
+        },
+        {
+          "chunk_id": "60cfc4d7_0000_e4310bf0",
+          "source": "325-930_母婴玩具乐器类售后细则.md"
+        },
+        {
+          "chunk_id": "1d74d496_0000_eb05090b",
+          "source": "325-928_服饰鞋帽类售后细则.md"
+        },
+        {
+          "chunk_id": "1cd87195_0000_074adffc",
+          "source": "118-310_无法申请售后原因.md"
+        },
+        {
+          "chunk_id": "49464d7b_0000_822b5700",
+          "source": "325-914_个护化妆类售后细则.md"
+        },
+        {
+          "chunk_id": "5e773011_0000_24ec5e79",
+          "source": "127-456_发错货处理.md"
+        },
+        {
+          "chunk_id": "115866fd_0000_aeda9afc",
+          "source": "325-922_运动健康类售后细则.md"
+        },
+        {
+          "chunk_id": "861cfb73_0000_86e44d51",
+          "source": "325-921_图书音像教育类售后细则.md"
+        },
+        {
+          "chunk_id": "d204ed25_0000_c2a2a22e",
+          "source": "118-453_质量问题处理.md"
+        },
+        {
+          "chunk_id": "0ea8e9ab_0000_44ef30de",
+          "source": "325-919_电脑类售后细则.md"
+        },
+        {
+          "chunk_id": "0d47aecb_0000_0b6b57d8",
+          "source": "127-778_商品退换货资格查询.md"
+        },
+        {
+          "chunk_id": "3940b46f_0001_c844cc01",
+          "source": "126-406_售后服务总则.md"
+        },
+        {
+          "chunk_id": "15046f08_0000_c4613877",
+          "source": "123-268_退换货进度查询.md"
+        },
+        {
+          "chunk_id": "69d47790_0000_67c540f8",
+          "source": "325-925_家具厨具家装类售后细则.md"
+        },
+        {
+          "chunk_id": "cc911888_0001_cc635127",
+          "source": "325-924_家用电器类售后细则.md"
+        },
+        {
+          "chunk_id": "b45902f8_0000_f45e1d72",
+          "source": "325-926_礼品箱包类售后细则.md"
+        },
+        {
+          "chunk_id": "cc911888_0000_1de2ee7f",
+          "source": "325-924_家用电器类售后细则.md"
+        },
+        {
+          "chunk_id": "17b5030f_0000_9bd98e59",
+          "source": "325-920_软件办公类售后细则.md"
+        }
+      ],
+      "bm25_candidates": [
+        {
+          "chunk_id": "730c1ac2_0000_6f4f301e",
+          "source": "325-931_生鲜类拒收售后细则.md"
+        },
+        {
+          "chunk_id": "c063faf9_0001_a1c88253",
+          "source": "126-300_自营上门取件费用.md"
+        },
+        {
+          "chunk_id": "c53519a1_0001_56d4cfe2",
+          "source": "325-932_钟表首饰类售后细则.md"
+        },
+        {
+          "chunk_id": "c063faf9_0000_160e59c9",
+          "source": "126-300_自营上门取件费用.md"
+        },
+        {
+          "chunk_id": "3940b46f_0000_0153406b",
+          "source": "126-406_售后服务总则.md"
+        },
+        {
+          "chunk_id": "cc911888_0000_1de2ee7f",
+          "source": "325-924_家用电器类售后细则.md"
+        },
+        {
+          "chunk_id": "1cd87195_0000_074adffc",
+          "source": "118-310_无法申请售后原因.md"
+        },
+        {
+          "chunk_id": "ecdc82f9_0000_8fc06c86",
+          "source": "104-137_物流信息查询.md"
+        },
+        {
+          "chunk_id": "2f8d9e84_0000_ee22d1cf",
+          "source": "109-193_退货后原运费返还.md"
+        },
+        {
+          "chunk_id": "240a9a0f_0000_a759ee9c",
+          "source": "130-479_多付款项退款.md"
+        },
+        {
+          "chunk_id": "b85a174c_0000_a86a687f",
+          "source": "130-485_白条退款手续费.md"
+        },
+        {
+          "chunk_id": "3e0a58f9_0000_f0feb53d",
+          "source": "130-484_退款金额变少.md"
+        },
+        {
+          "chunk_id": "69d47790_0000_67c540f8",
+          "source": "325-925_家具厨具家装类售后细则.md"
+        },
+        {
+          "chunk_id": "742d231b_0000_72268d78",
+          "source": "325-927_奢侈品类售后细则.md"
+        },
+        {
+          "chunk_id": "5e773011_0000_24ec5e79",
+          "source": "127-456_发错货处理.md"
+        },
+        {
+          "chunk_id": "f46d6db6_0000_6628f49e",
+          "source": "325-933_汽车用品类售后细则.md"
+        },
+        {
+          "chunk_id": "2b9ea08b_0000_c04af3a5",
+          "source": "108-385_显示签收但未收到货.md"
+        },
+        {
+          "chunk_id": "74df25a3_0000_4af9968d",
+          "source": "118-3516_无理由退货赠品处理.md"
+        }
+      ],
+      "suspect_image_chunk_ids": [
+        "1cd87195_0000_074adffc",
+        "5e773011_0000_24ec5e79"
+      ],
+      "retrieval_ms": 236.8,
+      "rerank_ms": 577.4,
+      "dense": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "730c1ac2_0000_6f4f301e",
+            "source": "325-931_生鲜类拒收售后细则.md"
+          },
+          {
+            "chunk_id": "af0c812c_0000_6babbbec",
+            "source": "325-929_食品饮料类售后细则.md"
+          },
+          {
+            "chunk_id": "763ff3f5_0000_c20e420b",
+            "source": "127-427_自营商品7天无理由退货标准.md"
+          },
+          {
+            "chunk_id": "60cfc4d7_0000_e4310bf0",
+            "source": "325-930_母婴玩具乐器类售后细则.md"
+          },
+          {
+            "chunk_id": "1d74d496_0000_eb05090b",
+            "source": "325-928_服饰鞋帽类售后细则.md"
+          }
+        ]
+      },
+      "bm25": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "730c1ac2_0000_6f4f301e",
+            "source": "325-931_生鲜类拒收售后细则.md"
+          },
+          {
+            "chunk_id": "c063faf9_0001_a1c88253",
+            "source": "126-300_自营上门取件费用.md"
+          },
+          {
+            "chunk_id": "c53519a1_0001_56d4cfe2",
+            "source": "325-932_钟表首饰类售后细则.md"
+          },
+          {
+            "chunk_id": "c063faf9_0000_160e59c9",
+            "source": "126-300_自营上门取件费用.md"
+          },
+          {
+            "chunk_id": "3940b46f_0000_0153406b",
+            "source": "126-406_售后服务总则.md"
+          }
+        ]
+      },
+      "rrf": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "730c1ac2_0000_6f4f301e",
+            "source": "325-931_生鲜类拒收售后细则.md"
+          },
+          {
+            "chunk_id": "1cd87195_0000_074adffc",
+            "source": "118-310_无法申请售后原因.md"
+          },
+          {
+            "chunk_id": "5e773011_0000_24ec5e79",
+            "source": "127-456_发错货处理.md"
+          },
+          {
+            "chunk_id": "cc911888_0000_1de2ee7f",
+            "source": "325-924_家用电器类售后细则.md"
+          },
+          {
+            "chunk_id": "69d47790_0000_67c540f8",
+            "source": "325-925_家具厨具家装类售后细则.md"
+          }
+        ]
+      },
+      "rrf_rerank": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "730c1ac2_0000_6f4f301e",
+            "source": "325-931_生鲜类拒收售后细则.md"
+          },
+          {
+            "chunk_id": "af0c812c_0000_6babbbec",
+            "source": "325-929_食品饮料类售后细则.md"
+          },
+          {
+            "chunk_id": "1cd87195_0000_074adffc",
+            "source": "118-310_无法申请售后原因.md"
+          },
+          {
+            "chunk_id": "60cfc4d7_0000_e4310bf0",
+            "source": "325-930_母婴玩具乐器类售后细则.md"
+          },
+          {
+            "chunk_id": "763ff3f5_0000_c20e420b",
+            "source": "127-427_自营商品7天无理由退货标准.md"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "dev_s01",
+      "query": "包裹还在路上，订单里申请退货的入口用不了，可能是什么原因？",
+      "category": "semantic",
+      "expected_sources": [
+        "118-310_无法申请售后原因.md"
+      ],
+      "expected_chunk_ids": [
+        "1cd87195_0000_074adffc"
+      ],
+      "required_chunk_ids": [],
+      "dense_candidates": [
+        {
+          "chunk_id": "1cd87195_0000_074adffc",
+          "source": "118-310_无法申请售后原因.md"
+        },
+        {
+          "chunk_id": "15046f08_0000_c4613877",
+          "source": "123-268_退换货进度查询.md"
+        },
+        {
+          "chunk_id": "d117b0e4_0000_bb6dd4c1",
+          "source": "118-810_退货改换货.md"
+        },
+        {
+          "chunk_id": "5e773011_0000_24ec5e79",
+          "source": "127-456_发错货处理.md"
+        },
+        {
+          "chunk_id": "75fc2bb2_0000_7e6a0352",
+          "source": "124-269_退换货地址查询.md"
+        },
+        {
+          "chunk_id": "26ea994d_0000_81070dee",
+          "source": "118-544_退货照片上传方式.md"
+        },
+        {
+          "chunk_id": "2f8d9e84_0000_ee22d1cf",
+          "source": "109-193_退货后原运费返还.md"
+        },
+        {
+          "chunk_id": "3e0a58f9_0000_f0feb53d",
+          "source": "130-484_退款金额变少.md"
+        },
+        {
+          "chunk_id": "0d47aecb_0000_0b6b57d8",
+          "source": "127-778_商品退换货资格查询.md"
+        },
+        {
+          "chunk_id": "d204ed25_0000_c2a2a22e",
+          "source": "118-453_质量问题处理.md"
+        },
+        {
+          "chunk_id": "74df25a3_0000_4af9968d",
+          "source": "118-3516_无理由退货赠品处理.md"
+        },
+        {
+          "chunk_id": "2b9ea08b_0000_c04af3a5",
+          "source": "108-385_显示签收但未收到货.md"
+        },
+        {
+          "chunk_id": "ecdc82f9_0000_8fc06c86",
+          "source": "104-137_物流信息查询.md"
+        },
+        {
+          "chunk_id": "763ff3f5_0000_c20e420b",
+          "source": "127-427_自营商品7天无理由退货标准.md"
+        },
+        {
+          "chunk_id": "b45902f8_0000_f45e1d72",
+          "source": "325-926_礼品箱包类售后细则.md"
+        },
+        {
+          "chunk_id": "af0c812c_0000_6babbbec",
+          "source": "325-929_食品饮料类售后细则.md"
+        },
+        {
+          "chunk_id": "240a9a0f_0000_a759ee9c",
+          "source": "130-479_多付款项退款.md"
+        },
+        {
+          "chunk_id": "1d74d496_0000_eb05090b",
+          "source": "325-928_服饰鞋帽类售后细则.md"
+        },
+        {
+          "chunk_id": "69d47790_0000_67c540f8",
+          "source": "325-925_家具厨具家装类售后细则.md"
+        },
+        {
+          "chunk_id": "cc911888_0001_cc635127",
+          "source": "325-924_家用电器类售后细则.md"
+        }
+      ],
+      "bm25_candidates": [
+        {
+          "chunk_id": "2b9ea08b_0000_c04af3a5",
+          "source": "108-385_显示签收但未收到货.md"
+        },
+        {
+          "chunk_id": "1cd87195_0000_074adffc",
+          "source": "118-310_无法申请售后原因.md"
+        },
+        {
+          "chunk_id": "ecdc82f9_0000_8fc06c86",
+          "source": "104-137_物流信息查询.md"
+        },
+        {
+          "chunk_id": "240a9a0f_0000_a759ee9c",
+          "source": "130-479_多付款项退款.md"
+        },
+        {
+          "chunk_id": "b85a174c_0000_a86a687f",
+          "source": "130-485_白条退款手续费.md"
+        },
+        {
+          "chunk_id": "3e0a58f9_0000_f0feb53d",
+          "source": "130-484_退款金额变少.md"
+        },
+        {
+          "chunk_id": "9756eab8_0000_bb5c2382",
+          "source": "325-915_手机数码类售后细则.md"
+        },
+        {
+          "chunk_id": "c063faf9_0000_160e59c9",
+          "source": "126-300_自营上门取件费用.md"
+        },
+        {
+          "chunk_id": "730c1ac2_0000_6f4f301e",
+          "source": "325-931_生鲜类拒收售后细则.md"
+        },
+        {
+          "chunk_id": "5e773011_0000_24ec5e79",
+          "source": "127-456_发错货处理.md"
+        },
+        {
+          "chunk_id": "c063faf9_0001_a1c88253",
+          "source": "126-300_自营上门取件费用.md"
+        },
+        {
+          "chunk_id": "0ea8e9ab_0000_44ef30de",
+          "source": "325-919_电脑类售后细则.md"
+        },
+        {
+          "chunk_id": "2f8d9e84_0000_ee22d1cf",
+          "source": "109-193_退货后原运费返还.md"
+        },
+        {
+          "chunk_id": "742d231b_0000_72268d78",
+          "source": "325-927_奢侈品类售后细则.md"
+        },
+        {
+          "chunk_id": "3940b46f_0000_0153406b",
+          "source": "126-406_售后服务总则.md"
+        },
+        {
+          "chunk_id": "0d47aecb_0000_0b6b57d8",
+          "source": "127-778_商品退换货资格查询.md"
+        },
+        {
+          "chunk_id": "0ea8e9ab_0001_358e7119",
+          "source": "325-919_电脑类售后细则.md"
+        },
+        {
+          "chunk_id": "8a63259b_0000_d9b41f16",
+          "source": "131-496_自营售后运费说明.md"
+        },
+        {
+          "chunk_id": "176d7a6f_0000_df7bea2d",
+          "source": "127-792_服务单审核时间.md"
+        },
+        {
+          "chunk_id": "f46d6db6_0001_d570ffdd",
+          "source": "325-933_汽车用品类售后细则.md"
+        }
+      ],
+      "suspect_image_chunk_ids": [
+        "1cd87195_0000_074adffc",
+        "5e773011_0000_24ec5e79"
+      ],
+      "retrieval_ms": 222.6,
+      "rerank_ms": 370.7,
+      "dense": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "1cd87195_0000_074adffc",
+            "source": "118-310_无法申请售后原因.md"
+          },
+          {
+            "chunk_id": "15046f08_0000_c4613877",
+            "source": "123-268_退换货进度查询.md"
+          },
+          {
+            "chunk_id": "d117b0e4_0000_bb6dd4c1",
+            "source": "118-810_退货改换货.md"
+          },
+          {
+            "chunk_id": "5e773011_0000_24ec5e79",
+            "source": "127-456_发错货处理.md"
+          },
+          {
+            "chunk_id": "75fc2bb2_0000_7e6a0352",
+            "source": "124-269_退换货地址查询.md"
+          }
+        ]
+      },
+      "bm25": {
+        "rank": 2,
+        "chunk_rank": 2,
+        "top_5": [
+          {
+            "chunk_id": "2b9ea08b_0000_c04af3a5",
+            "source": "108-385_显示签收但未收到货.md"
+          },
+          {
+            "chunk_id": "1cd87195_0000_074adffc",
+            "source": "118-310_无法申请售后原因.md"
+          },
+          {
+            "chunk_id": "ecdc82f9_0000_8fc06c86",
+            "source": "104-137_物流信息查询.md"
+          },
+          {
+            "chunk_id": "240a9a0f_0000_a759ee9c",
+            "source": "130-479_多付款项退款.md"
+          },
+          {
+            "chunk_id": "b85a174c_0000_a86a687f",
+            "source": "130-485_白条退款手续费.md"
+          }
+        ]
+      },
+      "rrf": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "1cd87195_0000_074adffc",
+            "source": "118-310_无法申请售后原因.md"
+          },
+          {
+            "chunk_id": "2b9ea08b_0000_c04af3a5",
+            "source": "108-385_显示签收但未收到货.md"
+          },
+          {
+            "chunk_id": "5e773011_0000_24ec5e79",
+            "source": "127-456_发错货处理.md"
+          },
+          {
+            "chunk_id": "3e0a58f9_0000_f0feb53d",
+            "source": "130-484_退款金额变少.md"
+          },
+          {
+            "chunk_id": "ecdc82f9_0000_8fc06c86",
+            "source": "104-137_物流信息查询.md"
+          }
+        ]
+      },
+      "rrf_rerank": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "1cd87195_0000_074adffc",
+            "source": "118-310_无法申请售后原因.md"
+          },
+          {
+            "chunk_id": "5e773011_0000_24ec5e79",
+            "source": "127-456_发错货处理.md"
+          },
+          {
+            "chunk_id": "0d47aecb_0000_0b6b57d8",
+            "source": "127-778_商品退换货资格查询.md"
+          },
+          {
+            "chunk_id": "15046f08_0000_c4613877",
+            "source": "123-268_退换货进度查询.md"
+          },
+          {
+            "chunk_id": "d117b0e4_0000_bb6dd4c1",
+            "source": "118-810_退货改换货.md"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "dev_s02",
+      "query": "退款比商品页面当时写的价格少，会不会是优惠抵扣造成的？",
+      "category": "semantic",
+      "expected_sources": [
+        "130-484_退款金额变少.md"
+      ],
+      "expected_chunk_ids": [
+        "3e0a58f9_0000_f0feb53d"
+      ],
+      "required_chunk_ids": [],
+      "dense_candidates": [
+        {
+          "chunk_id": "3e0a58f9_0000_f0feb53d",
+          "source": "130-484_退款金额变少.md"
+        },
+        {
+          "chunk_id": "240a9a0f_0000_a759ee9c",
+          "source": "130-479_多付款项退款.md"
+        },
+        {
+          "chunk_id": "74df25a3_0000_4af9968d",
+          "source": "118-3516_无理由退货赠品处理.md"
+        },
+        {
+          "chunk_id": "b85a174c_0000_a86a687f",
+          "source": "130-485_白条退款手续费.md"
+        },
+        {
+          "chunk_id": "2f8d9e84_0000_ee22d1cf",
+          "source": "109-193_退货后原运费返还.md"
+        },
+        {
+          "chunk_id": "0d47aecb_0000_0b6b57d8",
+          "source": "127-778_商品退换货资格查询.md"
+        },
+        {
+          "chunk_id": "763ff3f5_0000_c20e420b",
+          "source": "127-427_自营商品7天无理由退货标准.md"
+        },
+        {
+          "chunk_id": "258e57de_0000_826a8231",
+          "source": "131-491_送到自提点是否收费.md"
+        },
+        {
+          "chunk_id": "3940b46f_0001_c844cc01",
+          "source": "126-406_售后服务总则.md"
+        },
+        {
+          "chunk_id": "861cfb73_0000_86e44d51",
+          "source": "325-921_图书音像教育类售后细则.md"
+        },
+        {
+          "chunk_id": "d117b0e4_0000_bb6dd4c1",
+          "source": "118-810_退货改换货.md"
+        },
+        {
+          "chunk_id": "0ea8e9ab_0001_358e7119",
+          "source": "325-919_电脑类售后细则.md"
+        },
+        {
+          "chunk_id": "1cd87195_0000_074adffc",
+          "source": "118-310_无法申请售后原因.md"
+        },
+        {
+          "chunk_id": "0ea8e9ab_0000_44ef30de",
+          "source": "325-919_电脑类售后细则.md"
+        },
+        {
+          "chunk_id": "af0c812c_0000_6babbbec",
+          "source": "325-929_食品饮料类售后细则.md"
+        },
+        {
+          "chunk_id": "60cfc4d7_0000_e4310bf0",
+          "source": "325-930_母婴玩具乐器类售后细则.md"
+        },
+        {
+          "chunk_id": "f46d6db6_0001_d570ffdd",
+          "source": "325-933_汽车用品类售后细则.md"
+        },
+        {
+          "chunk_id": "15046f08_0000_c4613877",
+          "source": "123-268_退换货进度查询.md"
+        },
+        {
+          "chunk_id": "b45902f8_0000_f45e1d72",
+          "source": "325-926_礼品箱包类售后细则.md"
+        },
+        {
+          "chunk_id": "f46d6db6_0000_6628f49e",
+          "source": "325-933_汽车用品类售后细则.md"
+        }
+      ],
+      "bm25_candidates": [
+        {
+          "chunk_id": "3e0a58f9_0000_f0feb53d",
+          "source": "130-484_退款金额变少.md"
+        },
+        {
+          "chunk_id": "26ea994d_0000_81070dee",
+          "source": "118-544_退货照片上传方式.md"
+        },
+        {
+          "chunk_id": "3940b46f_0001_c844cc01",
+          "source": "126-406_售后服务总则.md"
+        },
+        {
+          "chunk_id": "1cd87195_0000_074adffc",
+          "source": "118-310_无法申请售后原因.md"
+        },
+        {
+          "chunk_id": "0d47aecb_0000_0b6b57d8",
+          "source": "127-778_商品退换货资格查询.md"
+        },
+        {
+          "chunk_id": "0ea8e9ab_0001_358e7119",
+          "source": "325-919_电脑类售后细则.md"
+        },
+        {
+          "chunk_id": "74df25a3_0000_4af9968d",
+          "source": "118-3516_无理由退货赠品处理.md"
+        },
+        {
+          "chunk_id": "cf4b7091_0000_b8650c30",
+          "source": "130-487_退款成功提醒.md"
+        },
+        {
+          "chunk_id": "240a9a0f_0000_a759ee9c",
+          "source": "130-479_多付款项退款.md"
+        },
+        {
+          "chunk_id": "b85a174c_0000_a86a687f",
+          "source": "130-485_白条退款手续费.md"
+        },
+        {
+          "chunk_id": "742d231b_0000_72268d78",
+          "source": "325-927_奢侈品类售后细则.md"
+        },
+        {
+          "chunk_id": "c53519a1_0001_56d4cfe2",
+          "source": "325-932_钟表首饰类售后细则.md"
+        },
+        {
+          "chunk_id": "0ea8e9ab_0000_44ef30de",
+          "source": "325-919_电脑类售后细则.md"
+        },
+        {
+          "chunk_id": "f46d6db6_0000_6628f49e",
+          "source": "325-933_汽车用品类售后细则.md"
+        },
+        {
+          "chunk_id": "c53519a1_0000_56ad6045",
+          "source": "325-932_钟表首饰类售后细则.md"
+        },
+        {
+          "chunk_id": "8a63259b_0000_d9b41f16",
+          "source": "131-496_自营售后运费说明.md"
+        },
+        {
+          "chunk_id": "75fc2bb2_0000_7e6a0352",
+          "source": "124-269_退换货地址查询.md"
+        },
+        {
+          "chunk_id": "15046f08_0000_c4613877",
+          "source": "123-268_退换货进度查询.md"
+        },
+        {
+          "chunk_id": "1d74d496_0000_eb05090b",
+          "source": "325-928_服饰鞋帽类售后细则.md"
+        },
+        {
+          "chunk_id": "49464d7b_0000_822b5700",
+          "source": "325-914_个护化妆类售后细则.md"
+        }
+      ],
+      "suspect_image_chunk_ids": [
+        "1cd87195_0000_074adffc"
+      ],
+      "retrieval_ms": 210.8,
+      "rerank_ms": 372.9,
+      "dense": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "3e0a58f9_0000_f0feb53d",
+            "source": "130-484_退款金额变少.md"
+          },
+          {
+            "chunk_id": "240a9a0f_0000_a759ee9c",
+            "source": "130-479_多付款项退款.md"
+          },
+          {
+            "chunk_id": "74df25a3_0000_4af9968d",
+            "source": "118-3516_无理由退货赠品处理.md"
+          },
+          {
+            "chunk_id": "b85a174c_0000_a86a687f",
+            "source": "130-485_白条退款手续费.md"
+          },
+          {
+            "chunk_id": "2f8d9e84_0000_ee22d1cf",
+            "source": "109-193_退货后原运费返还.md"
+          }
+        ]
+      },
+      "bm25": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "3e0a58f9_0000_f0feb53d",
+            "source": "130-484_退款金额变少.md"
+          },
+          {
+            "chunk_id": "26ea994d_0000_81070dee",
+            "source": "118-544_退货照片上传方式.md"
+          },
+          {
+            "chunk_id": "3940b46f_0001_c844cc01",
+            "source": "126-406_售后服务总则.md"
+          },
+          {
+            "chunk_id": "1cd87195_0000_074adffc",
+            "source": "118-310_无法申请售后原因.md"
+          },
+          {
+            "chunk_id": "0d47aecb_0000_0b6b57d8",
+            "source": "127-778_商品退换货资格查询.md"
+          }
+        ]
+      },
+      "rrf": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "3e0a58f9_0000_f0feb53d",
+            "source": "130-484_退款金额变少.md"
+          },
+          {
+            "chunk_id": "74df25a3_0000_4af9968d",
+            "source": "118-3516_无理由退货赠品处理.md"
+          },
+          {
+            "chunk_id": "240a9a0f_0000_a759ee9c",
+            "source": "130-479_多付款项退款.md"
+          },
+          {
+            "chunk_id": "0d47aecb_0000_0b6b57d8",
+            "source": "127-778_商品退换货资格查询.md"
+          },
+          {
+            "chunk_id": "3940b46f_0001_c844cc01",
+            "source": "126-406_售后服务总则.md"
+          }
+        ]
+      },
+      "rrf_rerank": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "3e0a58f9_0000_f0feb53d",
+            "source": "130-484_退款金额变少.md"
+          },
+          {
+            "chunk_id": "3940b46f_0001_c844cc01",
+            "source": "126-406_售后服务总则.md"
+          },
+          {
+            "chunk_id": "74df25a3_0000_4af9968d",
+            "source": "118-3516_无理由退货赠品处理.md"
+          },
+          {
+            "chunk_id": "f46d6db6_0000_6628f49e",
+            "source": "325-933_汽车用品类售后细则.md"
+          },
+          {
+            "chunk_id": "0ea8e9ab_0000_44ef30de",
+            "source": "325-919_电脑类售后细则.md"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "dev_c01",
+      "query": "京东E卡多付款通常何时原路退回？处理成功后京东会发短信吗？",
+      "category": "cross_document",
+      "expected_sources": [
+        "130-479_多付款项退款.md",
+        "130-487_退款成功提醒.md"
+      ],
+      "expected_chunk_ids": [
+        "240a9a0f_0000_a759ee9c",
+        "cf4b7091_0000_b8650c30"
+      ],
+      "required_chunk_ids": [
+        "240a9a0f_0000_a759ee9c",
+        "cf4b7091_0000_b8650c30"
+      ],
+      "dense_candidates": [
+        {
+          "chunk_id": "240a9a0f_0000_a759ee9c",
+          "source": "130-479_多付款项退款.md"
+        },
+        {
+          "chunk_id": "cf4b7091_0000_b8650c30",
+          "source": "130-487_退款成功提醒.md"
+        },
+        {
+          "chunk_id": "75fc2bb2_0000_7e6a0352",
+          "source": "124-269_退换货地址查询.md"
+        },
+        {
+          "chunk_id": "3940b46f_0000_0153406b",
+          "source": "126-406_售后服务总则.md"
+        },
+        {
+          "chunk_id": "3e0a58f9_0000_f0feb53d",
+          "source": "130-484_退款金额变少.md"
+        },
+        {
+          "chunk_id": "74df25a3_0000_4af9968d",
+          "source": "118-3516_无理由退货赠品处理.md"
+        },
+        {
+          "chunk_id": "861cfb73_0000_86e44d51",
+          "source": "325-921_图书音像教育类售后细则.md"
+        },
+        {
+          "chunk_id": "2f8d9e84_0000_ee22d1cf",
+          "source": "109-193_退货后原运费返还.md"
+        },
+        {
+          "chunk_id": "26ea994d_0000_81070dee",
+          "source": "118-544_退货照片上传方式.md"
+        },
+        {
+          "chunk_id": "15046f08_0000_c4613877",
+          "source": "123-268_退换货进度查询.md"
+        },
+        {
+          "chunk_id": "af0c812c_0000_6babbbec",
+          "source": "325-929_食品饮料类售后细则.md"
+        },
+        {
+          "chunk_id": "b85a174c_0000_a86a687f",
+          "source": "130-485_白条退款手续费.md"
+        },
+        {
+          "chunk_id": "69d47790_0000_67c540f8",
+          "source": "325-925_家具厨具家装类售后细则.md"
+        },
+        {
+          "chunk_id": "9756eab8_0001_49e427ae",
+          "source": "325-915_手机数码类售后细则.md"
+        },
+        {
+          "chunk_id": "f46d6db6_0000_6628f49e",
+          "source": "325-933_汽车用品类售后细则.md"
+        },
+        {
+          "chunk_id": "730c1ac2_0000_6f4f301e",
+          "source": "325-931_生鲜类拒收售后细则.md"
+        },
+        {
+          "chunk_id": "b45902f8_0000_f45e1d72",
+          "source": "325-926_礼品箱包类售后细则.md"
+        },
+        {
+          "chunk_id": "60cfc4d7_0000_e4310bf0",
+          "source": "325-930_母婴玩具乐器类售后细则.md"
+        },
+        {
+          "chunk_id": "9756eab8_0000_bb5c2382",
+          "source": "325-915_手机数码类售后细则.md"
+        },
+        {
+          "chunk_id": "d204ed25_0000_c2a2a22e",
+          "source": "118-453_质量问题处理.md"
+        }
+      ],
+      "bm25_candidates": [
+        {
+          "chunk_id": "5e773011_0000_24ec5e79",
+          "source": "127-456_发错货处理.md"
+        },
+        {
+          "chunk_id": "cf4b7091_0000_b8650c30",
+          "source": "130-487_退款成功提醒.md"
+        },
+        {
+          "chunk_id": "75fc2bb2_0000_7e6a0352",
+          "source": "124-269_退换货地址查询.md"
+        },
+        {
+          "chunk_id": "478eb843_0000_099b5f37",
+          "source": "119-842_退换货维修处理时长.md"
+        },
+        {
+          "chunk_id": "d117b0e4_0000_bb6dd4c1",
+          "source": "118-810_退货改换货.md"
+        },
+        {
+          "chunk_id": "240a9a0f_0000_a759ee9c",
+          "source": "130-479_多付款项退款.md"
+        },
+        {
+          "chunk_id": "69d47790_0000_67c540f8",
+          "source": "325-925_家具厨具家装类售后细则.md"
+        },
+        {
+          "chunk_id": "cc911888_0001_cc635127",
+          "source": "325-924_家用电器类售后细则.md"
+        },
+        {
+          "chunk_id": "2f8d9e84_0000_ee22d1cf",
+          "source": "109-193_退货后原运费返还.md"
+        },
+        {
+          "chunk_id": "d204ed25_0000_c2a2a22e",
+          "source": "118-453_质量问题处理.md"
+        },
+        {
+          "chunk_id": "b85a174c_0000_a86a687f",
+          "source": "130-485_白条退款手续费.md"
+        },
+        {
+          "chunk_id": "cc911888_0000_1de2ee7f",
+          "source": "325-924_家用电器类售后细则.md"
+        },
+        {
+          "chunk_id": "9756eab8_0001_49e427ae",
+          "source": "325-915_手机数码类售后细则.md"
+        },
+        {
+          "chunk_id": "74df25a3_0000_4af9968d",
+          "source": "118-3516_无理由退货赠品处理.md"
+        },
+        {
+          "chunk_id": "0ea8e9ab_0000_44ef30de",
+          "source": "325-919_电脑类售后细则.md"
+        },
+        {
+          "chunk_id": "730c1ac2_0000_6f4f301e",
+          "source": "325-931_生鲜类拒收售后细则.md"
+        },
+        {
+          "chunk_id": "60cfc4d7_0000_e4310bf0",
+          "source": "325-930_母婴玩具乐器类售后细则.md"
+        },
+        {
+          "chunk_id": "3940b46f_0001_c844cc01",
+          "source": "126-406_售后服务总则.md"
+        },
+        {
+          "chunk_id": "742d231b_0000_72268d78",
+          "source": "325-927_奢侈品类售后细则.md"
+        },
+        {
+          "chunk_id": "763ff3f5_0000_c20e420b",
+          "source": "127-427_自营商品7天无理由退货标准.md"
+        }
+      ],
+      "suspect_image_chunk_ids": [],
+      "retrieval_ms": 193.5,
+      "rerank_ms": 350.1,
+      "dense": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "240a9a0f_0000_a759ee9c",
+            "source": "130-479_多付款项退款.md"
+          },
+          {
+            "chunk_id": "cf4b7091_0000_b8650c30",
+            "source": "130-487_退款成功提醒.md"
+          },
+          {
+            "chunk_id": "75fc2bb2_0000_7e6a0352",
+            "source": "124-269_退换货地址查询.md"
+          },
+          {
+            "chunk_id": "3940b46f_0000_0153406b",
+            "source": "126-406_售后服务总则.md"
+          },
+          {
+            "chunk_id": "3e0a58f9_0000_f0feb53d",
+            "source": "130-484_退款金额变少.md"
+          }
+        ],
+        "all_required_at_5": true,
+        "all_required_chunks_at_5": true
+      },
+      "bm25": {
+        "rank": 2,
+        "chunk_rank": 2,
+        "top_5": [
+          {
+            "chunk_id": "5e773011_0000_24ec5e79",
+            "source": "127-456_发错货处理.md"
+          },
+          {
+            "chunk_id": "cf4b7091_0000_b8650c30",
+            "source": "130-487_退款成功提醒.md"
+          },
+          {
+            "chunk_id": "75fc2bb2_0000_7e6a0352",
+            "source": "124-269_退换货地址查询.md"
+          },
+          {
+            "chunk_id": "478eb843_0000_099b5f37",
+            "source": "119-842_退换货维修处理时长.md"
+          },
+          {
+            "chunk_id": "d117b0e4_0000_bb6dd4c1",
+            "source": "118-810_退货改换货.md"
+          }
+        ],
+        "all_required_at_5": false,
+        "all_required_chunks_at_5": false
+      },
+      "rrf": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "cf4b7091_0000_b8650c30",
+            "source": "130-487_退款成功提醒.md"
+          },
+          {
+            "chunk_id": "75fc2bb2_0000_7e6a0352",
+            "source": "124-269_退换货地址查询.md"
+          },
+          {
+            "chunk_id": "240a9a0f_0000_a759ee9c",
+            "source": "130-479_多付款项退款.md"
+          },
+          {
+            "chunk_id": "2f8d9e84_0000_ee22d1cf",
+            "source": "109-193_退货后原运费返还.md"
+          },
+          {
+            "chunk_id": "74df25a3_0000_4af9968d",
+            "source": "118-3516_无理由退货赠品处理.md"
+          }
+        ],
+        "all_required_at_5": true,
+        "all_required_chunks_at_5": true
+      },
+      "rrf_rerank": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "240a9a0f_0000_a759ee9c",
+            "source": "130-479_多付款项退款.md"
+          },
+          {
+            "chunk_id": "cf4b7091_0000_b8650c30",
+            "source": "130-487_退款成功提醒.md"
+          },
+          {
+            "chunk_id": "75fc2bb2_0000_7e6a0352",
+            "source": "124-269_退换货地址查询.md"
+          },
+          {
+            "chunk_id": "69d47790_0000_67c540f8",
+            "source": "325-925_家具厨具家装类售后细则.md"
+          },
+          {
+            "chunk_id": "b85a174c_0000_a86a687f",
+            "source": "130-485_白条退款手续费.md"
+          }
+        ],
+        "all_required_at_5": true,
+        "all_required_chunks_at_5": true
+      }
+    },
+    {
+      "case_id": "dev_c02",
+      "query": "自营退货服务单当天18点前提交，预计何时审核？审核后从哪里查寄回地址？",
+      "category": "cross_document",
+      "expected_sources": [
+        "124-269_退换货地址查询.md",
+        "127-792_服务单审核时间.md"
+      ],
+      "expected_chunk_ids": [
+        "176d7a6f_0000_df7bea2d",
+        "75fc2bb2_0000_7e6a0352"
+      ],
+      "required_chunk_ids": [
+        "176d7a6f_0000_df7bea2d",
+        "75fc2bb2_0000_7e6a0352"
+      ],
+      "dense_candidates": [
+        {
+          "chunk_id": "176d7a6f_0000_df7bea2d",
+          "source": "127-792_服务单审核时间.md"
+        },
+        {
+          "chunk_id": "75fc2bb2_0000_7e6a0352",
+          "source": "124-269_退换货地址查询.md"
+        },
+        {
+          "chunk_id": "15046f08_0000_c4613877",
+          "source": "123-268_退换货进度查询.md"
+        },
+        {
+          "chunk_id": "258e57de_0000_826a8231",
+          "source": "131-491_送到自提点是否收费.md"
+        },
+        {
+          "chunk_id": "d117b0e4_0000_bb6dd4c1",
+          "source": "118-810_退货改换货.md"
+        },
+        {
+          "chunk_id": "26ea994d_0000_81070dee",
+          "source": "118-544_退货照片上传方式.md"
+        },
+        {
+          "chunk_id": "af0c812c_0000_6babbbec",
+          "source": "325-929_食品饮料类售后细则.md"
+        },
+        {
+          "chunk_id": "0d47aecb_0000_0b6b57d8",
+          "source": "127-778_商品退换货资格查询.md"
+        },
+        {
+          "chunk_id": "74df25a3_0000_4af9968d",
+          "source": "118-3516_无理由退货赠品处理.md"
+        },
+        {
+          "chunk_id": "478eb843_0000_099b5f37",
+          "source": "119-842_退换货维修处理时长.md"
+        },
+        {
+          "chunk_id": "f46d6db6_0000_6628f49e",
+          "source": "325-933_汽车用品类售后细则.md"
+        },
+        {
+          "chunk_id": "b45902f8_0000_f45e1d72",
+          "source": "325-926_礼品箱包类售后细则.md"
+        },
+        {
+          "chunk_id": "5e773011_0000_24ec5e79",
+          "source": "127-456_发错货处理.md"
+        },
+        {
+          "chunk_id": "3940b46f_0000_0153406b",
+          "source": "126-406_售后服务总则.md"
+        },
+        {
+          "chunk_id": "69d47790_0000_67c540f8",
+          "source": "325-925_家具厨具家装类售后细则.md"
+        },
+        {
+          "chunk_id": "9756eab8_0001_49e427ae",
+          "source": "325-915_手机数码类售后细则.md"
+        },
+        {
+          "chunk_id": "f46d6db6_0001_d570ffdd",
+          "source": "325-933_汽车用品类售后细则.md"
+        },
+        {
+          "chunk_id": "9756eab8_0000_bb5c2382",
+          "source": "325-915_手机数码类售后细则.md"
+        },
+        {
+          "chunk_id": "49464d7b_0000_822b5700",
+          "source": "325-914_个护化妆类售后细则.md"
+        },
+        {
+          "chunk_id": "115866fd_0000_aeda9afc",
+          "source": "325-922_运动健康类售后细则.md"
+        }
+      ],
+      "bm25_candidates": [
+        {
+          "chunk_id": "176d7a6f_0000_df7bea2d",
+          "source": "127-792_服务单审核时间.md"
+        },
+        {
+          "chunk_id": "75fc2bb2_0000_7e6a0352",
+          "source": "124-269_退换货地址查询.md"
+        },
+        {
+          "chunk_id": "8a63259b_0000_d9b41f16",
+          "source": "131-496_自营售后运费说明.md"
+        },
+        {
+          "chunk_id": "240a9a0f_0000_a759ee9c",
+          "source": "130-479_多付款项退款.md"
+        },
+        {
+          "chunk_id": "15046f08_0000_c4613877",
+          "source": "123-268_退换货进度查询.md"
+        },
+        {
+          "chunk_id": "26ea994d_0000_81070dee",
+          "source": "118-544_退货照片上传方式.md"
+        },
+        {
+          "chunk_id": "c063faf9_0000_160e59c9",
+          "source": "126-300_自营上门取件费用.md"
+        },
+        {
+          "chunk_id": "5e773011_0000_24ec5e79",
+          "source": "127-456_发错货处理.md"
+        },
+        {
+          "chunk_id": "9756eab8_0001_49e427ae",
+          "source": "325-915_手机数码类售后细则.md"
+        },
+        {
+          "chunk_id": "0d47aecb_0000_0b6b57d8",
+          "source": "127-778_商品退换货资格查询.md"
+        },
+        {
+          "chunk_id": "730c1ac2_0000_6f4f301e",
+          "source": "325-931_生鲜类拒收售后细则.md"
+        },
+        {
+          "chunk_id": "c063faf9_0001_a1c88253",
+          "source": "126-300_自营上门取件费用.md"
+        },
+        {
+          "chunk_id": "0ea8e9ab_0001_358e7119",
+          "source": "325-919_电脑类售后细则.md"
+        },
+        {
+          "chunk_id": "258e57de_0000_826a8231",
+          "source": "131-491_送到自提点是否收费.md"
+        },
+        {
+          "chunk_id": "60cfc4d7_0000_e4310bf0",
+          "source": "325-930_母婴玩具乐器类售后细则.md"
+        },
+        {
+          "chunk_id": "f46d6db6_0001_d570ffdd",
+          "source": "325-933_汽车用品类售后细则.md"
+        },
+        {
+          "chunk_id": "d204ed25_0000_c2a2a22e",
+          "source": "118-453_质量问题处理.md"
+        },
+        {
+          "chunk_id": "d117b0e4_0000_bb6dd4c1",
+          "source": "118-810_退货改换货.md"
+        },
+        {
+          "chunk_id": "9756eab8_0000_bb5c2382",
+          "source": "325-915_手机数码类售后细则.md"
+        },
+        {
+          "chunk_id": "af0c812c_0000_6babbbec",
+          "source": "325-929_食品饮料类售后细则.md"
+        }
+      ],
+      "suspect_image_chunk_ids": [
+        "5e773011_0000_24ec5e79"
+      ],
+      "retrieval_ms": 239.5,
+      "rerank_ms": 328.9,
+      "dense": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "176d7a6f_0000_df7bea2d",
+            "source": "127-792_服务单审核时间.md"
+          },
+          {
+            "chunk_id": "75fc2bb2_0000_7e6a0352",
+            "source": "124-269_退换货地址查询.md"
+          },
+          {
+            "chunk_id": "15046f08_0000_c4613877",
+            "source": "123-268_退换货进度查询.md"
+          },
+          {
+            "chunk_id": "258e57de_0000_826a8231",
+            "source": "131-491_送到自提点是否收费.md"
+          },
+          {
+            "chunk_id": "d117b0e4_0000_bb6dd4c1",
+            "source": "118-810_退货改换货.md"
+          }
+        ],
+        "all_required_at_5": true,
+        "all_required_chunks_at_5": true
+      },
+      "bm25": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "176d7a6f_0000_df7bea2d",
+            "source": "127-792_服务单审核时间.md"
+          },
+          {
+            "chunk_id": "75fc2bb2_0000_7e6a0352",
+            "source": "124-269_退换货地址查询.md"
+          },
+          {
+            "chunk_id": "8a63259b_0000_d9b41f16",
+            "source": "131-496_自营售后运费说明.md"
+          },
+          {
+            "chunk_id": "240a9a0f_0000_a759ee9c",
+            "source": "130-479_多付款项退款.md"
+          },
+          {
+            "chunk_id": "15046f08_0000_c4613877",
+            "source": "123-268_退换货进度查询.md"
+          }
+        ],
+        "all_required_at_5": true,
+        "all_required_chunks_at_5": true
+      },
+      "rrf": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "176d7a6f_0000_df7bea2d",
+            "source": "127-792_服务单审核时间.md"
+          },
+          {
+            "chunk_id": "75fc2bb2_0000_7e6a0352",
+            "source": "124-269_退换货地址查询.md"
+          },
+          {
+            "chunk_id": "15046f08_0000_c4613877",
+            "source": "123-268_退换货进度查询.md"
+          },
+          {
+            "chunk_id": "26ea994d_0000_81070dee",
+            "source": "118-544_退货照片上传方式.md"
+          },
+          {
+            "chunk_id": "258e57de_0000_826a8231",
+            "source": "131-491_送到自提点是否收费.md"
+          }
+        ],
+        "all_required_at_5": true,
+        "all_required_chunks_at_5": true
+      },
+      "rrf_rerank": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "75fc2bb2_0000_7e6a0352",
+            "source": "124-269_退换货地址查询.md"
+          },
+          {
+            "chunk_id": "176d7a6f_0000_df7bea2d",
+            "source": "127-792_服务单审核时间.md"
+          },
+          {
+            "chunk_id": "0d47aecb_0000_0b6b57d8",
+            "source": "127-778_商品退换货资格查询.md"
+          },
+          {
+            "chunk_id": "15046f08_0000_c4613877",
+            "source": "123-268_退换货进度查询.md"
+          },
+          {
+            "chunk_id": "af0c812c_0000_6babbbec",
+            "source": "325-929_食品饮料类售后细则.md"
+          }
+        ],
+        "all_required_at_5": true,
+        "all_required_chunks_at_5": true
+      }
+    },
+    {
+      "case_id": "dev_n01",
+      "query": "扫地机器人用过，尘盒里留下灰，还能申请7天无理由退货吗？",
+      "category": "exception",
+      "expected_sources": [
+        "325-924_家用电器类售后细则.md"
+      ],
+      "expected_chunk_ids": [
+        "cc911888_0001_cc635127"
+      ],
+      "required_chunk_ids": [],
+      "dense_candidates": [
+        {
+          "chunk_id": "763ff3f5_0000_c20e420b",
+          "source": "127-427_自营商品7天无理由退货标准.md"
+        },
+        {
+          "chunk_id": "cc911888_0001_cc635127",
+          "source": "325-924_家用电器类售后细则.md"
+        },
+        {
+          "chunk_id": "69d47790_0000_67c540f8",
+          "source": "325-925_家具厨具家装类售后细则.md"
+        },
+        {
+          "chunk_id": "74df25a3_0000_4af9968d",
+          "source": "118-3516_无理由退货赠品处理.md"
+        },
+        {
+          "chunk_id": "1d74d496_0000_eb05090b",
+          "source": "325-928_服饰鞋帽类售后细则.md"
+        },
+        {
+          "chunk_id": "49464d7b_0000_822b5700",
+          "source": "325-914_个护化妆类售后细则.md"
+        },
+        {
+          "chunk_id": "cc911888_0000_1de2ee7f",
+          "source": "325-924_家用电器类售后细则.md"
+        },
+        {
+          "chunk_id": "115866fd_0000_aeda9afc",
+          "source": "325-922_运动健康类售后细则.md"
+        },
+        {
+          "chunk_id": "b45902f8_0000_f45e1d72",
+          "source": "325-926_礼品箱包类售后细则.md"
+        },
+        {
+          "chunk_id": "d204ed25_0000_c2a2a22e",
+          "source": "118-453_质量问题处理.md"
+        },
+        {
+          "chunk_id": "af0c812c_0000_6babbbec",
+          "source": "325-929_食品饮料类售后细则.md"
+        },
+        {
+          "chunk_id": "60cfc4d7_0000_e4310bf0",
+          "source": "325-930_母婴玩具乐器类售后细则.md"
+        },
+        {
+          "chunk_id": "3940b46f_0000_0153406b",
+          "source": "126-406_售后服务总则.md"
+        },
+        {
+          "chunk_id": "f46d6db6_0000_6628f49e",
+          "source": "325-933_汽车用品类售后细则.md"
+        },
+        {
+          "chunk_id": "861cfb73_0000_86e44d51",
+          "source": "325-921_图书音像教育类售后细则.md"
+        },
+        {
+          "chunk_id": "742d231b_0000_72268d78",
+          "source": "325-927_奢侈品类售后细则.md"
+        },
+        {
+          "chunk_id": "9756eab8_0001_49e427ae",
+          "source": "325-915_手机数码类售后细则.md"
+        },
+        {
+          "chunk_id": "d117b0e4_0000_bb6dd4c1",
+          "source": "118-810_退货改换货.md"
+        },
+        {
+          "chunk_id": "0ea8e9ab_0000_44ef30de",
+          "source": "325-919_电脑类售后细则.md"
+        },
+        {
+          "chunk_id": "17b5030f_0000_9bd98e59",
+          "source": "325-920_软件办公类售后细则.md"
+        }
+      ],
+      "bm25_candidates": [
+        {
+          "chunk_id": "cc911888_0001_cc635127",
+          "source": "325-924_家用电器类售后细则.md"
+        },
+        {
+          "chunk_id": "0ea8e9ab_0001_358e7119",
+          "source": "325-919_电脑类售后细则.md"
+        },
+        {
+          "chunk_id": "c53519a1_0001_56d4cfe2",
+          "source": "325-932_钟表首饰类售后细则.md"
+        },
+        {
+          "chunk_id": "0d47aecb_0000_0b6b57d8",
+          "source": "127-778_商品退换货资格查询.md"
+        },
+        {
+          "chunk_id": "8a63259b_0000_d9b41f16",
+          "source": "131-496_自营售后运费说明.md"
+        },
+        {
+          "chunk_id": "176d7a6f_0000_df7bea2d",
+          "source": "127-792_服务单审核时间.md"
+        },
+        {
+          "chunk_id": "5e773011_0000_24ec5e79",
+          "source": "127-456_发错货处理.md"
+        },
+        {
+          "chunk_id": "1cd87195_0000_074adffc",
+          "source": "118-310_无法申请售后原因.md"
+        },
+        {
+          "chunk_id": "c53519a1_0000_56ad6045",
+          "source": "325-932_钟表首饰类售后细则.md"
+        },
+        {
+          "chunk_id": "478eb843_0000_099b5f37",
+          "source": "119-842_退换货维修处理时长.md"
+        },
+        {
+          "chunk_id": "75fc2bb2_0000_7e6a0352",
+          "source": "124-269_退换货地址查询.md"
+        },
+        {
+          "chunk_id": "763ff3f5_0000_c20e420b",
+          "source": "127-427_自营商品7天无理由退货标准.md"
+        },
+        {
+          "chunk_id": "730c1ac2_0000_6f4f301e",
+          "source": "325-931_生鲜类拒收售后细则.md"
+        },
+        {
+          "chunk_id": "cc911888_0000_1de2ee7f",
+          "source": "325-924_家用电器类售后细则.md"
+        },
+        {
+          "chunk_id": "742d231b_0000_72268d78",
+          "source": "325-927_奢侈品类售后细则.md"
+        },
+        {
+          "chunk_id": "17b5030f_0000_9bd98e59",
+          "source": "325-920_软件办公类售后细则.md"
+        },
+        {
+          "chunk_id": "b45902f8_0000_f45e1d72",
+          "source": "325-926_礼品箱包类售后细则.md"
+        },
+        {
+          "chunk_id": "60cfc4d7_0000_e4310bf0",
+          "source": "325-930_母婴玩具乐器类售后细则.md"
+        },
+        {
+          "chunk_id": "c063faf9_0001_a1c88253",
+          "source": "126-300_自营上门取件费用.md"
+        },
+        {
+          "chunk_id": "49464d7b_0000_822b5700",
+          "source": "325-914_个护化妆类售后细则.md"
+        }
+      ],
+      "suspect_image_chunk_ids": [],
+      "retrieval_ms": 211.1,
+      "rerank_ms": 372.1,
+      "dense": {
+        "rank": 2,
+        "chunk_rank": 2,
+        "top_5": [
+          {
+            "chunk_id": "763ff3f5_0000_c20e420b",
+            "source": "127-427_自营商品7天无理由退货标准.md"
+          },
+          {
+            "chunk_id": "cc911888_0001_cc635127",
+            "source": "325-924_家用电器类售后细则.md"
+          },
+          {
+            "chunk_id": "69d47790_0000_67c540f8",
+            "source": "325-925_家具厨具家装类售后细则.md"
+          },
+          {
+            "chunk_id": "74df25a3_0000_4af9968d",
+            "source": "118-3516_无理由退货赠品处理.md"
+          },
+          {
+            "chunk_id": "1d74d496_0000_eb05090b",
+            "source": "325-928_服饰鞋帽类售后细则.md"
+          }
+        ]
+      },
+      "bm25": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "cc911888_0001_cc635127",
+            "source": "325-924_家用电器类售后细则.md"
+          },
+          {
+            "chunk_id": "0ea8e9ab_0001_358e7119",
+            "source": "325-919_电脑类售后细则.md"
+          },
+          {
+            "chunk_id": "c53519a1_0001_56d4cfe2",
+            "source": "325-932_钟表首饰类售后细则.md"
+          },
+          {
+            "chunk_id": "0d47aecb_0000_0b6b57d8",
+            "source": "127-778_商品退换货资格查询.md"
+          },
+          {
+            "chunk_id": "8a63259b_0000_d9b41f16",
+            "source": "131-496_自营售后运费说明.md"
+          }
+        ]
+      },
+      "rrf": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "cc911888_0001_cc635127",
+            "source": "325-924_家用电器类售后细则.md"
+          },
+          {
+            "chunk_id": "763ff3f5_0000_c20e420b",
+            "source": "127-427_自营商品7天无理由退货标准.md"
+          },
+          {
+            "chunk_id": "cc911888_0000_1de2ee7f",
+            "source": "325-924_家用电器类售后细则.md"
+          },
+          {
+            "chunk_id": "49464d7b_0000_822b5700",
+            "source": "325-914_个护化妆类售后细则.md"
+          },
+          {
+            "chunk_id": "b45902f8_0000_f45e1d72",
+            "source": "325-926_礼品箱包类售后细则.md"
+          }
+        ]
+      },
+      "rrf_rerank": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "cc911888_0001_cc635127",
+            "source": "325-924_家用电器类售后细则.md"
+          },
+          {
+            "chunk_id": "763ff3f5_0000_c20e420b",
+            "source": "127-427_自营商品7天无理由退货标准.md"
+          },
+          {
+            "chunk_id": "cc911888_0000_1de2ee7f",
+            "source": "325-924_家用电器类售后细则.md"
+          },
+          {
+            "chunk_id": "69d47790_0000_67c540f8",
+            "source": "325-925_家具厨具家装类售后细则.md"
+          },
+          {
+            "chunk_id": "742d231b_0000_72268d78",
+            "source": "325-927_奢侈品类售后细则.md"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "dev_n02",
+      "query": "自营商品已经过保，因故障送修，寄回运费仍由京东承担吗？",
+      "category": "exception",
+      "expected_sources": [
+        "131-496_自营售后运费说明.md"
+      ],
+      "expected_chunk_ids": [
+        "8a63259b_0000_d9b41f16"
+      ],
+      "required_chunk_ids": [],
+      "dense_candidates": [
+        {
+          "chunk_id": "8a63259b_0000_d9b41f16",
+          "source": "131-496_自营售后运费说明.md"
+        },
+        {
+          "chunk_id": "2f8d9e84_0000_ee22d1cf",
+          "source": "109-193_退货后原运费返还.md"
+        },
+        {
+          "chunk_id": "3940b46f_0000_0153406b",
+          "source": "126-406_售后服务总则.md"
+        },
+        {
+          "chunk_id": "74df25a3_0000_4af9968d",
+          "source": "118-3516_无理由退货赠品处理.md"
+        },
+        {
+          "chunk_id": "9756eab8_0001_49e427ae",
+          "source": "325-915_手机数码类售后细则.md"
+        },
+        {
+          "chunk_id": "0ea8e9ab_0000_44ef30de",
+          "source": "325-919_电脑类售后细则.md"
+        },
+        {
+          "chunk_id": "f46d6db6_0000_6628f49e",
+          "source": "325-933_汽车用品类售后细则.md"
+        },
+        {
+          "chunk_id": "f46d6db6_0001_d570ffdd",
+          "source": "325-933_汽车用品类售后细则.md"
+        },
+        {
+          "chunk_id": "69d47790_0000_67c540f8",
+          "source": "325-925_家具厨具家装类售后细则.md"
+        },
+        {
+          "chunk_id": "d204ed25_0000_c2a2a22e",
+          "source": "118-453_质量问题处理.md"
+        },
+        {
+          "chunk_id": "115866fd_0000_aeda9afc",
+          "source": "325-922_运动健康类售后细则.md"
+        },
+        {
+          "chunk_id": "af0c812c_0000_6babbbec",
+          "source": "325-929_食品饮料类售后细则.md"
+        },
+        {
+          "chunk_id": "b45902f8_0000_f45e1d72",
+          "source": "325-926_礼品箱包类售后细则.md"
+        },
+        {
+          "chunk_id": "0ea8e9ab_0001_358e7119",
+          "source": "325-919_电脑类售后细则.md"
+        },
+        {
+          "chunk_id": "49464d7b_0000_822b5700",
+          "source": "325-914_个护化妆类售后细则.md"
+        },
+        {
+          "chunk_id": "17b5030f_0000_9bd98e59",
+          "source": "325-920_软件办公类售后细则.md"
+        },
+        {
+          "chunk_id": "763ff3f5_0000_c20e420b",
+          "source": "127-427_自营商品7天无理由退货标准.md"
+        },
+        {
+          "chunk_id": "861cfb73_0000_86e44d51",
+          "source": "325-921_图书音像教育类售后细则.md"
+        },
+        {
+          "chunk_id": "cc911888_0000_1de2ee7f",
+          "source": "325-924_家用电器类售后细则.md"
+        },
+        {
+          "chunk_id": "1d74d496_0000_eb05090b",
+          "source": "325-928_服饰鞋帽类售后细则.md"
+        }
+      ],
+      "bm25_candidates": [
+        {
+          "chunk_id": "8a63259b_0000_d9b41f16",
+          "source": "131-496_自营售后运费说明.md"
+        },
+        {
+          "chunk_id": "2f8d9e84_0000_ee22d1cf",
+          "source": "109-193_退货后原运费返还.md"
+        },
+        {
+          "chunk_id": "3940b46f_0000_0153406b",
+          "source": "126-406_售后服务总则.md"
+        },
+        {
+          "chunk_id": "74df25a3_0000_4af9968d",
+          "source": "118-3516_无理由退货赠品处理.md"
+        },
+        {
+          "chunk_id": "3940b46f_0001_c844cc01",
+          "source": "126-406_售后服务总则.md"
+        },
+        {
+          "chunk_id": "9756eab8_0001_49e427ae",
+          "source": "325-915_手机数码类售后细则.md"
+        },
+        {
+          "chunk_id": "1cd87195_0000_074adffc",
+          "source": "118-310_无法申请售后原因.md"
+        },
+        {
+          "chunk_id": "240a9a0f_0000_a759ee9c",
+          "source": "130-479_多付款项退款.md"
+        },
+        {
+          "chunk_id": "c063faf9_0000_160e59c9",
+          "source": "126-300_自营上门取件费用.md"
+        },
+        {
+          "chunk_id": "3e0a58f9_0000_f0feb53d",
+          "source": "130-484_退款金额变少.md"
+        },
+        {
+          "chunk_id": "26ea994d_0000_81070dee",
+          "source": "118-544_退货照片上传方式.md"
+        },
+        {
+          "chunk_id": "cf4b7091_0000_b8650c30",
+          "source": "130-487_退款成功提醒.md"
+        },
+        {
+          "chunk_id": "258e57de_0000_826a8231",
+          "source": "131-491_送到自提点是否收费.md"
+        },
+        {
+          "chunk_id": "478eb843_0000_099b5f37",
+          "source": "119-842_退换货维修处理时长.md"
+        },
+        {
+          "chunk_id": "5e773011_0000_24ec5e79",
+          "source": "127-456_发错货处理.md"
+        },
+        {
+          "chunk_id": "b85a174c_0000_a86a687f",
+          "source": "130-485_白条退款手续费.md"
+        },
+        {
+          "chunk_id": "ecdc82f9_0000_8fc06c86",
+          "source": "104-137_物流信息查询.md"
+        },
+        {
+          "chunk_id": "730c1ac2_0000_6f4f301e",
+          "source": "325-931_生鲜类拒收售后细则.md"
+        },
+        {
+          "chunk_id": "0ea8e9ab_0000_44ef30de",
+          "source": "325-919_电脑类售后细则.md"
+        },
+        {
+          "chunk_id": "0ea8e9ab_0001_358e7119",
+          "source": "325-919_电脑类售后细则.md"
+        }
+      ],
+      "suspect_image_chunk_ids": [
+        "8a63259b_0000_d9b41f16",
+        "1cd87195_0000_074adffc"
+      ],
+      "retrieval_ms": 197.1,
+      "rerank_ms": 480.2,
+      "dense": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "8a63259b_0000_d9b41f16",
+            "source": "131-496_自营售后运费说明.md"
+          },
+          {
+            "chunk_id": "2f8d9e84_0000_ee22d1cf",
+            "source": "109-193_退货后原运费返还.md"
+          },
+          {
+            "chunk_id": "3940b46f_0000_0153406b",
+            "source": "126-406_售后服务总则.md"
+          },
+          {
+            "chunk_id": "74df25a3_0000_4af9968d",
+            "source": "118-3516_无理由退货赠品处理.md"
+          },
+          {
+            "chunk_id": "9756eab8_0001_49e427ae",
+            "source": "325-915_手机数码类售后细则.md"
+          }
+        ]
+      },
+      "bm25": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "8a63259b_0000_d9b41f16",
+            "source": "131-496_自营售后运费说明.md"
+          },
+          {
+            "chunk_id": "2f8d9e84_0000_ee22d1cf",
+            "source": "109-193_退货后原运费返还.md"
+          },
+          {
+            "chunk_id": "3940b46f_0000_0153406b",
+            "source": "126-406_售后服务总则.md"
+          },
+          {
+            "chunk_id": "74df25a3_0000_4af9968d",
+            "source": "118-3516_无理由退货赠品处理.md"
+          },
+          {
+            "chunk_id": "3940b46f_0001_c844cc01",
+            "source": "126-406_售后服务总则.md"
+          }
+        ]
+      },
+      "rrf": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "8a63259b_0000_d9b41f16",
+            "source": "131-496_自营售后运费说明.md"
+          },
+          {
+            "chunk_id": "2f8d9e84_0000_ee22d1cf",
+            "source": "109-193_退货后原运费返还.md"
+          },
+          {
+            "chunk_id": "3940b46f_0000_0153406b",
+            "source": "126-406_售后服务总则.md"
+          },
+          {
+            "chunk_id": "74df25a3_0000_4af9968d",
+            "source": "118-3516_无理由退货赠品处理.md"
+          },
+          {
+            "chunk_id": "9756eab8_0001_49e427ae",
+            "source": "325-915_手机数码类售后细则.md"
+          }
+        ]
+      },
+      "rrf_rerank": {
+        "rank": 1,
+        "chunk_rank": 1,
+        "top_5": [
+          {
+            "chunk_id": "8a63259b_0000_d9b41f16",
+            "source": "131-496_自营售后运费说明.md"
+          },
+          {
+            "chunk_id": "3940b46f_0000_0153406b",
+            "source": "126-406_售后服务总则.md"
+          },
+          {
+            "chunk_id": "2f8d9e84_0000_ee22d1cf",
+            "source": "109-193_退货后原运费返还.md"
+          },
+          {
+            "chunk_id": "0ea8e9ab_0000_44ef30de",
+            "source": "325-919_电脑类售后细则.md"
+          },
+          {
+            "chunk_id": "9756eab8_0001_49e427ae",
+            "source": "325-915_手机数码类售后细则.md"
+          }
+        ]
+      }
+    }
+  ],
+  "mode": "retrieval",
+  "collection": "jd_after_sales",
+  "split": "dev",
+  "test_set": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\tests\\fixtures\\jd_after_sales_dev_retrieval_v1.json",
+  "reranker": "dashscope/qwen3.7-text-rerank"
+}

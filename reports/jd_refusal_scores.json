@@ -1,0 +1,107 @@
+{
+  "scope": "reranker score calibration; no answer generation",
+  "cases": [
+    {
+      "case_id": "jd_after_sales_q28",
+      "query": "我的订单 JD123456 今天退款到账了吗？",
+      "expected": "unanswerable",
+      "max_rerank_score": 0.6434054961480795
+    },
+    {
+      "case_id": "jd_after_sales_q29",
+      "query": "我的快递现在到哪个配送站了？",
+      "expected": "unanswerable",
+      "max_rerank_score": 0.6500736684414132
+    },
+    {
+      "case_id": "jd_after_sales_q30",
+      "query": "服务单还没审核，直接告诉我准确退货仓库地址。",
+      "expected": "unanswerable",
+      "max_rerank_score": 0.7989994269567811
+    },
+    {
+      "case_id": "jd_after_sales_q37",
+      "query": "今天天气怎么样？",
+      "expected": "unanswerable",
+      "max_rerank_score": 0.2757429246734999
+    },
+    {
+      "case_id": "jd_after_sales_q38",
+      "query": "帮我写一首关于秋天的诗。",
+      "expected": "unanswerable",
+      "max_rerank_score": 0.17582462385572822
+    },
+    {
+      "case_id": "jd_after_sales_q39",
+      "query": "我的售后服务单现在审核通过了吗？",
+      "expected": "unanswerable",
+      "max_rerank_score": 0.7982667569990962
+    },
+    {
+      "case_id": "jd_after_sales_q40",
+      "query": "我这单退款今天几点能到账？",
+      "expected": "unanswerable",
+      "max_rerank_score": 0.5863747708328745
+    },
+    {
+      "case_id": "jd_after_sales_q41",
+      "query": "没有提供商品型号、订单信息和是否激活，请只回答我的这台笔记本能或不能7天无理由退货。",
+      "expected": "unanswerable",
+      "max_rerank_score": 0.6455606131513436
+    },
+    {
+      "case_id": "refuse_exact_compensation",
+      "query": "我自行寄回商品后，京东今天会给我补偿多少元逆向运费？请给准确金额。",
+      "expected": "unanswerable",
+      "max_rerank_score": 0.6638003713886015
+    },
+    {
+      "case_id": "refuse_latest_promotion",
+      "query": "京东今年双十一的最新退货特殊政策是什么？请给出具体条款。",
+      "expected": "unanswerable",
+      "max_rerank_score": 0.46120732498503997
+    },
+    {
+      "case_id": "control_dev_l01",
+      "query": "手机数码类售后条款里，含 SN 或 CDKEY 激活信息的游戏软件能退换吗？",
+      "expected": "answerable",
+      "max_rerank_score": 0.9624558241862895
+    },
+    {
+      "case_id": "control_hold_l01",
+      "query": "京东自营瑞士表无需订购配件时，正常维修要多少个工作日？",
+      "expected": "answerable",
+      "max_rerank_score": 0.9473424398023353
+    },
+    {
+      "case_id": "control_dev_s01",
+      "query": "包裹还在路上，订单里申请退货的入口用不了，可能是什么原因？",
+      "expected": "answerable",
+      "max_rerank_score": 0.729096920926559
+    },
+    {
+      "case_id": "control_hold_s01",
+      "query": "物流显示送到了，但我和家人都没拿到包裹，该怎么办？",
+      "expected": "answerable",
+      "max_rerank_score": 0.8675734190262837
+    },
+    {
+      "case_id": "control_dev_c01",
+      "query": "京东E卡多付款通常何时原路退回？处理成功后京东会发短信吗？",
+      "expected": "answerable",
+      "max_rerank_score": 0.7593992021634584
+    },
+    {
+      "case_id": "control_hold_c01",
+      "query": "按照京东自营手机数码类售后细则，手机出现质量问题，签收后多久能换货？寄回运费谁出？",
+      "expected": "answerable",
+      "max_rerank_score": 0.7837966753348822
+    }
+  ],
+  "mode": "scores",
+  "collection": "jd_after_sales",
+  "rrf_k": 60,
+  "split": null,
+  "test_set": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\tests\\fixtures\\jd_after_sales_refusal_10_v3.json",
+  "reranker": "dashscope/qwen3-rerank"
+}

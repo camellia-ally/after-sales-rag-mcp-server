@@ -1,0 +1,228 @@
+{
+  "name": "jd_after_sales_dev_retrieval_v1",
+  "collection": "jd_after_sales",
+  "purpose": "retrieval_ablation",
+  "split": "dev",
+  "label_status": "agent_draft; human review required",
+  "source_snapshot": "39 Markdown sources, 46 Chroma chunks, 2026-09-30",
+  "test_cases": [
+    {
+      "case_id": "dev_l01",
+      "query": "手机数码类售后条款里，含 SN 或 CDKEY 激活信息的游戏软件能退换吗？",
+      "answerability": "answerable",
+      "category": "lexical",
+      "expected_sources": [
+        "325-915_手机数码类售后细则.md"
+      ],
+      "expected_chunk_ids": [
+        "9756eab8_0000_bb5c2382"
+      ],
+      "reference_answer": "含授权或激活信息的游戏软件为特殊商品，不予退换货；质量问题应联系厂家售后。",
+      "evidence": [
+        {
+          "source": "325-915_手机数码类售后细则.md",
+          "quote": "序列号SN",
+          "matching_chunk_ids": [
+            "9756eab8_0000_bb5c2382"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "dev_l02",
+      "query": "生鲜订单的“坏损包退”要求魔镜等级达到 S2 吗？",
+      "answerability": "answerable",
+      "category": "lexical",
+      "expected_sources": [
+        "325-931_生鲜类拒收售后细则.md"
+      ],
+      "expected_chunk_ids": [
+        "730c1ac2_0000_6f4f301e"
+      ],
+      "reference_answer": "相关条款要求魔镜等级 S2 及以上，并满足自营订单及签收后规定时效等条件。",
+      "evidence": [
+        {
+          "source": "325-931_生鲜类拒收售后细则.md",
+          "quote": "S2及以上",
+          "matching_chunk_ids": [
+            "730c1ac2_0000_6f4f301e"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "dev_s01",
+      "query": "包裹还在路上，订单里申请退货的入口用不了，可能是什么原因？",
+      "answerability": "answerable",
+      "category": "semantic",
+      "expected_sources": [
+        "118-310_无法申请售后原因.md"
+      ],
+      "expected_chunk_ids": [
+        "1cd87195_0000_074adffc"
+      ],
+      "reference_answer": "配送途中可能无法申请售后，可尝试取消订单。",
+      "evidence": [
+        {
+          "source": "118-310_无法申请售后原因.md",
+          "quote": "配送途中无法申请售后",
+          "matching_chunk_ids": [
+            "1cd87195_0000_074adffc"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "dev_s02",
+      "query": "退款比商品页面当时写的价格少，会不会是优惠抵扣造成的？",
+      "answerability": "answerable",
+      "category": "semantic",
+      "expected_sources": [
+        "130-484_退款金额变少.md"
+      ],
+      "expected_chunk_ids": [
+        "3e0a58f9_0000_f0feb53d"
+      ],
+      "reference_answer": "退款按实际支付金额计算，优惠券、立减和满减可能影响金额。",
+      "evidence": [
+        {
+          "source": "130-484_退款金额变少.md",
+          "quote": "实际支付金额",
+          "matching_chunk_ids": [
+            "3e0a58f9_0000_f0feb53d"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "dev_c01",
+      "query": "京东E卡多付款通常何时原路退回？处理成功后京东会发短信吗？",
+      "answerability": "answerable",
+      "category": "cross_document",
+      "expected_sources": [
+        "130-479_多付款项退款.md",
+        "130-487_退款成功提醒.md"
+      ],
+      "expected_chunk_ids": [
+        "240a9a0f_0000_a759ee9c",
+        "cf4b7091_0000_b8650c30"
+      ],
+      "reference_answer": "一般在第二个工作日18:00前原路退回，节假日顺延；处理成功会有京东短信。",
+      "evidence": [
+        {
+          "source": "130-479_多付款项退款.md",
+          "quote": "京东E卡",
+          "matching_chunk_ids": [
+            "240a9a0f_0000_a759ee9c"
+          ]
+        },
+        {
+          "source": "130-487_退款成功提醒.md",
+          "quote": "短信告知",
+          "matching_chunk_ids": [
+            "cf4b7091_0000_b8650c30"
+          ]
+        }
+      ],
+      "review_status": "agent_draft",
+      "required_sources": [
+        "130-479_多付款项退款.md",
+        "130-487_退款成功提醒.md"
+      ],
+      "required_chunk_ids": [
+        "240a9a0f_0000_a759ee9c",
+        "cf4b7091_0000_b8650c30"
+      ]
+    },
+    {
+      "case_id": "dev_c02",
+      "query": "自营退货服务单当天18点前提交，预计何时审核？审核后从哪里查寄回地址？",
+      "answerability": "answerable",
+      "category": "cross_document",
+      "expected_sources": [
+        "127-792_服务单审核时间.md",
+        "124-269_退换货地址查询.md"
+      ],
+      "expected_chunk_ids": [
+        "176d7a6f_0000_df7bea2d",
+        "75fc2bb2_0000_7e6a0352"
+      ],
+      "reference_answer": "预计当天22:00前审核；审核后可从短信或服务单记录查看返回地址。",
+      "evidence": [
+        {
+          "source": "127-792_服务单审核时间.md",
+          "quote": "当天18:00前",
+          "matching_chunk_ids": [
+            "176d7a6f_0000_df7bea2d"
+          ]
+        },
+        {
+          "source": "124-269_退换货地址查询.md",
+          "quote": "服务单审核后",
+          "matching_chunk_ids": [
+            "75fc2bb2_0000_7e6a0352"
+          ]
+        }
+      ],
+      "review_status": "agent_draft",
+      "required_sources": [
+        "127-792_服务单审核时间.md",
+        "124-269_退换货地址查询.md"
+      ],
+      "required_chunk_ids": [
+        "176d7a6f_0000_df7bea2d",
+        "75fc2bb2_0000_7e6a0352"
+      ]
+    },
+    {
+      "case_id": "dev_n01",
+      "query": "扫地机器人用过，尘盒里留下灰，还能申请7天无理由退货吗？",
+      "answerability": "answerable",
+      "category": "exception",
+      "expected_sources": [
+        "325-924_家用电器类售后细则.md"
+      ],
+      "expected_chunk_ids": [
+        "cc911888_0001_cc635127"
+      ],
+      "reference_answer": "使用后产生难以恢复的使用痕迹，不支持7天无理由退货。",
+      "evidence": [
+        {
+          "source": "325-924_家用电器类售后细则.md",
+          "quote": "扫地机器人",
+          "matching_chunk_ids": [
+            "cc911888_0001_cc635127"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "dev_n02",
+      "query": "自营商品已经过保，因故障送修，寄回运费仍由京东承担吗？",
+      "answerability": "answerable",
+      "category": "exception",
+      "expected_sources": [
+        "131-496_自营售后运费说明.md"
+      ],
+      "expected_chunk_ids": [
+        "8a63259b_0000_d9b41f16"
+      ],
+      "reference_answer": "保修期外维修运费需客户承担。",
+      "evidence": [
+        {
+          "source": "131-496_自营售后运费说明.md",
+          "quote": "保修期外运费需要客户承担",
+          "matching_chunk_ids": [
+            "8a63259b_0000_d9b41f16"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    }
+  ]
+}

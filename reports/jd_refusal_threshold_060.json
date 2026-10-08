@@ -1,0 +1,177 @@
+{
+  "label_status": "agent_draft; human review required",
+  "scope": "refusal decision only; answer factuality needs manual review",
+  "min_rerank_score": 0.6,
+  "unanswerable_refusal_rate": 1.0,
+  "answerable_false_refusal_rate": 0.0,
+  "n_unanswerable": 10,
+  "n_answerable": 6,
+  "cases": [
+    {
+      "case_id": "jd_after_sales_q28",
+      "query": "我的订单 JD123456 今天退款到账了吗？",
+      "expected": "unanswerable",
+      "status": "refused",
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "max_rerank_score": 0.6434054961480795,
+      "stop_reason": "insufficient_evidence",
+      "elapsed_ms": 5933.7
+    },
+    {
+      "case_id": "jd_after_sales_q29",
+      "query": "我的快递现在到哪个配送站了？",
+      "expected": "unanswerable",
+      "status": "refused",
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "max_rerank_score": 0.6500736684414132,
+      "stop_reason": "insufficient_evidence",
+      "elapsed_ms": 6962.3
+    },
+    {
+      "case_id": "jd_after_sales_q30",
+      "query": "服务单还没审核，直接告诉我准确退货仓库地址。",
+      "expected": "unanswerable",
+      "status": "refused",
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "max_rerank_score": 0.7989994269567811,
+      "stop_reason": "insufficient_evidence",
+      "elapsed_ms": 8887.0
+    },
+    {
+      "case_id": "jd_after_sales_q37",
+      "query": "今天天气怎么样？",
+      "expected": "unanswerable",
+      "status": "refused",
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "max_rerank_score": 0.2757429246734999,
+      "stop_reason": "low_rerank_relevance",
+      "elapsed_ms": 624.8
+    },
+    {
+      "case_id": "jd_after_sales_q38",
+      "query": "帮我写一首关于秋天的诗。",
+      "expected": "unanswerable",
+      "status": "refused",
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "max_rerank_score": 0.17582462385572822,
+      "stop_reason": "low_rerank_relevance",
+      "elapsed_ms": 673.4
+    },
+    {
+      "case_id": "jd_after_sales_q39",
+      "query": "我的售后服务单现在审核通过了吗？",
+      "expected": "unanswerable",
+      "status": "refused",
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "max_rerank_score": 0.7982667569990962,
+      "stop_reason": "insufficient_evidence",
+      "elapsed_ms": 9301.7
+    },
+    {
+      "case_id": "jd_after_sales_q40",
+      "query": "我这单退款今天几点能到账？",
+      "expected": "unanswerable",
+      "status": "refused",
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "max_rerank_score": 0.5863747708328745,
+      "stop_reason": "low_rerank_relevance",
+      "elapsed_ms": 653.2
+    },
+    {
+      "case_id": "jd_after_sales_q41",
+      "query": "没有提供商品型号、订单信息和是否激活，请只回答我的这台笔记本能或不能7天无理由退货。",
+      "expected": "unanswerable",
+      "status": "refused",
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "max_rerank_score": 0.6455606131513436,
+      "stop_reason": "insufficient_evidence",
+      "elapsed_ms": 13226.0
+    },
+    {
+      "case_id": "refuse_exact_compensation",
+      "query": "我自行寄回商品后，京东今天会给我补偿多少元逆向运费？请给准确金额。",
+      "expected": "unanswerable",
+      "status": "refused",
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "max_rerank_score": 0.6638003713886015,
+      "stop_reason": "insufficient_evidence",
+      "elapsed_ms": 29115.6
+    },
+    {
+      "case_id": "refuse_latest_promotion",
+      "query": "京东今年双十一的最新退货特殊政策是什么？请给出具体条款。",
+      "expected": "unanswerable",
+      "status": "refused",
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "max_rerank_score": 0.46120732498503997,
+      "stop_reason": "low_rerank_relevance",
+      "elapsed_ms": 694.5
+    },
+    {
+      "case_id": "control_dev_l01",
+      "query": "手机数码类售后条款里，含 SN 或 CDKEY 激活信息的游戏软件能退换吗？",
+      "expected": "answerable",
+      "status": "answered",
+      "answer": "根据提供的检索资料，含SN或CDKEY激活信息的游戏软件属于特殊商品，**不予退换货**[1]。如遇质量问题，需直接联系生产厂家售后服务中心处理[1]。",
+      "max_rerank_score": 0.9624558241862895,
+      "stop_reason": "answered",
+      "elapsed_ms": 13319.7
+    },
+    {
+      "case_id": "control_hold_l01",
+      "query": "京东自营瑞士表无需订购配件时，正常维修要多少个工作日？",
+      "expected": "answerable",
+      "status": "answered",
+      "answer": "根据提供的检索资料，京东自营瑞士表无需订购配件时，正常维修需要60个工作日[1]。",
+      "max_rerank_score": 0.9473424398023353,
+      "stop_reason": "answered",
+      "elapsed_ms": 27580.8
+    },
+    {
+      "case_id": "control_dev_s01",
+      "query": "包裹还在路上，订单里申请退货的入口用不了，可能是什么原因？",
+      "expected": "answerable",
+      "status": "answered",
+      "answer": "根据检索资料，包裹还在路上（即商品在配送途中）时，平台通常限制直接申请售后或退货服务[1]。在此情况下，建议您尝试取消订单[1]。若排除配送因素，该入口无法使用还可能由网络或系统问题、订单已超出售后申请时间等原因导致[1]。",
+      "max_rerank_score": 0.729096920926559,
+      "stop_reason": "answered",
+      "elapsed_ms": 10381.2
+    },
+    {
+      "case_id": "control_hold_s01",
+      "query": "物流显示送到了，但我和家人都没拿到包裹，该怎么办？",
+      "expected": "answerable",
+      "status": "answered",
+      "answer": "根据检索资料，若物流显示已签收但未收到包裹，建议您按以下情况处理[1]：\n\n1. **优先排查代收情况**：检查是否由家人、朋友、公司前台、小区门卫或其他代收点代为签收并保管。\n2. **等待误操作补送**：部分情况可能是配送人员误点击了“已签收”，建议您耐心等待配送人员实际送货上门。\n3. **联系客服查询**：若长时间未收到货物，请根据订单类型联系对应客服协助查询：\n   * **京东自营商品**：联系京东在线客服帮您查询原因[1]。\n   * **第三方卖家商品**：直接联系商家客服处理[1]。",
+      "max_rerank_score": 0.8675734190262837,
+      "stop_reason": "answered",
+      "elapsed_ms": 13288.6
+    },
+    {
+      "case_id": "control_dev_c01",
+      "query": "京东E卡多付款通常何时原路退回？处理成功后京东会发短信吗？",
+      "expected": "answerable",
+      "status": "answered",
+      "answer": "根据提供的检索资料，回答如下：\n\n1. **退款时间**：使用京东E卡等支付方式产生的多付款项，通常会在**第二个工作日18:00之前**原路退回（如遇节假日或周六日，时间顺延）[2]。\n2. **短信通知**：京东在处理成功后**会发送短信告知**[1]。至于银行或支付渠道是否会同步发送短信提醒，则取决于相关系统的设置[1]。",
+      "max_rerank_score": 0.7593992021634584,
+      "stop_reason": "answered",
+      "elapsed_ms": 7337.0
+    },
+    {
+      "case_id": "control_hold_c01",
+      "query": "按照京东自营手机数码类售后细则，手机出现质量问题，签收后多久能换货？寄回运费谁出？",
+      "expected": "answerable",
+      "status": "answered",
+      "answer": "根据提供的检索资料：\n1. **换货时限**：自实际收到商品第二日起15日内可换货[1][2]。\n2. **寄回运费**：因商品质量问题属于非客户原因，返回运费由京东承担（不向客户收取）[2][4]。",
+      "max_rerank_score": 0.7837966753348822,
+      "stop_reason": "answered",
+      "elapsed_ms": 13085.0
+    }
+  ],
+  "mode": "refusal",
+  "collection": "jd_after_sales",
+  "rrf_k": 60,
+  "split": null,
+  "test_set": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\tests\\fixtures\\jd_after_sales_refusal_10_v3.json",
+  "reranker": "dashscope/qwen3-rerank"
+}

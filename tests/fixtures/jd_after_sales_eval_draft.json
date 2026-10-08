@@ -1,0 +1,716 @@
+{
+  "description": "Agent-drafted source-grounded questions for the public JD help article prototype. Human review and chunk ID labeling are still required before treating this as a golden set.",
+  "version": "0.1-draft",
+  "review_status": "agent_draft",
+  "collection": "jd_after_sales",
+  "answerability_distribution": {
+    "answerable": 24,
+    "partial": 3,
+    "unanswerable": 3
+  },
+  "test_cases": [
+    {
+      "case_id": "jd_after_sales_q01",
+      "query": "签收京东自营商品后，7天无理由退货的时间从哪天开始算？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "763ff3f5_0000_c20e420b"
+      ],
+      "expected_sources": [
+        "127-427_自营商品7天无理由退货标准.md"
+      ],
+      "source_article_ids": [
+        "127-427"
+      ],
+      "reference_answer": "从签收后的第二天开始计算，七天内商品完好可申请。",
+      "category": "time_rule",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q02",
+      "query": "申请7天无理由退货时，商品完好具体指什么？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "763ff3f5_0000_c20e420b"
+      ],
+      "expected_sources": [
+        "127-427_自营商品7天无理由退货标准.md"
+      ],
+      "source_article_ids": [
+        "127-427"
+      ],
+      "reference_answer": "保持原有品质和功能，商品本身、配件、商标标识齐全。",
+      "category": "condition",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q03",
+      "query": "自营商品7天无理由退货，赠品没有寄回会怎样？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "74df25a3_0000_4af9968d"
+      ],
+      "expected_sources": [
+        "118-3516_无理由退货赠品处理.md"
+      ],
+      "source_article_ids": [
+        "118-3516"
+      ],
+      "reference_answer": "主商品符合退货条件但赠品未返回时，无法按实付金额全额退款。",
+      "category": "cross_rule",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q04",
+      "query": "一个拆分订单只退部分主商品，赠品未退，退款如何处理？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "74df25a3_0000_4af9968d"
+      ],
+      "expected_sources": [
+        "118-3516_无理由退货赠品处理.md"
+      ],
+      "source_article_ids": [
+        "118-3516"
+      ],
+      "reference_answer": "需扣除赠品分摊到相应退货主商品的价格。",
+      "category": "exception",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q05",
+      "query": "自营商品出现质量问题，签收后第8天还能申请换货吗？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "d204ed25_0000_c2a2a22e",
+        "3940b46f_0000_0153406b"
+      ],
+      "expected_sources": [
+        "118-453_质量问题处理.md",
+        "126-406_售后服务总则.md"
+      ],
+      "source_article_ids": [
+        "118-453",
+        "126-406"
+      ],
+      "reference_answer": "帮助页写明质量问题支持15天内换货，具体以商品售后细则及审核为准。",
+      "category": "time_rule",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q06",
+      "query": "自营商品因质量问题退换货，返回运费由谁承担？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "8a63259b_0000_d9b41f16"
+      ],
+      "expected_sources": [
+        "131-496_自营售后运费说明.md"
+      ],
+      "source_article_ids": [
+        "131-496"
+      ],
+      "reference_answer": "属于非客户原因，返回运费由京东承担。",
+      "category": "fee_rule",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q07",
+      "query": "非PLUS会员因自己误购申请自营商品退货，返回运费由谁承担？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "8a63259b_0000_d9b41f16"
+      ],
+      "expected_sources": [
+        "131-496_自营售后运费说明.md"
+      ],
+      "source_article_ids": [
+        "131-496"
+      ],
+      "reference_answer": "客户原因由客户承担返回运费。",
+      "category": "fee_rule",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q08",
+      "query": "PLUS会员因误购退换自营商品，返回运费由谁承担？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "8a63259b_0000_d9b41f16"
+      ],
+      "expected_sources": [
+        "131-496_自营售后运费说明.md"
+      ],
+      "source_article_ids": [
+        "131-496"
+      ],
+      "reference_answer": "该页表格显示PLUS会员的客户原因退换货由京东承担返回运费。",
+      "category": "fee_rule",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q09",
+      "query": "自营商品因质量问题退货，原订单支付的运费会返还吗？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "2f8d9e84_0000_ee22d1cf"
+      ],
+      "expected_sources": [
+        "109-193_退货后原运费返还.md"
+      ],
+      "source_article_ids": [
+        "109-193"
+      ],
+      "reference_answer": "会返还原运费；若使用运费券支付，运费券不退回。",
+      "category": "fee_rule",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q10",
+      "query": "自营商品因非质量问题退货，原订单支付的运费会返还吗？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "2f8d9e84_0000_ee22d1cf"
+      ],
+      "expected_sources": [
+        "109-193_退货后原运费返还.md"
+      ],
+      "source_article_ids": [
+        "109-193"
+      ],
+      "reference_answer": "原订单运费不予返还。",
+      "category": "fee_rule",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q11",
+      "query": "我用运费券支付了运费，退货后运费券会退回来吗？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "2f8d9e84_0000_ee22d1cf"
+      ],
+      "expected_sources": [
+        "109-193_退货后原运费返还.md"
+      ],
+      "source_article_ids": [
+        "109-193"
+      ],
+      "reference_answer": "该帮助页说明运费券不予退回。",
+      "category": "exception",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q12",
+      "query": "退货服务单尚未审核，能改成换货吗？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "d117b0e4_0000_bb6dd4c1"
+      ],
+      "expected_sources": [
+        "118-810_退货改换货.md"
+      ],
+      "source_article_ids": [
+        "118-810"
+      ],
+      "reference_answer": "可自行取消原服务单，重新申请换货。",
+      "category": "workflow",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q13",
+      "query": "退货服务单已经审核，想改成换货应怎么办？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "d117b0e4_0000_bb6dd4c1"
+      ],
+      "expected_sources": [
+        "118-810_退货改换货.md"
+      ],
+      "source_article_ids": [
+        "118-810"
+      ],
+      "reference_answer": "建议联系在线客服处理。",
+      "category": "workflow",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q14",
+      "query": "京东自营商品当天18点前提交售后申请，预计何时审核？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "176d7a6f_0000_df7bea2d"
+      ],
+      "expected_sources": [
+        "127-792_服务单审核时间.md"
+      ],
+      "source_article_ids": [
+        "127-792"
+      ],
+      "reference_answer": "预计当天22点前审核。",
+      "category": "time_rule",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q15",
+      "query": "京东自营商品当天18点后提交售后申请，预计何时审核？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "176d7a6f_0000_df7bea2d"
+      ],
+      "expected_sources": [
+        "127-792_服务单审核时间.md"
+      ],
+      "source_article_ids": [
+        "127-792"
+      ],
+      "reference_answer": "预计次日12点前审核。",
+      "category": "time_rule",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q16",
+      "query": "京东收到问题商品后，退货和维修通常各需要多久？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "478eb843_0000_099b5f37"
+      ],
+      "expected_sources": [
+        "119-842_退换货维修处理时长.md"
+      ],
+      "source_article_ids": [
+        "119-842"
+      ],
+      "reference_answer": "退货自接收问题商品起7日内处理；维修自接收问题商品起30日内处理，检测及特殊情况可能延长。",
+      "category": "cross_rule",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q17",
+      "query": "京东自营商品发错货，应如何申请处理？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "5e773011_0000_24ec5e79"
+      ],
+      "expected_sources": [
+        "127-456_发错货处理.md"
+      ],
+      "source_article_ids": [
+        "127-456"
+      ],
+      "reference_answer": "在售后服务入口提交换货申请，由售后人员受理。",
+      "category": "workflow",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q18",
+      "query": "商品还在配送途中，为什么订单页面无法申请售后？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "1cd87195_0000_074adffc"
+      ],
+      "expected_sources": [
+        "118-310_无法申请售后原因.md"
+      ],
+      "source_article_ids": [
+        "118-310"
+      ],
+      "reference_answer": "帮助页列出配送途中无法申请售后，可尝试取消订单。",
+      "category": "diagnosis",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q19",
+      "query": "服务单审核通过后，从哪里查退换货地址？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "75fc2bb2_0000_7e6a0352"
+      ],
+      "expected_sources": [
+        "124-269_退换货地址查询.md"
+      ],
+      "source_article_ids": [
+        "124-269"
+      ],
+      "reference_answer": "可查看审核后的短信，或在返修/退换货记录中查看对应服务单。",
+      "category": "workflow",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q20",
+      "query": "京东App里从哪里查询退换货申请进度？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "15046f08_0000_c4613877"
+      ],
+      "expected_sources": [
+        "123-268_退换货进度查询.md"
+      ],
+      "source_article_ids": [
+        "123-268"
+      ],
+      "reference_answer": "我的 > 退换/售后 > 进度查询，找到商品后查看服务单进度。",
+      "category": "workflow",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q21",
+      "query": "物流显示签收但我没收到，自营订单该怎么处理？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "2b9ea08b_0000_c04af3a5"
+      ],
+      "expected_sources": [
+        "108-385_显示签收但未收到货.md"
+      ],
+      "source_article_ids": [
+        "108-385"
+      ],
+      "reference_answer": "先检查是否被家人或代收点签收；可能是配送员误操作，长时间未收到可联系京东在线客服查询。",
+      "category": "diagnosis",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q22",
+      "query": "为什么我的退款金额比订单标价低？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "3e0a58f9_0000_f0feb53d"
+      ],
+      "expected_sources": [
+        "130-484_退款金额变少.md"
+      ],
+      "source_article_ids": [
+        "130-484"
+      ],
+      "reference_answer": "退款按实际支付金额计算，优惠券、支付立减、满减等会影响金额；若低于实付金额可联系在线客服。",
+      "category": "fee_rule",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q23",
+      "query": "自营配送订单在哪里看物流更新？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "ecdc82f9_0000_8fc06c86"
+      ],
+      "expected_sources": [
+        "104-137_物流信息查询.md"
+      ],
+      "source_article_ids": [
+        "104-137"
+      ],
+      "reference_answer": "在我的订单中点击对应订单查看物流更新。",
+      "category": "workflow",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q24",
+      "query": "订单多支付的款项，用京东E卡支付时一般如何退回？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "240a9a0f_0000_a759ee9c"
+      ],
+      "expected_sources": [
+        "130-479_多付款项退款.md"
+      ],
+      "source_article_ids": [
+        "130-479"
+      ],
+      "reference_answer": "该帮助页说明多付款项一般在第二个工作日18:00前原路退回，节假日与周末顺延。",
+      "category": "time_rule",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q25",
+      "query": "我买的某个具体商品能否7天无理由退货？",
+      "answerability": "partial",
+      "expected_chunk_ids": [],
+      "expected_sources": [
+        "127-427_自营商品7天无理由退货标准.md",
+        "127-778_商品退换货资格查询.md"
+      ],
+      "source_article_ids": [
+        "127-427",
+        "127-778"
+      ],
+      "reference_answer": "一般规则是签收后七天内且商品完好；部分商品不适用，需查询具体商品详情页或商品售后政策。",
+      "category": "missing_product",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q26",
+      "query": "京东自营普通冰箱退货，上门取件收费标准是多少元一件？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "c063faf9_0000_160e59c9"
+      ],
+      "expected_sources": [
+        "126-300_自营上门取件费用.md"
+      ],
+      "source_article_ids": [
+        "126-300"
+      ],
+      "reference_answer": "公开收费标准列冰箱为大件商品，上门取件收费标准为50元/件；实际订单费用应以服务单展示为准。",
+      "category": "fee_rule",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q27",
+      "query": "我刚提交售后申请，现在审核完成了吗？",
+      "answerability": "partial",
+      "expected_chunk_ids": [],
+      "expected_sources": [
+        "127-792_服务单审核时间.md"
+      ],
+      "source_article_ids": [
+        "127-792"
+      ],
+      "reference_answer": "可说明自营商品预计审核时段，但无法读取该服务单当前状态。",
+      "category": "missing_order_state",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q28",
+      "query": "我的订单 JD123456 今天退款到账了吗？",
+      "answerability": "unanswerable",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "source_article_ids": [],
+      "reference_answer": "无法访问该订单或支付账户，不能判断实际到账状态。",
+      "category": "private_order_state",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q29",
+      "query": "我的快递现在到哪个配送站了？",
+      "answerability": "unanswerable",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "source_article_ids": [],
+      "reference_answer": "无法读取实时物流轨迹，不能判断当前位置。",
+      "category": "live_tracking",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q30",
+      "query": "服务单还没审核，直接告诉我准确退货仓库地址。",
+      "answerability": "unanswerable",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "source_article_ids": [],
+      "reference_answer": "公开帮助页没有该服务单的具体退货地址；需等待审核后从短信或服务单查看。",
+      "category": "private_order_state",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q31",
+      "query": "自营笔记本电脑激活 Windows 后，还能申请7天无理由退货吗？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "0ea8e9ab_0001_358e7119"
+      ],
+      "expected_sources": [
+        "325-919_电脑类售后细则.md"
+      ],
+      "source_article_ids": [
+        "325-919"
+      ],
+      "reference_answer": "电脑类细则指出，已激活 Windows 或 Office 的商品不支持7天无理由退货。",
+      "category": "category_rule",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q32",
+      "query": "电脑类商品签收后发现外观异常，应该在多久内提交退换货申请？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "0ea8e9ab_0000_44ef30de"
+      ],
+      "expected_sources": [
+        "325-919_电脑类售后细则.md"
+      ],
+      "source_article_ids": [
+        "325-919"
+      ],
+      "reference_answer": "签收后24小时内提交申请。",
+      "category": "time_rule",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q33",
+      "query": "自营生鲜商品无正当理由拒收，相关费用和风险由谁承担？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "730c1ac2_0000_6f4f301e"
+      ],
+      "expected_sources": [
+        "325-931_生鲜类拒收售后细则.md"
+      ],
+      "source_article_ids": [
+        "325-931"
+      ],
+      "reference_answer": "由用户承担，另有约定的除外。",
+      "category": "category_rule",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q34",
+      "query": "自营商品因质量问题退货，原订单运费是否返还？自己寄回的运费如何补偿？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "2f8d9e84_0000_ee22d1cf",
+        "8a63259b_0000_d9b41f16"
+      ],
+      "expected_sources": [
+        "109-193_退货后原运费返还.md",
+        "131-496_自营售后运费说明.md"
+      ],
+      "source_article_ids": [
+        "109-193",
+        "131-496"
+      ],
+      "reference_answer": "原订单运费返还，运费券不退；自己寄回先垫付，售后完成后按逆向运费补偿标准以京东余额返还。",
+      "category": "cross_document",
+      "language": "zh",
+      "review_status": "agent_draft",
+      "required_sources": [
+        "109-193_退货后原运费返还.md",
+        "131-496_自营售后运费说明.md"
+      ],
+      "required_chunk_ids": [
+        "2f8d9e84_0000_ee22d1cf",
+        "8a63259b_0000_d9b41f16"
+      ]
+    },
+    {
+      "case_id": "jd_after_sales_q35",
+      "query": "京东自营微波炉上门取件的公开收费标准是多少元一件？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "c063faf9_0000_160e59c9"
+      ],
+      "expected_sources": [
+        "126-300_自营上门取件费用.md"
+      ],
+      "source_article_ids": [
+        "126-300"
+      ],
+      "reference_answer": "微波炉属于中件商品，公开标准为30元/件。",
+      "category": "fee_rule",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q36",
+      "query": "京东自营普通小件商品上门取件的公开收费标准是多少元一件？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "c063faf9_0000_160e59c9"
+      ],
+      "expected_sources": [
+        "126-300_自营上门取件费用.md"
+      ],
+      "source_article_ids": [
+        "126-300"
+      ],
+      "reference_answer": "其余小件商品公开标准为8元/件。",
+      "category": "fee_rule",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q37",
+      "query": "今天天气怎么样？",
+      "answerability": "unanswerable",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "source_article_ids": [],
+      "reference_answer": "知识库没有实时天气数据。",
+      "category": "out_of_scope",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q38",
+      "query": "帮我写一首关于秋天的诗。",
+      "answerability": "unanswerable",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "source_article_ids": [],
+      "reference_answer": "售后帮助知识库没有写诗依据。",
+      "category": "out_of_scope",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q39",
+      "query": "我的售后服务单现在审核通过了吗？",
+      "answerability": "unanswerable",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "source_article_ids": [],
+      "reference_answer": "无法访问该服务单的实时审核状态。",
+      "category": "private_order_state",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q40",
+      "query": "我这单退款今天几点能到账？",
+      "answerability": "unanswerable",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "source_article_ids": [],
+      "reference_answer": "无法访问具体订单的退款进度。",
+      "category": "private_order_state",
+      "language": "zh",
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "jd_after_sales_q41",
+      "query": "我买的这个具体型号笔记本是否符合无理由退货资格？",
+      "answerability": "unanswerable",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "source_article_ids": [],
+      "reference_answer": "缺少型号、购买及激活状态，不能判定该商品的具体资格。",
+      "category": "missing_product_state",
+      "language": "zh",
+      "review_status": "agent_draft"
+    }
+  ],
+  "note": "Pilot draft. Source and chunk labels require human review. Chunk IDs match the local 46-chunk collection snapshot."
+}

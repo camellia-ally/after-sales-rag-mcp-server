@@ -1,0 +1,144 @@
+{
+  "label_status": "agent_draft; human review required",
+  "scope": "refusal decision only; answer factuality needs manual review",
+  "unanswerable_refusal_rate": 1.0,
+  "answerable_false_refusal_rate": 0.0,
+  "n_unanswerable": 10,
+  "n_answerable": 6,
+  "cases": [
+    {
+      "case_id": "jd_after_sales_q28",
+      "query": "我的订单 JD123456 今天退款到账了吗？",
+      "expected": "unanswerable",
+      "status": "refused",
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "elapsed_ms": 6560.1
+    },
+    {
+      "case_id": "jd_after_sales_q29",
+      "query": "我的快递现在到哪个配送站了？",
+      "expected": "unanswerable",
+      "status": "refused",
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "elapsed_ms": 4443.3
+    },
+    {
+      "case_id": "jd_after_sales_q30",
+      "query": "服务单还没审核，直接告诉我准确退货仓库地址。",
+      "expected": "unanswerable",
+      "status": "refused",
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "elapsed_ms": 6886.0
+    },
+    {
+      "case_id": "jd_after_sales_q37",
+      "query": "今天天气怎么样？",
+      "expected": "unanswerable",
+      "status": "refused",
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "elapsed_ms": 3388.4
+    },
+    {
+      "case_id": "jd_after_sales_q38",
+      "query": "帮我写一首关于秋天的诗。",
+      "expected": "unanswerable",
+      "status": "refused",
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "elapsed_ms": 3581.0
+    },
+    {
+      "case_id": "jd_after_sales_q39",
+      "query": "我的售后服务单现在审核通过了吗？",
+      "expected": "unanswerable",
+      "status": "refused",
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "elapsed_ms": 4981.5
+    },
+    {
+      "case_id": "jd_after_sales_q40",
+      "query": "我这单退款今天几点能到账？",
+      "expected": "unanswerable",
+      "status": "refused",
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "elapsed_ms": 10709.6
+    },
+    {
+      "case_id": "jd_after_sales_q41",
+      "query": "没有提供商品型号、订单信息和是否激活，请只回答我的这台笔记本能或不能7天无理由退货。",
+      "expected": "unanswerable",
+      "status": "refused",
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "elapsed_ms": 12872.8
+    },
+    {
+      "case_id": "refuse_exact_compensation",
+      "query": "我自行寄回商品后，京东今天会给我补偿多少元逆向运费？请给准确金额。",
+      "expected": "unanswerable",
+      "status": "refused",
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "elapsed_ms": 7495.8
+    },
+    {
+      "case_id": "refuse_latest_promotion",
+      "query": "京东今年双十一的最新退货特殊政策是什么？请给出具体条款。",
+      "expected": "unanswerable",
+      "status": "refused",
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "elapsed_ms": 9595.6
+    },
+    {
+      "case_id": "control_dev_l01",
+      "query": "手机数码类售后条款里，含 SN 或 CDKEY 激活信息的游戏软件能退换吗？",
+      "expected": "answerable",
+      "status": "answered",
+      "answer": "根据手机数码类售后细则，含授权/激活信息（包括且不限于序列号SN、激活码、CDKEY等）的游戏、软件类商品为特殊商品，**不予退换货**；若存在质量问题，请直接联系生产厂家的售后服务中心[1]。",
+      "elapsed_ms": 9973.2
+    },
+    {
+      "case_id": "control_hold_l01",
+      "query": "京东自营瑞士表无需订购配件时，正常维修要多少个工作日？",
+      "expected": "answerable",
+      "status": "answered",
+      "answer": "根据提供的检索资料，京东自营瑞士表在无需订购配件的情况下，正常维修周期为60个工作日[1]。",
+      "elapsed_ms": 8913.6
+    },
+    {
+      "case_id": "control_dev_s01",
+      "query": "包裹还在路上，订单里申请退货的入口用不了，可能是什么原因？",
+      "expected": "answerable",
+      "status": "answered",
+      "answer": "根据提供的检索资料，包裹还在路上（即商品处于配送途中）时，系统会限制直接申请售后或退货[1]。在此情况下，建议您尝试直接取消该订单[1]。",
+      "elapsed_ms": 4863.2
+    },
+    {
+      "case_id": "control_hold_s01",
+      "query": "物流显示送到了，但我和家人都没拿到包裹，该怎么办？",
+      "expected": "answerable",
+      "status": "answered",
+      "answer": "若物流显示已签收但未收到包裹，建议您按以下步骤处理：\n1. 优先查找代收点：包裹可能已被家人、朋友、公司前台或小区门卫等代收点代为收取，建议您优先查找[1]。\n2. 耐心等待配送：可能是配送人员误操作已签收，建议您耐心等待配送人员为您送货[1]。\n3. 联系客服查询：若长时间未收到货，京东自营商品建议您联系京东在线客服帮您查询原因；第三方卖家商品请直接联系商家客服处理[1]。",
+      "elapsed_ms": 10282.0
+    },
+    {
+      "case_id": "control_dev_c01",
+      "query": "京东E卡多付款通常何时原路退回？处理成功后京东会发短信吗？",
+      "expected": "answerable",
+      "status": "answered",
+      "answer": "根据提供的资料，回答如下：\n\n1. **退款时间**：使用京东E卡支付的先款订单，多支付款项会在**第二个工作日18:00之前**原路退回（节假日、周六日时间顺延）[2]。\n2. **短信通知**：退款处理成功后，**京东会发送短信告知**您[1]。（注：银行端是否同步发送短信提醒取决于各银行系统）[1]。",
+      "elapsed_ms": 9619.8
+    },
+    {
+      "case_id": "control_hold_c01",
+      "query": "按照京东自营手机数码类售后细则，手机出现质量问题，签收后多久能换货？寄回运费谁出？",
+      "expected": "answerable",
+      "status": "answered",
+      "answer": "根据提供的检索资料，针对京东自营手机数码类商品出现质量问题的情况：\n1. **换货时限**：自实际收到商品第二日起15日内可换货[1]。\n2. **寄回运费**：因商品质量问题产生的换货，返回运费由京东承担（即不收取返回运费）[2][4]。",
+      "elapsed_ms": 12845.6
+    }
+  ],
+  "mode": "refusal",
+  "collection": "jd_after_sales",
+  "rrf_k": 60,
+  "split": null,
+  "test_set": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\tests\\fixtures\\jd_after_sales_refusal_10_v3.json",
+  "reranker": "dashscope/qwen3-rerank"
+}

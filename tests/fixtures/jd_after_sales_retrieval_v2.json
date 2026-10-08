@@ -1,0 +1,715 @@
+{
+  "name": "jd_after_sales_retrieval_v2",
+  "collection": "jd_after_sales",
+  "split": "single_fixed_set",
+  "label_status": "agent_draft; human review required",
+  "rrf_k": 60,
+  "test_cases": [
+    {
+      "case_id": "dev_l01",
+      "query": "手机数码类售后条款里，含 SN 或 CDKEY 激活信息的游戏软件能退换吗？",
+      "answerability": "answerable",
+      "category": "keyword",
+      "expected_sources": [
+        "325-915_手机数码类售后细则.md"
+      ],
+      "expected_chunk_ids": [
+        "9756eab8_0000_bb5c2382"
+      ],
+      "reference_answer": "含授权或激活信息的游戏软件为特殊商品，不予退换货；质量问题应联系厂家售后。",
+      "evidence": [
+        {
+          "source": "325-915_手机数码类售后细则.md",
+          "quote": "序列号SN",
+          "matching_chunk_ids": [
+            "9756eab8_0000_bb5c2382"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "dev_l02",
+      "query": "生鲜订单的“坏损包退”要求魔镜等级达到 S2 吗？",
+      "answerability": "answerable",
+      "category": "keyword",
+      "expected_sources": [
+        "325-931_生鲜类拒收售后细则.md"
+      ],
+      "expected_chunk_ids": [
+        "730c1ac2_0000_6f4f301e"
+      ],
+      "reference_answer": "相关条款要求魔镜等级 S2 及以上，并满足自营订单及签收后规定时效等条件。",
+      "evidence": [
+        {
+          "source": "325-931_生鲜类拒收售后细则.md",
+          "quote": "S2及以上",
+          "matching_chunk_ids": [
+            "730c1ac2_0000_6f4f301e"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "hold_l01",
+      "query": "京东自营瑞士表无需订购配件时，正常维修要多少个工作日？",
+      "answerability": "answerable",
+      "category": "keyword",
+      "expected_sources": [
+        "325-932_钟表首饰类售后细则.md"
+      ],
+      "expected_chunk_ids": [
+        "c53519a1_0000_56ad6045"
+      ],
+      "reference_answer": "正常维修周期为60个工作日。",
+      "evidence": [
+        {
+          "source": "325-932_钟表首饰类售后细则.md",
+          "quote": "瑞士表60个工作日",
+          "matching_chunk_ids": [
+            "c53519a1_0000_56ad6045"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "hold_l02",
+      "query": "京东超市自营秒送的上门取件，基础运费是多少元？",
+      "answerability": "answerable",
+      "category": "keyword",
+      "expected_sources": [
+        "126-300_自营上门取件费用.md"
+      ],
+      "expected_chunk_ids": [
+        "c063faf9_0000_160e59c9"
+      ],
+      "reference_answer": "基础运费为5元；距离、重量和时段等费用可能另计。",
+      "evidence": [
+        {
+          "source": "126-300_自营上门取件费用.md",
+          "quote": "基础运费5元",
+          "matching_chunk_ids": [
+            "c063faf9_0000_160e59c9"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "hold_l03",
+      "query": "海尔品牌商品有质量问题时，厂家售后能直接换货吗？",
+      "answerability": "answerable",
+      "category": "keyword",
+      "expected_sources": [
+        "325-924_家用电器类售后细则.md"
+      ],
+      "expected_chunk_ids": [
+        "cc911888_0000_1de2ee7f"
+      ],
+      "reference_answer": "相关细则说明海尔品牌产品有质量问题时，厂家售后可直接更换。",
+      "evidence": [
+        {
+          "source": "325-924_家用电器类售后细则.md",
+          "quote": "海尔品牌的产品",
+          "matching_chunk_ids": [
+            "cc911888_0000_1de2ee7f"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "hold_l04",
+      "query": "退货服务单里的实物照片，要点哪个按钮上传？",
+      "answerability": "answerable",
+      "category": "keyword",
+      "expected_sources": [
+        "118-544_退货照片上传方式.md"
+      ],
+      "expected_chunk_ids": [
+        "26ea994d_0000_81070dee"
+      ],
+      "reference_answer": "在相应服务单的查看页面点击右下角“上传图片”按钮。",
+      "evidence": [
+        {
+          "source": "118-544_退货照片上传方式.md",
+          "quote": "上传图片",
+          "matching_chunk_ids": [
+            "26ea994d_0000_81070dee"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "hold_n02",
+      "query": "含激活码的游戏软件已拆封，还能按7天无理由退货吗？",
+      "answerability": "answerable",
+      "category": "keyword",
+      "expected_sources": [
+        "325-920_软件办公类售后细则.md",
+        "325-915_手机数码类售后细则.md"
+      ],
+      "expected_chunk_ids": [
+        "17b5030f_0000_9bd98e59",
+        "9756eab8_0000_bb5c2382"
+      ],
+      "reference_answer": "含授权或激活信息的游戏软件属于特殊商品，不予退换货。",
+      "evidence": [
+        {
+          "source": "325-920_软件办公类售后细则.md",
+          "quote": "游戏、软件类商品含授权/激活信息",
+          "matching_chunk_ids": [
+            "17b5030f_0000_9bd98e59"
+          ]
+        },
+        {
+          "source": "325-915_手机数码类售后细则.md",
+          "quote": "游戏、软件类商品含授权/激活信息",
+          "matching_chunk_ids": [
+            "9756eab8_0000_bb5c2382"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "hold_n03",
+      "query": "自营黄金首饰没有质量问题，只是不喜欢了，可以退货吗？",
+      "answerability": "answerable",
+      "category": "keyword",
+      "expected_sources": [
+        "325-932_钟表首饰类售后细则.md"
+      ],
+      "expected_chunk_ids": [
+        "c53519a1_0000_56ad6045",
+        "c53519a1_0001_56d4cfe2"
+      ],
+      "reference_answer": "黄金产品除质量问题以外不予退换货。",
+      "evidence": [
+        {
+          "source": "325-932_钟表首饰类售后细则.md",
+          "quote": "黄金产品除质量问题以外",
+          "matching_chunk_ids": [
+            "c53519a1_0000_56ad6045",
+            "c53519a1_0001_56d4cfe2"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "dev_s01",
+      "query": "包裹还在路上，订单里申请退货的入口用不了，可能是什么原因？",
+      "answerability": "answerable",
+      "category": "semantic",
+      "expected_sources": [
+        "118-310_无法申请售后原因.md"
+      ],
+      "expected_chunk_ids": [
+        "1cd87195_0000_074adffc"
+      ],
+      "reference_answer": "配送途中可能无法申请售后，可尝试取消订单。",
+      "evidence": [
+        {
+          "source": "118-310_无法申请售后原因.md",
+          "quote": "配送途中无法申请售后",
+          "matching_chunk_ids": [
+            "1cd87195_0000_074adffc"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "dev_s02",
+      "query": "退款比商品页面当时写的价格少，会不会是优惠抵扣造成的？",
+      "answerability": "answerable",
+      "category": "semantic",
+      "expected_sources": [
+        "130-484_退款金额变少.md"
+      ],
+      "expected_chunk_ids": [
+        "3e0a58f9_0000_f0feb53d"
+      ],
+      "reference_answer": "退款按实际支付金额计算，优惠券、立减和满减可能影响金额。",
+      "evidence": [
+        {
+          "source": "130-484_退款金额变少.md",
+          "quote": "实际支付金额",
+          "matching_chunk_ids": [
+            "3e0a58f9_0000_f0feb53d"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "hold_s01",
+      "query": "物流显示送到了，但我和家人都没拿到包裹，该怎么办？",
+      "answerability": "answerable",
+      "category": "semantic",
+      "expected_sources": [
+        "108-385_显示签收但未收到货.md"
+      ],
+      "expected_chunk_ids": [
+        "2b9ea08b_0000_c04af3a5"
+      ],
+      "reference_answer": "先确认代收情况；可能是配送员误操作，长时间未收到可联系京东客服。",
+      "evidence": [
+        {
+          "source": "108-385_显示签收但未收到货.md",
+          "quote": "配送人员误操作",
+          "matching_chunk_ids": [
+            "2b9ea08b_0000_c04af3a5"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "hold_s02",
+      "query": "手机上提交换货后，怎么查看售后处理到哪一步了？",
+      "answerability": "answerable",
+      "category": "semantic",
+      "expected_sources": [
+        "123-268_退换货进度查询.md"
+      ],
+      "expected_chunk_ids": [
+        "15046f08_0000_c4613877"
+      ],
+      "reference_answer": "在京东 App 的“我的 > 退换/售后 > 进度查询”查看服务单。",
+      "evidence": [
+        {
+          "source": "123-268_退换货进度查询.md",
+          "quote": "进度查询",
+          "matching_chunk_ids": [
+            "15046f08_0000_c4613877"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "hold_s03",
+      "query": "寄来的货和我下单买的不是同一件，在哪里发起换货？",
+      "answerability": "answerable",
+      "category": "semantic",
+      "expected_sources": [
+        "127-456_发错货处理.md"
+      ],
+      "expected_chunk_ids": [
+        "5e773011_0000_24ec5e79"
+      ],
+      "reference_answer": "通过客户服务或商品售后入口提交换货申请。",
+      "evidence": [
+        {
+          "source": "127-456_发错货处理.md",
+          "quote": "不是您订单中订购的商品",
+          "matching_chunk_ids": [
+            "5e773011_0000_24ec5e79"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "hold_s04",
+      "query": "售后退款办好后，京东和银行都会通知我吗？",
+      "answerability": "answerable",
+      "category": "semantic",
+      "expected_sources": [
+        "130-487_退款成功提醒.md"
+      ],
+      "expected_chunk_ids": [
+        "cf4b7091_0000_b8650c30"
+      ],
+      "reference_answer": "京东处理成功会短信告知；银行是否发短信取决于银行系统。",
+      "evidence": [
+        {
+          "source": "130-487_退款成功提醒.md",
+          "quote": "银行是否会发送短信",
+          "matching_chunk_ids": [
+            "cf4b7091_0000_b8650c30"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "hold_n01",
+      "query": "生鲜商品本身没问题，我不想要就拒收，费用和风险由谁承担？",
+      "answerability": "answerable",
+      "category": "semantic",
+      "expected_sources": [
+        "325-931_生鲜类拒收售后细则.md"
+      ],
+      "expected_chunk_ids": [
+        "730c1ac2_0000_6f4f301e"
+      ],
+      "reference_answer": "无正当理由拒收的相关费用和风险由用户承担，另有约定除外。",
+      "evidence": [
+        {
+          "source": "325-931_生鲜类拒收售后细则.md",
+          "quote": "无正当理由拒绝签收",
+          "matching_chunk_ids": [
+            "730c1ac2_0000_6f4f301e"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "hold_n04",
+      "query": "油烟机安装后留下拆不掉的使用痕迹，还能申请7天无理由退货吗？",
+      "answerability": "answerable",
+      "category": "semantic",
+      "expected_sources": [
+        "325-924_家用电器类售后细则.md"
+      ],
+      "expected_chunk_ids": [
+        "cc911888_0000_1de2ee7f",
+        "cc911888_0001_cc635127"
+      ],
+      "reference_answer": "安装后存在不可恢复使用痕迹的挂装电器不支持7天无理由退货。",
+      "evidence": [
+        {
+          "source": "325-924_家用电器类售后细则.md",
+          "quote": "安装后存在不可恢复的使用痕迹",
+          "matching_chunk_ids": [
+            "cc911888_0000_1de2ee7f",
+            "cc911888_0001_cc635127"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    },
+    {
+      "case_id": "dev_c01",
+      "query": "京东E卡多付款通常何时原路退回？处理成功后京东会发短信吗？",
+      "answerability": "answerable",
+      "category": "hybrid",
+      "expected_sources": [
+        "130-479_多付款项退款.md",
+        "130-487_退款成功提醒.md"
+      ],
+      "expected_chunk_ids": [
+        "240a9a0f_0000_a759ee9c",
+        "cf4b7091_0000_b8650c30"
+      ],
+      "reference_answer": "一般在第二个工作日18:00前原路退回，节假日顺延；处理成功会有京东短信。",
+      "evidence": [
+        {
+          "source": "130-479_多付款项退款.md",
+          "quote": "京东E卡",
+          "matching_chunk_ids": [
+            "240a9a0f_0000_a759ee9c"
+          ]
+        },
+        {
+          "source": "130-487_退款成功提醒.md",
+          "quote": "短信告知",
+          "matching_chunk_ids": [
+            "cf4b7091_0000_b8650c30"
+          ]
+        }
+      ],
+      "review_status": "agent_draft",
+      "required_sources": [
+        "130-479_多付款项退款.md",
+        "130-487_退款成功提醒.md"
+      ],
+      "required_chunk_ids": [
+        "240a9a0f_0000_a759ee9c",
+        "cf4b7091_0000_b8650c30"
+      ]
+    },
+    {
+      "case_id": "dev_c02",
+      "query": "自营退货服务单当天18点前提交，预计何时审核？审核后从哪里查寄回地址？",
+      "answerability": "answerable",
+      "category": "hybrid",
+      "expected_sources": [
+        "127-792_服务单审核时间.md",
+        "124-269_退换货地址查询.md"
+      ],
+      "expected_chunk_ids": [
+        "176d7a6f_0000_df7bea2d",
+        "75fc2bb2_0000_7e6a0352"
+      ],
+      "reference_answer": "预计当天22:00前审核；审核后可从短信或服务单记录查看返回地址。",
+      "evidence": [
+        {
+          "source": "127-792_服务单审核时间.md",
+          "quote": "当天18:00前",
+          "matching_chunk_ids": [
+            "176d7a6f_0000_df7bea2d"
+          ]
+        },
+        {
+          "source": "124-269_退换货地址查询.md",
+          "quote": "服务单审核后",
+          "matching_chunk_ids": [
+            "75fc2bb2_0000_7e6a0352"
+          ]
+        }
+      ],
+      "review_status": "agent_draft",
+      "required_sources": [
+        "127-792_服务单审核时间.md",
+        "124-269_退换货地址查询.md"
+      ],
+      "required_chunk_ids": [
+        "176d7a6f_0000_df7bea2d",
+        "75fc2bb2_0000_7e6a0352"
+      ]
+    },
+    {
+      "case_id": "hold_c01",
+      "query": "按照京东自营手机数码类售后细则，手机出现质量问题，签收后多久能换货？寄回运费谁出？",
+      "answerability": "answerable",
+      "category": "hybrid",
+      "expected_sources": [
+        "325-915_手机数码类售后细则.md",
+        "131-496_自营售后运费说明.md"
+      ],
+      "expected_chunk_ids": [
+        "9756eab8_0000_bb5c2382",
+        "8a63259b_0000_d9b41f16"
+      ],
+      "reference_answer": "手机数码类质量问题通常15日内可换货；非客户原因返回运费由京东承担。",
+      "evidence": [
+        {
+          "source": "325-915_手机数码类售后细则.md",
+          "quote": "15日内可换货",
+          "matching_chunk_ids": [
+            "9756eab8_0000_bb5c2382"
+          ]
+        },
+        {
+          "source": "131-496_自营售后运费说明.md",
+          "quote": "非客户原因",
+          "matching_chunk_ids": [
+            "8a63259b_0000_d9b41f16"
+          ]
+        }
+      ],
+      "review_status": "agent_draft",
+      "required_sources": [
+        "325-915_手机数码类售后细则.md",
+        "131-496_自营售后运费说明.md"
+      ],
+      "required_chunk_ids": [
+        "9756eab8_0000_bb5c2382",
+        "8a63259b_0000_d9b41f16"
+      ]
+    },
+    {
+      "case_id": "hold_c02",
+      "query": "按照京东自营家电售后细则，冰箱想无理由退货，期限是几天？如果收取上门取件费，公开标准是多少？",
+      "answerability": "answerable",
+      "category": "hybrid",
+      "expected_sources": [
+        "325-924_家用电器类售后细则.md",
+        "126-300_自营上门取件费用.md"
+      ],
+      "expected_chunk_ids": [
+        "cc911888_0000_1de2ee7f",
+        "c063faf9_0000_160e59c9"
+      ],
+      "reference_answer": "商品及附件完好时，收货次日起7天内可申请；冰箱属大件，公开取件标准50元/件。",
+      "evidence": [
+        {
+          "source": "325-924_家用电器类售后细则.md",
+          "quote": "7天内在商品",
+          "matching_chunk_ids": [
+            "cc911888_0000_1de2ee7f"
+          ]
+        },
+        {
+          "source": "126-300_自营上门取件费用.md",
+          "quote": "50元/件",
+          "matching_chunk_ids": [
+            "c063faf9_0000_160e59c9"
+          ]
+        }
+      ],
+      "review_status": "agent_draft",
+      "required_sources": [
+        "325-924_家用电器类售后细则.md",
+        "126-300_自营上门取件费用.md"
+      ],
+      "required_chunk_ids": [
+        "cc911888_0000_1de2ee7f",
+        "c063faf9_0000_160e59c9"
+      ]
+    },
+    {
+      "case_id": "hold_c03",
+      "query": "退款金额为什么比标价少？退款处理成功后会不会收到通知？",
+      "answerability": "answerable",
+      "category": "hybrid",
+      "expected_sources": [
+        "130-484_退款金额变少.md",
+        "130-487_退款成功提醒.md"
+      ],
+      "expected_chunk_ids": [
+        "3e0a58f9_0000_f0feb53d",
+        "cf4b7091_0000_b8650c30"
+      ],
+      "reference_answer": "退款按实付金额计算，优惠可能影响金额；京东处理成功会短信告知。",
+      "evidence": [
+        {
+          "source": "130-484_退款金额变少.md",
+          "quote": "实际支付金额",
+          "matching_chunk_ids": [
+            "3e0a58f9_0000_f0feb53d"
+          ]
+        },
+        {
+          "source": "130-487_退款成功提醒.md",
+          "quote": "短信告知",
+          "matching_chunk_ids": [
+            "cf4b7091_0000_b8650c30"
+          ]
+        }
+      ],
+      "review_status": "agent_draft",
+      "required_sources": [
+        "130-484_退款金额变少.md",
+        "130-487_退款成功提醒.md"
+      ],
+      "required_chunk_ids": [
+        "3e0a58f9_0000_f0feb53d",
+        "cf4b7091_0000_b8650c30"
+      ]
+    },
+    {
+      "case_id": "hold_c04",
+      "query": "PLUS会员自营商品因自己误购退货，寄回运费和原订单已收运费分别怎么处理？",
+      "answerability": "answerable",
+      "category": "hybrid",
+      "expected_sources": [
+        "131-496_自营售后运费说明.md",
+        "109-193_退货后原运费返还.md"
+      ],
+      "expected_chunk_ids": [
+        "8a63259b_0000_d9b41f16",
+        "2f8d9e84_0000_ee22d1cf"
+      ],
+      "reference_answer": "PLUS会员客户原因退货返回运费由京东承担；非质量问题退货原订单运费不返还。",
+      "evidence": [
+        {
+          "source": "131-496_自营售后运费说明.md",
+          "quote": "PLUS会员",
+          "matching_chunk_ids": [
+            "8a63259b_0000_d9b41f16"
+          ]
+        },
+        {
+          "source": "109-193_退货后原运费返还.md",
+          "quote": "非商品质量问题",
+          "matching_chunk_ids": [
+            "2f8d9e84_0000_ee22d1cf"
+          ]
+        }
+      ],
+      "review_status": "agent_draft",
+      "required_sources": [
+        "131-496_自营售后运费说明.md",
+        "109-193_退货后原运费返还.md"
+      ],
+      "required_chunk_ids": [
+        "8a63259b_0000_d9b41f16",
+        "2f8d9e84_0000_ee22d1cf"
+      ]
+    },
+    {
+      "case_id": "jd_after_sales_q34",
+      "query": "自营商品因质量问题退货，原订单运费是否返还？自己寄回的运费如何补偿？",
+      "answerability": "answerable",
+      "expected_chunk_ids": [
+        "2f8d9e84_0000_ee22d1cf",
+        "8a63259b_0000_d9b41f16"
+      ],
+      "expected_sources": [
+        "109-193_退货后原运费返还.md",
+        "131-496_自营售后运费说明.md"
+      ],
+      "source_article_ids": [
+        "109-193",
+        "131-496"
+      ],
+      "reference_answer": "原订单运费返还，运费券不退；自己寄回先垫付，售后完成后按逆向运费补偿标准以京东余额返还。",
+      "category": "hybrid",
+      "language": "zh",
+      "review_status": "agent_draft",
+      "required_sources": [
+        "109-193_退货后原运费返还.md",
+        "131-496_自营售后运费说明.md"
+      ],
+      "required_chunk_ids": [
+        "2f8d9e84_0000_ee22d1cf",
+        "8a63259b_0000_d9b41f16"
+      ],
+      "evidence": [
+        {
+          "source": "109-193_退货后原运费返还.md",
+          "quote": "如果是因商品质量问题",
+          "matching_chunk_ids": [
+            "2f8d9e84_0000_ee22d1cf"
+          ]
+        },
+        {
+          "source": "131-496_自营售后运费说明.md",
+          "quote": "商品寄回时需要您先垫付运费",
+          "matching_chunk_ids": [
+            "8a63259b_0000_d9b41f16"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "new_c01",
+      "query": "京东自营家电出现质量问题，签收后第60天还能申请换货吗？如果需寄回，返回运费由谁承担？",
+      "answerability": "answerable",
+      "category": "hybrid",
+      "expected_sources": [
+        "325-924_家用电器类售后细则.md",
+        "131-496_自营售后运费说明.md"
+      ],
+      "expected_chunk_ids": [
+        "cc911888_0000_1de2ee7f",
+        "8a63259b_0000_d9b41f16"
+      ],
+      "required_sources": [
+        "325-924_家用电器类售后细则.md",
+        "131-496_自营售后运费说明.md"
+      ],
+      "required_chunk_ids": [
+        "cc911888_0000_1de2ee7f",
+        "8a63259b_0000_d9b41f16"
+      ],
+      "reference_answer": "家电质量问题90天内可换货；非客户原因的返回运费由京东承担，具体以检测和售后审核为准。",
+      "evidence": [
+        {
+          "source": "325-924_家用电器类售后细则.md",
+          "quote": "90天质量问题包换",
+          "matching_chunk_ids": [
+            "cc911888_0000_1de2ee7f"
+          ]
+        },
+        {
+          "source": "131-496_自营售后运费说明.md",
+          "quote": "非客户原因",
+          "matching_chunk_ids": [
+            "8a63259b_0000_d9b41f16"
+          ]
+        }
+      ],
+      "review_status": "agent_draft"
+    }
+  ]
+}

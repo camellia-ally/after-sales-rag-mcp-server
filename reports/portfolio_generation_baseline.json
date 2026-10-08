@@ -1,0 +1,2122 @@
+{
+  "report_type": "portfolio_generation_baseline",
+  "complete": true,
+  "generated_at_utc": "2026-09-20T08:17:02.732715+00:00",
+  "test_set": "tests/fixtures/golden_test_set_portfolio.json",
+  "collection": "portfolio",
+  "top_k": 5,
+  "ragas_version": "0.2.15",
+  "metrics": {
+    "evaluated_count": 39,
+    "answered_count": 34,
+    "refused_count": 5,
+    "error_count": 0,
+    "judge_error_count": 0,
+    "status_accuracy": 1.0,
+    "citation_coverage": 1.0,
+    "citation_validity": 1.0,
+    "faithfulness_count": 34,
+    "faithfulness_mean": 0.9484955860172122
+  },
+  "expected_case_count": 39,
+  "results": [
+    {
+      "case_id": "portfolio_q01",
+      "query": "GPT-4-turbo 的上下文长度是多少？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "GPT-4-turbo 的上下文长度是 128k [1]。",
+      "reference_answer": "128k",
+      "retrieved_chunk_ids": [
+        "6ea14443_0010_97f1de33",
+        "6ea14443_0009_82c403ba",
+        "6ea14443_0051_5ea41f6e",
+        "6ea14443_0055_dfeb7df2",
+        "6ea14443_0016_606d8da5"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "6ea14443_0010_97f1de33",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.9582,
+          "text_snippet": "到 128k，相当于 300 页文本，并且训练知识更新到 2023 年 4 月 GPT3.5 是免费的，而 GPT-4 是收费的。需要开通 plus 会员 20 美元/月。 通常我们可以调用模型 API 来开发自己的应用，主流模型 API 对比如下： 语言模型名称 上下文长度 特点 input 费用($/million tokens) output 费用($/1M tokens)...",
+          "metadata": {
+            "title": "GPT-3.5 vs GPT-4 Model Comparison and API Pricing Overview",
+            "chunk_index": 10,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 21,
+        "prompt_tokens": 2282,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2303
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q02",
+      "query": "大语言模型为什么能成为AI应用开发的大一统基座模型？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "大语言模型能够成为AI应用开发的大一统基座模型，主要得益于其作为基座模型（foundation model）的特性与范式革新[2]。这种新型技术范式通过在海量无标注数据上进行预训练，使大模型具备通用的语言表示和知识能力，从而可广泛适用于多种下游任务[2]。相比传统AI开发中需为每个子任务单独构建、训练和优化模型的方式，大语言模型通过指令遵循与文本生成能力，将复杂的业务逻辑转化为Prompt设计与组合，显著降低了开发门槛与成本[3]。此外，大语言模型具备上下文感知、多语言支持、逐步推理等能力，使其在对话交互、写作、推理、跨领域应用等方面表现出色[1][2]。以ChatGPT为代表的对话式交互模式进一步推动了大模型作为统一入口的应用潜力，催生了如Auto-GPT、微软Jarvis等智能体项目，展现出大模型在构建多功能助手方面的巨大前景[1]。因此，大语言模型不仅提升了研发效率，还实现了“一个模型服务多个应用”的统一建模目标，构成了一种全新的、值得推广的AI开发范式[1]。",
+      "reference_answer": "因为大模型可以极大地提高研发效率，缩短开发周期，减少人力投入，并基于其推理、常识和写作能力获得更好的应用效果。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0020_b9678762",
+        "6ea14443_0019_21b18b6f",
+        "6ea14443_0031_19988b45",
+        "6ea14443_0102_248653f6",
+        "6ea14443_0001_a6b054ec"
+      ],
+      "citations": [
+        {
+          "index": 2,
+          "chunk_id": "6ea14443_0019_21b18b6f",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.9228,
+          "text_snippet": "3. 逐步推理：小型语言模型通常难以解决涉及多个推理步骤的复杂任务，例如数学问题。然而，LLM 通过采用思维链（CoT, Chain of Thought）推理策略，利用包含中间推理步骤的提示机制来解决这些任务，从而得出最终答案。据推测，这种能力可能是通过对代码的训练获得的。这些涌现能力让 LLM 在处理各种任务时表现出色，使它们成为解决复杂问题和应用于多领域的强大工具。 2.1.2...",
+          "metadata": {
+            "title": "基座模型与思维链推理在大型语言模型中的应用",
+            "chunk_index": 19,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 3,
+          "chunk_id": "6ea14443_0031_19988b45",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.8538,
+          "text_snippet": "大模型开发要素 同时，以调用、发挥大模型为核心的大模型开发与传统的 AI 开发在整体思路上有着较大的不同。大语言模型的两个核心能力：指令遵循与文本生成，提供了复杂业务逻辑的简单平替方案。 传统 AI 开发：首先需要将非常复杂的业务逻辑依次拆解，对于每一个子业务构造训练数据与验证数据，对于每一个子业务训练优化模型，最后形成完整的模型链路来解决整个业务逻辑。 大模型开发：用 Prompt...",
+          "metadata": {
+            "title": "大模型开发与传统AI开发的核心差异对比",
+            "chunk_index": 31,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 1,
+          "chunk_id": "6ea14443_0020_b9678762",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.9999,
+          "text_snippet": "大语言模型是这个新模式的典型例子，使用统一的大模型可以极大地提高研发效率。相比于每次开发单个模型的方式，这是一项本质上的进步。大型模型不仅可以缩短每个具体应用的开发周期，减少所需人力投入，也可以基于大模型的推理、常识和写作能力，获得更好的应用效果。因此，大模型可以成为AI应用开发的大一统基座模型，这是一个一举多得、全新的范式，值得大力推广。 2.1.3 支持对话作为统一入口的能力...",
+          "metadata": {
+            "title": "大语言模型的特性与对话式AI应用前景",
+            "chunk_index": 20,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 253,
+        "prompt_tokens": 2353,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2606
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q03",
+      "query": "LangServe 在 LangChain 框架中主要提供什么功能？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "LangServe 在 LangChain 框架中主要提供将 LangChain 应用程序部署到云端的功能，支持可扩展、高可用的托管解决方案，并具备监控和日志功能，从而简化部署流程，使开发者能够专注于应用开发而无需关注底层基础设施和运维工作[1]。",
+      "reference_answer": "部署服务，用于将 LangChain 应用程序部署到云端，提供可扩展、高可用的托管解决方案，并带有监控和日志功能。简化部署流程，让开发者可以专注于应用程序的开发，而不必担心底层的基础设施和运维工作。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0030_d148b07f",
+        "6ea14443_0029_509427a5",
+        "6ea14443_0028_2cffbed8",
+        "6ea14443_0027_093b36d4",
+        "6ea14443_0122_3e9e3ce0"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "6ea14443_0030_d148b07f",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.9659,
+          "text_snippet": "库。 LangChain CLI: 命令行工具，使开发者能够通过终端与 LangChain 框架交互，执行项目初始化、测试、部署等任务。提高开发效率，让开发者能够通过简单的命令来管理整个应用程序的生命周期。 LangServe: 部署服务，用于将 LangChain...",
+          "metadata": {
+            "title": "LangChain 开发工具与大模型应用开发流程入门",
+            "chunk_index": 30,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 64,
+        "prompt_tokens": 2474,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2538
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q05",
+      "query": "System Prompt 和 User Prompt 的主要区别是什么？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "System Prompt 和 User Prompt 的主要区别在于它们在对话中的角色和作用不同：\n\n- **System Prompt** 是用于对模型进行初始化设定的提示，它在整个会话过程中持久地影响模型的回复风格、行为或人设，具有更高的重要性。例如，可以设置模型为“幽默风趣的个人知识库助手”[1]。System Prompt 通常在一个会话中仅有一个，并且不随用户输入变化而改变。\n\n- **User Prompt** 则是用户实际提出的问题或指令，是需要模型做出回应的具体输入内容。它是动态的，每次交互都可能不同，直接驱动模型生成具体的回答[1]。\n\n因此，System Prompt 定义了模型“如何表现”，而 User Prompt 决定了模型“回答什么”[2]。",
+      "reference_answer": "System Prompt会在整个会话过程中持久地影响模型的回复，且相比于普通 Prompt 具有更高的重要性；User Prompt更偏向于我们平时提到的 Prompt，即需要模型做出回复的输入。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0049_691540f3",
+        "6ea14443_0050_6937c07f",
+        "6ea14443_0048_403302c2",
+        "6ea14443_0055_dfeb7df2",
+        "6ea14443_0229_212eb2e7"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "6ea14443_0049_691540f3",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.9723,
+          "text_snippet": "3. System Prompt System Prompt 是随着 ChatGPT API 开放并逐步得到大量使用的一个新兴概念，事实上，它并不在大模型本身训练中得到体现，而是大模型服务方为提升用户体验所设置的一种策略。 具体来说，在使用 ChatGPT API 时，你可以设置两种 Prompt：一种是 System Prompt，该种 Prompt...",
+          "metadata": {
+            "title": "Understanding System Prompt in ChatGPT API",
+            "chunk_index": 49,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 2,
+          "chunk_id": "6ea14443_0050_6937c07f",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.961,
+          "text_snippet": "我们一般设置 System Prompt 来对模型进行一些初始化设定，例如，我们可以在 System Prompt 中给模型设定我们希望它具备的人设，如一个个人知识库助手等。System Prompt 一般在一个会话中仅有一个。在通过 System Prompt 设定好模型的人设或是初始设置后，我们可以通过 User Prompt...",
+          "metadata": {
+            "title": "使用 System Prompt 与 LLM API 构建个性化智能助手",
+            "chunk_index": 50,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 168,
+        "prompt_tokens": 2322,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2490
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q06",
+      "query": "在使用文心千帆API时，如何正确配置用户角色和系统角色的prompt？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "在使用文心千帆API时，正确配置用户角色和系统角色的prompt需遵循以下规则：\n\n- **用户角色（user）**：通过 `messages` 列表中的 `\"role\": \"user\"` 来配置，其内容为用户的输入提示词。例如：\n  ```python\n  messages = [{\"role\": \"user\", \"content\": \"你好，介绍一下你自己\"}]\n  ```\n\n- **系统角色（system）**：与OpenAI不同，文心千帆的模型人设（即系统角色）通过独立的 `system` 参数传入，而不是放在 `messages` 中。例如：\n  ```python\n  resp = chat_comp.do(\n      messages=message,\n      model=model,\n      temperature=temperature,\n      system=\"你是一名个人助理-小鲸鱼\"\n  )\n  ```\n\n综上，文心千帆API中：\n- 用户提示词应放入 `messages` 列表中，角色为 `\"user\"`；\n- 系统角色设定（如模型人设）应通过 `system` 参数单独传入[1]。\n\n此外，需注意：\n- `messages` 列表中成员数量必须为奇数，且角色顺序应为 `user` → `assistant` → `user` → ...，最后一个消息必须是 `user` 角色[4]；\n- `system`、`messages` 中的 `content` 总长度不能超过20480个字符，且总token数不超过5120，否则模型会自动遗忘前文[2][4]。\n\n因此，正确配置方式为：将用户输入作为 `messages` 中的 `\"user\"` 内容，将模型人设等系统级指令通过 `system` 参数传入[1]。",
+      "reference_answer": "模型人设是通过system字段传入的，而不是在messages字段中；用户提示词通过messages字段中的role为'user'的内容传入。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0059_ac1aaed3",
+        "6ea14443_0060_21446d93",
+        "6ea14443_0055_dfeb7df2",
+        "6ea14443_0061_9bbcfc28",
+        "6ea14443_0057_85ff66f8"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "6ea14443_0059_ac1aaed3",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.9816,
+          "text_snippet": "用户账户-安全认证页，查看 Access Key、Secret Key，并将获取到的参数相应地填写到 .env 文件的 QIANFAN_ACCESS_KEY、QIANFAN_SECRET_KEY。然后执行以下代码，将密钥加载到环境变量中。 from dotenv import load_dotenv, find_dotenv # 读取本地/项目的环境变量。 # find_dotenv()...",
+          "metadata": {
+            "title": "配置文心千帆API密钥与消息格式指南",
+            "chunk_index": 59,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 4,
+          "chunk_id": "6ea14443_0061_9bbcfc28",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.6091,
+          "text_snippet": "max_token 参数由模型自行控制最大 token 数，messages 中的 content 总长度、functions 和 system 字段总内容不能超过 20480 个字符，且不能超过 5120 tokens，否则模型就会自行对前文依次遗忘。文心的 messages 有以下几点要求：① 一个成员为单轮对话，多个成员为多轮对话；② 最后一个 message 为当前对话，前面的...",
+          "metadata": {
+            "title": "ERNIE-Bot 模型消息长度与 token 限制说明",
+            "chunk_index": 61,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 2,
+          "chunk_id": "6ea14443_0060_21446d93",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.6757,
+          "text_snippet": "def get_completion(prompt, model=\"ERNIE-Bot\", temperature=0.01): ''' 获取文心模型调用结果 请求参数： prompt: 对应的提示词 model: 调用的模型，默认为 ERNIE-Bot，也可以按需选择 ERNIE-Bot-4 等其他模型 temperature: 模型输出的温度系数，控制输出的随机程度，取值范围是...",
+          "metadata": {
+            "title": "使用文心大模型ERNIE-Bot构建个人助理对话系统",
+            "chunk_index": 60,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 372,
+        "prompt_tokens": 2236,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2608
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q07",
+      "query": "设计高效Prompt时应遵循哪两个关键原则？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "设计高效Prompt时应遵循的两个关键原则是：编写清晰、具体的指令[1]，以及给予模型充足思考时间[1]。",
+      "reference_answer": "编写清晰、具体的指令和给予模型充足思考时间。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0144_a2129d69",
+        "6ea14443_0070_6646ddf9",
+        "6ea14443_0115_2ce7e1ce",
+        "6ea14443_0172_e781131c",
+        "6ea14443_0152_fc0dc691"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "6ea14443_0144_a2129d69",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 1.0,
+          "text_snippet": "第二章 提示原则 如何去使用 Prompt，以充分发挥 LLM 的性能？首先我们需要知道设计 Prompt 的原则，它们是每一个开发者设计 Prompt 所必须知道的基础概念。本章讨论了设计高效 Prompt 的两个关键原则：编写清晰、具体的指令和给予模型充足思考时间。掌握这两点，对创建可靠的语言模型交互尤为重要。 首先，Prompt...",
+          "metadata": {
+            "title": "设计高效Prompt的两大核心原则：清晰指令与充分推理",
+            "chunk_index": 144,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 31,
+        "prompt_tokens": 2053,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2084
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q12",
+      "query": "embed_documents方法的返回值是什么类型？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "`embed_documents` 方法的返回值类型是 `List[List[float]]`，即一个包含多个浮点数列表的列表，每个内部列表代表对应文本的 embedding 向量[1]。",
+      "reference_answer": "返回一个列表，其中每个元素都是一个浮点值列表，表示输入文本列表中每个文档的embedding。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0120_c3daf1ff",
+        "6ea14443_0119_ff1961d0",
+        "6ea14443_0118_edbce7f4",
+        "6ea14443_0121_1a11288e",
+        "6ea14443_0090_f3b00e7a"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "6ea14443_0120_c3daf1ff",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.9999,
+          "text_snippet": "def embed_documents(self, texts: List[str]) -> List[List[float]]: \"\"\" 生成输入文本列表的 embedding. Args: texts (List[str]): 要生成 embedding 的文本列表. Returns: List[List[float]]: 输入列表中每个文档的 embedding 列表。每个...",
+          "metadata": {
+            "title": "文本嵌入生成函数实现",
+            "chunk_index": 120,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 43,
+        "prompt_tokens": 1975,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2018
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q13",
+      "query": "LCEL是什么？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "LCEL（LangChain Expression Language，LangChain的表达式语言）是一种新的语法，是LangChain工具包的重要补充[1]。它使得处理LangChain和代理更加简单方便，提供了异步、批处理和流处理支持，使代码可以快速在不同服务器中移植，并拥有后备措施以解决LLM格式输出的问题[1]。此外，LCEL支持并行性，提高了效率，并内置了日志记录功能，有助于理解复杂链条和代理的运行情况[3]。通过使用`|`符号（类似Unix管道运算符），开发者可以将不同的组件如提示模板、模型和输出解析器链接成一个链，实现数据的连续处理[3]。",
+      "reference_answer": "LCEL（LangChain Expression Language，Langchain的表达式语言）是一种新的语法，是LangChain工具包的重要补充，它提供了异步、批处理和流处理支持，使代码可以快速在不同服务器中移植，并拥有后备措施来解决LLM格式输出的问题。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0131_7466347e",
+        "6ea14443_0029_509427a5",
+        "6ea14443_0132_5dc2dff4",
+        "6ea14443_0130_a7a6c7ad",
+        "6ea14443_0027_093b36d4"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "6ea14443_0131_7466347e",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.9936,
+          "text_snippet": "我扛着比我的身体还重的行李，潜入尼罗河的底部。穿过几道闪电后，我看到一堆光环，不确定这是否就是目的地。 什么是 LCEL ？ LCEL（LangChain Expression...",
+          "metadata": {
+            "title": "LCEL: LangChain Expression Language for Enhanced Agent Development",
+            "chunk_index": 131,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 3,
+          "chunk_id": "6ea14443_0132_5dc2dff4",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.8243,
+          "text_snippet": "LLM接入LangChain.md 2024-04-12 LCEL增加了LLM的并行性，提高了效率。 LCEL内置了日志记录，即使代理变得复杂，有助于理解复杂链条和代理的运行情况。 用法示例： chain = prompt | model | output_parser 上面代码中我们使用 LCEL...",
+          "metadata": {
+            "title": "LCEL与文心大模型在LangChain中的集成与调用",
+            "chunk_index": 132,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 149,
+        "prompt_tokens": 2027,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2176
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q16",
+      "query": "在设计Prompt时，为什么需要指定完成任务所需的步骤？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "在设计Prompt时，需要指定完成任务所需的步骤，因为通过给出一系列明确的步骤，可以帮助模型更好地理解任务要求，提高任务完成的效率和准确性[1]。这种做法能够引导模型进行逐步推理，避免因任务复杂而产生错误或不完整的输出[2]。此外，指定步骤还能让模型有足够的时间进行逻辑思考，从而提升结果的可靠性和质量[4]。",
+      "reference_answer": "通过给定一个复杂任务，给出完成任务的一系列步骤，可以帮助模型更好地理解任务要求，提高任务完成的效率。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0173_160e1d8d",
+        "6ea14443_0076_c61e1c9d",
+        "6ea14443_0142_ebc09ac8",
+        "6ea14443_0171_83b64266",
+        "6ea14443_0177_d134dd6c"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "6ea14443_0173_160e1d8d",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 1.0,
+          "text_snippet": "2. 评估并优化生成部分的结果。 3. 在设计Prompt时，要指定完成任务所需的步骤。通过给定一个复杂任务，给出完成任务的一系列步骤，可以帮助模型更好地理解任务要求，提高任务完成的效率。 4. 迭代优化是构造Prompt的常用策略。通过不断尝试、分析结果、改进Prompt的过程，逐步逼近最优的Prompt形式。成功的Prompt通常是通过多轮调整得出的。 5....",
+          "metadata": {
+            "title": "优化Prompt设计与提升回答可信度的方法",
+            "chunk_index": 173,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 2,
+          "chunk_id": "6ea14443_0076_c61e1c9d",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.9941,
+          "text_snippet": "例如，若要语言模型推断一本书的主题，仅提供简单的书名和一句简介是不够的。这就像让一个人在极短时间内解决困难的数学题，错误在所难免。相反，我们应通过 Prompt 引导语言模型进行深入思考。可以要求其先列出对问题的各种看法，说明推理依据，然后再得出最终结论。在 Prompt 中添加逐步推理的要求，能让语言模型投入更多时间进行逻辑思维，输出结果也将更可靠准确。综上所述，给予语言模型充足的推理时间，是...",
+          "metadata": {
+            "title": "Prompt Engineering for Complex Task Decomposition in Language Models",
+            "chunk_index": 76,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 4,
+          "chunk_id": "6ea14443_0171_83b64266",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.8778,
+          "text_snippet": "评估并优化生成部分...",
+          "metadata": {
+            "title": "优化Prompt设计以提升大模型回答的清晰性与准确性",
+            "chunk_index": 171,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 87,
+        "prompt_tokens": 2705,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2792
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q18",
+      "query": "评估大模型回答时，逻辑性维度主要考察什么方面？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "评估大模型回答时，逻辑性维度主要考察系统回答是否逻辑连贯，是否出现前后冲突、逻辑混乱的情况[3]。该维度打分在0~1之间，0为逻辑完全混乱，1为完全没有逻辑问题[2]。",
+      "reference_answer": "该维度评估系统回答是否逻辑连贯，是否出现前后冲突、逻辑混乱的情况。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0193_aff7e27a",
+        "6ea14443_0210_0112c9a5",
+        "6ea14443_0209_8c0230a0",
+        "6ea14443_0198_6f2836a5",
+        "6ea14443_0212_fd6c7764"
+      ],
+      "citations": [
+        {
+          "index": 3,
+          "chunk_id": "6ea14443_0209_8c0230a0",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.9721,
+          "text_snippet": "如何评估 LLM 应用 模型生成的回答优于标准答案，但评估得分反而降低；④ 无法评估回答的智能性、流畅性。如果回答是各个标准答案中的关键词拼接而成，我们认为这样的回答不可用且难以理解，但 BLEU 得分会较高。因此，针对业务场景，有时还需要一些无需构造标准答案的进阶评估方法。 2.3 使用大模型进行评估...",
+          "metadata": {
+            "title": "使用大模型进行LLM生成内容的多维度评估方法",
+            "chunk_index": 209,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 2,
+          "chunk_id": "6ea14443_0210_0112c9a5",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.9806,
+          "text_snippet": "④ 回答正确性。该维度评估系统回答是否正确，是否充分解答了用户问题，打分分值在0~1之间，0为完全不正确，1为完全正确。 ⑤ 逻辑性。该维度评估系统回答是否逻辑连贯，是否出现前后冲突、逻辑混乱的情况。打分分值在0~1之间，0为逻辑完全混乱，1为完全没有逻辑问题。 ⑥ 通顺性。该维度评估系统回答是否通顺、合乎语法。打分分值在0~1之间，0为语句完全不通顺，1为语句完全通顺没有任何语法问题。 ⑦...",
+          "metadata": {
+            "title": "Evaluation Criteria for AI Response Quality Assessment",
+            "chunk_index": 210,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 55,
+        "prompt_tokens": 2401,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2456
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q20",
+      "query": "知识查找正确性评估的核心目的是什么？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "知识查找正确性评估的核心目的是判断从知识库中检索到的知识片段是否能够正确且充分地回答用户提出的问题[3]。该维度用于评估检索系统的效果，确保所获取的知识片段在内容上与问题相关并具备解答能力，是衡量RAG系统性能的关键指标之一[1]。",
+      "reference_answer": "知识查找正确性指对于特定问题，从知识库检索到的知识片段是否正确、是否足够回答问题。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0214_628771e8",
+        "6ea14443_0209_8c0230a0",
+        "6ea14443_0192_b0a4b27d",
+        "6ea14443_0216_23b278c2",
+        "6ea14443_0212_fd6c7764"
+      ],
+      "citations": [
+        {
+          "index": 3,
+          "chunk_id": "6ea14443_0192_b0a4b27d",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.8834,
+          "text_snippet": "则版本 B 优于版本 A。 准则二 多维评估...",
+          "metadata": {
+            "title": "多维评估框架在大模型问答系统中的应用",
+            "chunk_index": 192,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 1,
+          "chunk_id": "6ea14443_0214_628771e8",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.949,
+          "text_snippet": "如何评估 LLM 应用 4. 知识查找正确性。知识查找正确性指对于特定问题，从知识库检索到的知识片段是否正确、是否足够回答问题。知识查找正确性推荐使用大模型进行评估，即要求模型判别给定的知识片段是否足够回答问题。同时，该维度评估结果结合主观正确性可以计算幻觉情况，即如果主观回答正确但知识查找不正确，则说明产生了模型幻觉。...",
+          "metadata": {
+            "title": "评估LLM应用中的知识查找正确性",
+            "chunk_index": 214,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 0.8,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 67,
+        "prompt_tokens": 2600,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2667
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q21",
+      "query": "如何获取 DataWhale 总仓库的所有开源项目的 readme？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "要获取 DataWhale 总仓库的所有开源项目的 README，可以按照以下步骤操作：\n\n1. **运行 `project/database/test_get_all_repo.py` 文件**，该脚本会调用 GitHub API 获取 DataWhale 组织（`datawhalechina`）下所有仓库的列表，并拉取每个仓库的 README 文件。\n\n2. **配置参数**：\n   - 设置 `org_name = 'datawhalechina'` 作为组织名称。\n   - 设置 `export_dir = \"../../database/readme_db\"` 为保存 README 文件的目录路径（需根据实际路径调整）。\n\n3. **执行获取流程**：\n   - 脚本首先通过 `get_repos()` 函数获取所有仓库名称。\n   - 然后对每个仓库调用 `fetch_repo_readme()` 函数，从 GitHub API 拉取对应的 README 内容。\n   - README 内容以 Base64 编码形式返回，需解码为 UTF-8 文本，并保存为 `.md` 文件。\n\n4. **文件存储位置**：\n   - 所有 README 文件将被保存在 `export_dir` 指定的目录中，例如 `../../database/readme_db`。\n   - 每个仓库的 README 会以独立文件形式存放于对应仓库名的子目录中 [5]。\n\n5. **后续处理（可选）**：\n   - 若需生成每个 README 的摘要，可运行 `project/database/text_summary_readme.py` 文件，利用大模型对原始 README 进行摘要处理，并保存至 `../../data_base/knowledge_db/readme_summary` 目录 [2]。\n\n综上，核心方法是通过 `test_get_all_repo.py` 调用 GitHub API 获取并下载所有项目 README 文件 [1]。",
+      "reference_answer": "用户可以通过运行 project/database/test_get_all_repo.py 文件来获取 Datawhale 总仓库所有开源项目的 readme。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0224_bdd75d65",
+        "6ea14443_0227_9dbcd8b6",
+        "6ea14443_0226_91ea7f53",
+        "6ea14443_0232_ad8f007a",
+        "6ea14443_0225_f0caf8f6"
+      ],
+      "citations": [
+        {
+          "index": 5,
+          "chunk_id": "6ea14443_0225_f0caf8f6",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.7657,
+          "text_snippet": "案例1：个人知识库助手.md 2024-04-12 import os import base64 import loguru from dotenv import load_dotenv # 加载环境变量 load_dotenv() # 从环境变量中获取TOKEN TOKEN = os.getenv('TOKEN') # 定义获取组织仓库的函数 def get_repos(org_name,...",
+          "metadata": {
+            "title": "GitHub组织仓库与README批量提取脚本",
+            "chunk_index": 225,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 2,
+          "chunk_id": "6ea14443_0227_9dbcd8b6",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.9189,
+          "text_snippet": "案例1：个人知识库助手.md 2024-04-12 # 配置组织名称 org_name = 'datawhalechina' # 配置 export_dir export_dir = \"../../database/readme_db\" # 请替换为实际的目录路径 # 获取仓库列表 repos = get_repos(org_name, TOKEN, export_dir) # 打印仓库名称...",
+          "metadata": {
+            "title": "个人知识库助手：自动化获取与摘要GitHub仓库README",
+            "chunk_index": 227,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 1,
+          "chunk_id": "6ea14443_0224_bdd75d65",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.9549,
+          "text_snippet": "《机器学习公式详解》PDF版本 《面向开发者的 LLM 入门教程 第一部分 Prompt Engineering》md版本 《强化学习入门指南》MP4版本 以及datawhale总仓库所有开源项目的readme https://github.com/datawhalechina 这些知识库源数据放置在 ../../data_base/knowledge_db...",
+          "metadata": {
+            "title": "DataWhale 开源项目 README 获取与知识库配置指南",
+            "chunk_index": 224,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 386,
+        "prompt_tokens": 2011,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2397
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q22",
+      "query": "在 RAG 流程中，文本分割的 chunk_size 和 chunk_overlap 分别代表什么？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "在 RAG 流程中，`chunk_size` 指每个块包含的字符或 Token（如单词、句子等）的数量[1]；`chunk_overlap` 指两个块之间共享的字符数量，用于保持上下文的连贯性，避免分割丢失上下文信息[1]。",
+      "reference_answer": "chunk_size 指每个块包含的字符或 Token 的数量，chunk_overlap 指两个块之间共享的字符数量，用于保持上下文的连贯性，避免分割丢失上下文信息。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0234_9dc5a0eb",
+        "6ea14443_0105_5db2387f",
+        "6ea14443_0104_dfb3ff6e",
+        "6ea14443_0106_ce6b0429",
+        "6ea14443_0239_37305c71"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "6ea14443_0234_9dc5a0eb",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 1.0,
+          "text_snippet": "案例1：个人知识库助手.md 2024-04-12 ... def file_loader(file, loaders): if isinstance(file, tempfile._TemporaryFileWrapper): file = file.name if not os.path.isfile(file): [file_loader(os.path.join(file, f),...",
+          "metadata": {
+            "title": "文本分割与向量化在RAG中的实现",
+            "chunk_index": 234,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 0.6666666666666666,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 68,
+        "prompt_tokens": 1794,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1862
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q25",
+      "query": "在构建天机系统的交互界面时，使用了哪个库来创建 Web 界面？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "在构建天机系统的交互界面时，使用了 Gradio 库来创建 Web 界面[1]。",
+      "reference_answer": "使用 Gradio 库来构建交互界面。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0264_f6ef58fe",
+        "6ea14443_0154_696786a7",
+        "6ea14443_0262_a2f2411d",
+        "6ea14443_0273_004d250b",
+        "6ea14443_0255_52b2a8d1"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "6ea14443_0264_f6ef58fe",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.9807,
+          "text_snippet": "案例2：人情世故大模型系统-天机.md 2024-04-12 def regenerate(chat_history, system_prompt): # ... 1.3.3.4 使用Gradio库构建交互界面，包括场景选择、输入框、聊天界面等。 # 使用Gradio创建Web界面 with gr.Blocks() as demo: # 定义界面状态 chat_history =...",
+          "metadata": {
+            "title": "构建人情世故大模型交互界面的Gradio实现",
+            "chunk_index": 264,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 2278,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2303
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q27",
+      "query": "为什么需要一个框架来支持RAG策略的实现？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "需要一个框架来支持RAG策略的实现，主要是因为RAG的实现涉及多个复杂环节，如检索模型、语料库选择、语言模型（LM）集成以及提示工程等，这些因素共同影响整体性能[1]。此外，构建完整的RAG应用需要处理API集成、交互逻辑、数据存储等大量定制化开发工作，而框架（如LangChain）能够提供通用接口，简化开发流程，使开发者能够更高效地集成和管理RAG系统[2]。同时，框架还能支持快速评估与迭代，提升RAG架构的评估效率，尤其在大语言模型（LLM）快速发展的背景下尤为重要[1]。因此，使用框架可以显著降低开发复杂性，加速RAG系统的部署与优化。",
+      "reference_answer": "因为RAG策略的实现需要一个框架，该框架能显著促进大量调优，且整体性能会受到检索模型、所用语料库、语言模型或提示设计的影响。",
+      "retrieved_chunk_ids": [
+        "fcf98471_0005_e8623bc2",
+        "6ea14443_0027_093b36d4",
+        "6ea14443_0026_47691deb",
+        "fcf98471_0013_367d910c",
+        "fcf98471_0012_021bb363"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "fcf98471_0005_e8623bc2",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 0.9388,
+          "text_snippet": "strategies is clear, their implementation requires such a framework can crucially contribute to asignificantamountoftuning, astheoverallper- formance will be affected by the retrieval model, the...",
+          "metadata": {
+            "title": "Optimizing RAG Architectures Through Strategic Frameworks",
+            "chunk_index": 5,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 2,
+          "chunk_id": "6ea14443_0027_093b36d4",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.8615,
+          "text_snippet": "LangChain 框架是一个开源工具，充分利用了大型语言模型的强大能力，以便开发各种下游应用。它的目标是为各种大型语言模型应用提供通用接口，从而简化应用程序的开发流程。具体来说，LangChain 框架可以实现数据感知和环境互动，也就是说，它能够让语言模型与其他数据来源连接，并且允许语言模型与其所处的环境进行互动。 利用 LangChain 框架，我们可以轻松地构建如下所示的 RAG 应用...",
+          "metadata": {
+            "title": "LangChain Framework for Building LLM-Powered Applications",
+            "chunk_index": 27,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 162,
+        "prompt_tokens": 1188,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1350
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q29",
+      "query": "有哪些方法可以检测大语言模型生成内容中的幻觉？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "检测大语言模型生成内容中的幻觉，可以采用以下方法：\n\n1. **基于知识查找正确性的评估**：通过判断从知识库检索到的知识片段是否能够正确回答问题来间接检测幻觉。如果知识查找不正确但主观回答正确，则可能产生幻觉[2]。该方法可使用大模型进行自动评估，要求模型判别给定知识片段是否足够回答问题[3]。\n\n2. **使用大模型作为评估者**：利用如GPT-4等大模型充当评估角色，通过构造特定Prompt（如“你是一个人工评估员”）让其对生成回答的多个维度进行打分，其中包括“回答幻觉比例”这一维度。该维度评分范围为0~1，0表示全部是幻觉，1表示无幻觉[3][5]。\n\n3. **综合多维评估**：结合知识查找正确性、回答一致性、回答幻觉比例、回答正确性等多个维度进行综合评估，其中“回答幻觉比例”直接用于量化幻觉程度[5]。\n\n4. **外部验证与链接检查**：对于包含具体信息（如论文名称、链接）的回答，可通过实际访问链接或验证信息真实性来识别幻觉。例如，若链接为404或指向错误论文，则说明存在幻觉[4]。\n\n5. **零资源黑盒检测方法**：如Self-check GPT方法，可在无需额外标注数据的情况下，对生成式大语言模型的幻觉进行检测[1]。\n\n综上，主要方法包括基于知识检索的评估、大模型自评估、多维量化评估、外部事实验证以及专门的幻觉检测技术[1][2][3][4][5]。",
+      "reference_answer": "资料列举的方法包括：用少样本Prompt或直接让ChatGPT评估答案的事实性；把生成内容与外部知识库事实进行关联；检查单个Token的概率，因为幻觉内容通常置信度更低；以及让LLM从多个候选答案中选择最佳答案。使用LLM评分或选择时需要注意Prompt设计和候选顺序可能影响结果。",
+      "retrieved_chunk_ids": [
+        "fcf98471_0074_eaaa0008",
+        "6ea14443_0214_628771e8",
+        "6ea14443_0209_8c0230a0",
+        "6ea14443_0081_d74055e3",
+        "6ea14443_0192_b0a4b27d"
+      ],
+      "citations": [
+        {
+          "index": 2,
+          "chunk_id": "6ea14443_0214_628771e8",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.8395,
+          "text_snippet": "如何评估 LLM 应用 4. 知识查找正确性。知识查找正确性指对于特定问题，从知识库检索到的知识片段是否正确、是否足够回答问题。知识查找正确性推荐使用大模型进行评估，即要求模型判别给定的知识片段是否足够回答问题。同时，该维度评估结果结合主观正确性可以计算幻觉情况，即如果主观回答正确但知识查找不正确，则说明产生了模型幻觉。...",
+          "metadata": {
+            "title": "评估LLM应用中的知识查找正确性",
+            "chunk_index": 214,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 3,
+          "chunk_id": "6ea14443_0209_8c0230a0",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.8236,
+          "text_snippet": "如何评估 LLM 应用 模型生成的回答优于标准答案，但评估得分反而降低；④ 无法评估回答的智能性、流畅性。如果回答是各个标准答案中的关键词拼接而成，我们认为这样的回答不可用且难以理解，但 BLEU 得分会较高。因此，针对业务场景，有时还需要一些无需构造标准答案的进阶评估方法。 2.3 使用大模型进行评估...",
+          "metadata": {
+            "title": "使用大模型进行LLM生成内容的多维度评估方法",
+            "chunk_index": 209,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 5,
+          "chunk_id": "6ea14443_0192_b0a4b27d",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.6677,
+          "text_snippet": "则版本 B 优于版本 A。 准则二 多维评估...",
+          "metadata": {
+            "title": "多维评估框架在大模型问答系统中的应用",
+            "chunk_index": 192,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 4,
+          "chunk_id": "6ea14443_0081_d74055e3",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.7513,
+          "text_snippet": "模型给出的论文信息看上去非常正确，但如果打开链接，会发现 404 或者指向的论文不对。也就是说，论文的信息或者链接是模型捏造的。语言模型的幻觉问题事关应用的可靠性与安全性。开发者有必要认识到这一缺陷，并采取 Prompt优化、外部知识等措施予以缓解，以开发出更加可信赖的语言模型应用。这也将是未来语言模型进化的重要方向之一。[IMAGE: 1] 注：本文对应源代码在3. Prompt...",
+          "metadata": {
+            "title": "Language Model Hallucination in Academic References",
+            "chunk_index": 81,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 1,
+          "chunk_id": "fcf98471_0074_eaaa0008",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 0.8475,
+          "text_snippet": "Saurav Kadavath, Tom Conerly, Amanda Askell, Tom Potsawee Manakul, Adian Liusie, and Mark J. F. Gales. 2023. Self-check GPT: Zero-resource black-box hallucination detection for generative large...",
+          "metadata": {
+            "title": "Self-check GPT: Zero-resource Hallucination Detection for LLMs",
+            "chunk_index": 74,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 367,
+        "prompt_tokens": 1863,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2230
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q30",
+      "query": "SelfCheckGPT如何解决无法访问模型隐藏状态的问题？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "SelfCheckGPT通过采样多个答案来解决无法访问模型隐藏状态的问题，其核心思想是利用生成的答案来估计参考答案的概率，从而实现评估[1]。这种方法避免了对模型内部隐藏状态的直接访问需求，适用于通过API调用的封闭式大模型（如ChatGPT和GPT-4）[1]。",
+      "reference_answer": "SelfCheckGPT通过采样多个答案来估计给定生成答案下参考答案的概率，从而避免依赖模型的隐藏状态。",
+      "retrieved_chunk_ids": [
+        "fcf98471_0021_f7a337cb",
+        "fcf98471_0009_c08677e8",
+        "6ea14443_0077_b64d797f",
+        "6ea14443_0056_a70c714d",
+        "6ea14443_0019_21b18b6f"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "fcf98471_0021_f7a337cb",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 0.9933,
+          "text_snippet": "While the approach performs well, the need to access the hidden states of the model makes it unsuitable for systems that access LLMs through an API. 3 Evaluation Strategies For models that do not...",
+          "metadata": {
+            "title": "Limitations of API-Accessible LLMs in RAG Evaluation",
+            "chunk_index": 21,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 76,
+        "prompt_tokens": 1414,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1490
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q31",
+      "query": "什么是答案相关性（Answer Relevance）？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "答案相关性（Answer Relevance）衡量的是回答与给定问题之间的直接关联程度，即回答是否准确且适当地回应了问题[1]。它会惩罚那些包含冗余信息或对问题回答不完整的情况[1]。此外，答案相关性强调生成的答案应针对所提供的实际问题进行回应，且答案内容不应包含超出上下文范围的信息[2]。在评估过程中，通常会根据答案是否充分基于给定上下文来判断其相关性[4]。",
+      "reference_answer": "答案相关性指的是生成的答案应针对所提供的实际问题。",
+      "retrieved_chunk_ids": [
+        "fcf98471_0049_a84313ee",
+        "fcf98471_0026_4c41aaad",
+        "fcf98471_0048_e553d4b0",
+        "fcf98471_0046_f03def5b",
+        "fcf98471_0034_6c4d05a3"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "fcf98471_0049_a84313ee",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 0.9989,
+          "text_snippet": "Answer Relevance measures the degree to which a response directly addresses and is appropriate for a given question. It penalizes the presence of redundant information or incomplete answers given a...",
+          "metadata": {
+            "title": "Answer Relevance in Question-Answer Evaluation",
+            "chunk_index": 49,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 2,
+          "chunk_id": "fcf98471_0026_4c41aaad",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 0.9504,
+          "text_snippet": "statement: [statement 1] Answer Relevance refers to the idea that the generated answer should address the actual question that was provided. Finally, Context Relevance refers to the idea that the...",
+          "metadata": {
+            "title": "Answer and Context Relevance in Faithfulness Evaluation",
+            "chunk_index": 26,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 4,
+          "chunk_id": "fcf98471_0046_f03def5b",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 0.871,
+          "text_snippet": "The question should be fully answered from the given context. We then asked human annotators to compare this answer and indicate which of the two answers had the highest answer relevance. The...",
+          "metadata": {
+            "title": "Evaluating Answer Relevance Through Human Annotation",
+            "chunk_index": 46,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 107,
+        "prompt_tokens": 739,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 846
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q32",
+      "query": "如何判断一个答案是否忠实于上下文？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "判断一个答案是否忠实于上下文，主要依据是：答案中所作的陈述是否能够从上下文中推断出来。如果答案中的信息可以被上下文支持，则认为该答案是忠实的[1]。此外，评估时还需关注答案是否直接回应问题，并且在上下文信息过长时，确保大语言模型（LLM）仍能有效利用相关性信息[3]。为了增强答案的可信度，可要求模型在生成回答时注明知识来源，避免编造不存在于给定资料的内容[4]。通过设计包含反思步骤的Prompt，进一步验证回答内容是否基于上下文，从而提升答案的准确性与一致性[5]。",
+      "reference_answer": "如果答案中提出的主张可以从上下文中推断出来，则认为该答案忠实于上下文。",
+      "retrieved_chunk_ids": [
+        "fcf98471_0032_c9e5f030",
+        "fcf98471_0058_d5fdad91",
+        "fcf98471_0028_837f18d3",
+        "6ea14443_0174_0dc40fbe",
+        "6ea14443_0177_d134dd6c"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "fcf98471_0032_c9e5f030",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 0.9683,
+          "text_snippet": "Faithfulness We say that the answer a s (q) is faithful to the context c(q) if the claims that are made in the answer can be inferred from the context. We then obtain embeddings for all questions...",
+          "metadata": {
+            "title": "Faithfulness Evaluation in Question-Answer Systems Using Embeddings",
+            "chunk_index": 32,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 3,
+          "chunk_id": "fcf98471_0028_837f18d3",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 0.8522,
+          "text_snippet": "that were supported according to the LLM and associated with feeding long context passages to the LLM. Moreover, when context passages are too long, LLMs are often less effective in exploiting answer...",
+          "metadata": {
+            "title": "Impact of Long Context Passages on LLM Answer Relevance",
+            "chunk_index": 28,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 4,
+          "chunk_id": "6ea14443_0174_0dc40fbe",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.8194,
+          "text_snippet": "在强化学习中，智能体和环境之间不断交互，智能体根据环境的反馈来调整其策略，以获得最大的奖励。 我们可以要求模型在生成回答时注明知识来源，这样可以避免模型杜撰并不存在于给定资料的知识，同时也可以提高我们对模型生成答案的可信度： template_v4 =...",
+          "metadata": {
+            "title": "强化学习中的智能体-环境交互与生成式回答的可信度保障",
+            "chunk_index": 174,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 5,
+          "chunk_id": "6ea14443_0177_d134dd6c",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.7974,
+          "text_snippet": "2. 评估并优化生成部分 1. 确定项目目标和需求：首先要明确你的项目是为了解决什么问题或实现什么目标，确定需要使用LLM的具体场景和任务。 2. 收集和准备数据：根据项目需求，收集和准备适合的数据集，确保数据的质量和多样性，以提高LLM的性能和效果。 3. 设计Prompt和指令微调：根据项目需求设计合适的Prompt，确保指令清晰明确，可以引导LLM生成符合预期的文本。 4....",
+          "metadata": {
+            "title": "优化LLM生成效果的分步Prompt设计与评估流程",
+            "chunk_index": 177,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 147,
+        "prompt_tokens": 1284,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1431
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q33",
+      "query": "在评估上下文相关性时，LLM会执行什么操作？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "在评估上下文相关性时，LLM会执行以下操作：根据给定的问题 $ q $ 和其对应的上下文 $ c(q) $，LLM 会从上下文 $ c(q) $ 中提取出对回答问题至关重要的句子集合 $ S $。这一过程通过特定的提示（prompt）引导完成，例如：“请从以下内容中提取与问题相关的关键句子”[1]。该操作旨在确保生成的答案基于最相关的上下文信息，从而提高回答的相关性和准确性。",
+      "reference_answer": "LLM会从给定上下文中提取对回答问题至关重要的句子子集；如果没有相关句子，或问题无法根据上下文回答，则返回“InsufficientInformation”。",
+      "retrieved_chunk_ids": [
+        "fcf98471_0038_e1454109",
+        "fcf98471_0028_837f18d3",
+        "6ea14443_0177_d134dd6c",
+        "6ea14443_0187_8c515ff7",
+        "6ea14443_0181_8fcadab5"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "fcf98471_0038_e1454109",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 0.9924,
+          "text_snippet": "context relevance, given a question q and its context c(q), the LLM extracts a subset of sentences S from c(q) that are crucial to answer q, using the following prompt: Please extract relevant...",
+          "metadata": {
+            "title": "LLM-Based Sentence Extraction for Contextual Question Answering",
+            "chunk_index": 38,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 0.8333333333333334,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 109,
+        "prompt_tokens": 1884,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1993
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q34",
+      "query": "为了评估忠实性，研究者是如何构建数据集的？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "研究者为了评估忠实性，构建数据集的过程如下：首先，选择了50篇自2022年初以来有更新的维基百科页面作为基础。对于每一篇页面，使用ChatGPT生成一个基于其引言部分可回答的问题[1]。接着，利用ChatGPT在无额外上下文的情况下回答该问题，同时保留原始的、有上下文支持的标准答案。然后，邀请标注员根据问题和对应的维基百科页面，判断哪一个答案更忠实（即标准答案或无上下文生成的答案）[1]。这一过程形成了用于评估忠实性的新数据集，称为WikiEval4[1]。",
+      "reference_answer": "研究者首先选择了50个自2022年初以来有更新的维基百科页面，然后让ChatGPT基于每页的引言部分提出一个问题。",
+      "retrieved_chunk_ids": [
+        "fcf98471_0044_fb556820",
+        "fcf98471_0043_d48f66b4",
+        "fcf98471_0041_57524465",
+        "6ea14443_0164_4c2902c0",
+        "fcf98471_0027_ee56334a"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "fcf98471_0044_fb556820",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 1.0,
+          "text_snippet": "aware of any publicly available datasets that could be used for this purpose, we created a new dataset, which we refer to as WikiEval4. To assess faithfulness, we first used ChatGPT to answer the...",
+          "metadata": {
+            "title": "Creating WikiEval4: A Dataset for Evaluating Faithfulness in AI Answers",
+            "chunk_index": 44,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 140,
+        "prompt_tokens": 1385,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1525
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q35",
+      "query": "答案相关性衡量的目的是什么？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "答案相关性衡量的目的是评估生成的回答是否直接针对并适当回应了所提出的问题，确保回答内容与问题紧密相关，避免冗余信息或不完整回答[1]。",
+      "reference_answer": "答案相关性评分用于衡量响应直接回应问题的程度，并惩罚冗余信息或不完整回答。",
+      "retrieved_chunk_ids": [
+        "fcf98471_0049_a84313ee",
+        "fcf98471_0048_e553d4b0",
+        "fcf98471_0026_4c41aaad",
+        "fcf98471_0046_f03def5b",
+        "6ea14443_0205_b96ec173"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "fcf98471_0049_a84313ee",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 0.9957,
+          "text_snippet": "Answer Relevance measures the degree to which a response directly addresses and is appropriate for a given question. It penalizes the presence of redundant information or incomplete answers given a...",
+          "metadata": {
+            "title": "Answer Relevance in Question-Answer Evaluation",
+            "chunk_index": 49,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 40,
+        "prompt_tokens": 1146,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1186
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q37",
+      "query": "Ragas框架如何评估答案的忠实度？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "Ragas框架通过评估答案是否基于检索到的上下文来衡量忠实度（faithfulness），具体方法是：给定一个答案和对应的上下文，Ragas会为忠实度分配一个0到10之间的分数[1]。该框架利用大语言模型（LLM）进行参考无监督（reference-free）的评估，特别关注答案是否在检索到的上下文中得到支持[2]。实验表明，Ragas在评估忠实度方面的预测结果与人类判断高度一致[3]。",
+      "reference_answer": "Ragas先把答案拆分成更小的陈述，再让LLM判断每条陈述能否由检索上下文推导出来。忠实度分数为被上下文支持的陈述数量除以陈述总数，即 F = |V| / |S|；答案中无法由上下文推出的主张会被惩罚。",
+      "retrieved_chunk_ids": [
+        "fcf98471_0060_bbbd0a5c",
+        "fcf98471_0057_619ab3bb",
+        "fcf98471_0061_422f002c",
+        "fcf98471_0012_021bb363",
+        "fcf98471_0000_d012e1b6"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "fcf98471_0060_bbbd0a5c",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 0.9522,
+          "text_snippet": "from context should be penalized. described Ragas, our implementation of the three given an answer and context, assign a score for faithfulness in the range 0-10. This framework is easy to use and...",
+          "metadata": {
+            "title": "Faithfulness Scoring in RAG Systems Using Ragas",
+            "chunk_index": 60,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 2,
+          "chunk_id": "fcf98471_0057_619ab3bb",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 0.7796,
+          "text_snippet": "asGPTScore, we ask ChatGPT to assign a score between 0 and 10 for the three quality dimensions. We have highlighted the need for automated evaluation of RAG systems. To this end, we use a prompt that...",
+          "metadata": {
+            "title": "Automated Evaluation of RAG Systems Using ChatGPTScore",
+            "chunk_index": 57,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 3,
+          "chunk_id": "fcf98471_0061_422f002c",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 0.7538,
+          "text_snippet": "tems with valuable insights, even in the absence of any ground truth. Our evaluation on WikiEval ties, where the same score is assigned by the LLM, has shown that the predictions from Ragas are...",
+          "metadata": {
+            "title": "Evaluating LLM Responses with Ragas and GPT Ranking",
+            "chunk_index": 61,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 110,
+        "prompt_tokens": 893,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1003
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q38",
+      "query": "2022年国际机器学习会议中关于改进语言模型的研究主题是什么？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "2022年国际机器学习会议（ICML 2022）中关于改进语言模型的研究主题之一是“通过从万亿级标记中检索来改进语言模型”[1]。此外，另一相关研究主题为“将检索与语言模型结合用于知识密集型自然语言处理任务”[2]。这些研究聚焦于利用外部检索机制增强语言模型的知识获取与推理能力。",
+      "reference_answer": "研究主题是通过从万亿个标记中检索来改进语言模型。",
+      "retrieved_chunk_ids": [
+        "fcf98471_0065_d34478cd",
+        "fcf98471_0066_90b177ae",
+        "6ea14443_0080_2b964566",
+        "fcf98471_0071_33c9b660",
+        "6ea14443_0048_403302c2"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "fcf98471_0065_d34478cd",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 0.9802,
+          "text_snippet": "Monyan, Jack W. Rae, Erich Elsen, and Laurent Sifre. Omar Khattab, Keshav Santhanam, Xiang Lisa Li, David Hall, Percy Liang, Christopher Potts, and Matei Zaharia. 2022. Improving language models by...",
+          "metadata": {
+            "title": "Enhancing Language Models via Retrieval from Trillion-Token Datasets",
+            "chunk_index": 65,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 2,
+          "chunk_id": "fcf98471_0066_90b177ae",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 0.8809,
+          "text_snippet": "Machine Learning, ICML 2022, 17–23 July 2022, Baltimore, Maryland, USA, volume 162 of Proceedings of Machine Learning Research, PMLR, pages 2206–2240. Composing retrieval and language models for...",
+          "metadata": {
+            "title": "Composing Retrieval and Language Models for Knowledge-Intensive NLP",
+            "chunk_index": 66,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 0.8,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 88,
+        "prompt_tokens": 1503,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1591
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q40",
+      "query": "WikiEval数据集中的表格2主要展示什么内容？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "表格2主要展示WikiEval数据集中高忠实度和低忠实度的答案示例[1]。",
+      "reference_answer": "表格2展示了高忠实度和低忠实度的答案示例。",
+      "retrieved_chunk_ids": [
+        "fcf98471_0077_d49f5d67",
+        "fcf98471_0061_422f002c",
+        "fcf98471_0052_da1acf43",
+        "fcf98471_0059_bbcf3bc2",
+        "fcf98471_0041_57524465"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "fcf98471_0077_d49f5d67",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 0.9978,
+          "text_snippet": "OriRam, Yoav Levine, Itay Dalmedigos, Dor Muhlgay. Examples from WikiEval. Amnon Shashua, Kevin Leyton-Brown, and Yoav Shoham. 2023. In-context retrieval-augmented language models. CoRR,...",
+          "metadata": {
+            "title": "In-Context Retrieval-Augmented Language Models and Evaluation with WikiEval",
+            "chunk_index": 77,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 22,
+        "prompt_tokens": 1061,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1083
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q41",
+      "query": "如何通过动手学大模型应用开发项目快速入门大模型应用开发？该项目是否提供了关于Prompt Engineering的具体实践方法？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "通过动手学大模型应用开发项目快速入门大模型应用开发，主要依赖于该项目提供的实践导向教学内容。该课程以“个人知识库助手”项目为核心，从零开始引导学习者掌握大模型开发的全流程，包括大模型简介、API调用、知识库搭建、RAG应用构建及验证迭代等关键环节[1]。项目强调动手实践，通过实际代码操作和项目搭建，帮助初学者在数小时内掌握大模型开发的核心技能，无需具备人工智能或算法背景，仅需基础Python能力即可参与[3]。\n\n关于Prompt Engineering的具体实践方法，该项目明确将其列为重要内容之一。在“LLM 开发技巧”部分中，专门设有“Prompt Engineering”章节，并在“大模型开发的一般流程”中指出，优质的Prompt对大模型性能有极大影响，需通过逐步迭代来构建[4]。此外，课程《Developer》也明确提到将分享提示词开发的最佳实践和技巧，包括设计高效提示的原则，如编写清晰具体的指令、给予模型充分的思考时间等[5]。因此，该项目不仅包含Prompt Engineering的概念介绍，还提供了具体实践方法。\n\n综上所述，该项目通过项目驱动的方式实现快速入门，并提供了关于Prompt Engineering的具体实践方法[4][5]。",
+      "reference_answer": "该项目以个人知识库助手为主线，把大模型简介、API调用、知识库搭建、RAG构建和验证迭代放进实际项目，帮助初学者快速完成开发闭环。它也提供Prompt Engineering实践方法：明确设计原则，建立小型验证集，发现Bad Case并持续迭代Prompt。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0000_babdea98",
+        "6ea14443_0003_52f5ff7d",
+        "6ea14443_0001_a6b054ec",
+        "6ea14443_0032_d050f138",
+        "6ea14443_0152_fc0dc691"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "6ea14443_0000_babdea98",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.9599,
+          "text_snippet": "动手学大模型应用开发 项目简介 本项目是一个面向小白开发者的大模型应用开发教程，旨在基于阿里云服务器，结合个人知识库助手项目，通过一个课程完成大模型开发的重点入门，主要内容包括： 1. 大模型简介，何为大模型、大模型特点是什么、LangChain 是什么，如何开发一个 LLM 应用，针对小白开发者的简单介绍； 2. 如何调用大模型 API，本节介绍了国内外知名大模型产品 API...",
+          "metadata": {
+            "title": "动手学大模型应用开发：从入门到RAG实战",
+            "chunk_index": 0,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 3,
+          "chunk_id": "6ea14443_0001_a6b054ec",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.8019,
+          "text_snippet": "README.md 2024-04-14 3. LLM 应用实例。引入一些成功的开源案例，从本课程的角度出发，解析这些应用范例的 Idea、核心思路、实现框架，帮助初学者明白其可以通过 LLM 开发什么样的应用。 目前，第一部分已经完稿，欢迎大家阅读学习；第二、三部分正在创作中。 目录结构说明： requirements.txt：官方环境下的安装依赖 notebook：Notebook...",
+          "metadata": {
+            "title": "从零入门LLM应用开发：基于RAG的个人知识库助手实战",
+            "chunk_index": 1,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 4,
+          "chunk_id": "6ea14443_0032_d050f138",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.786,
+          "text_snippet": "LLM 评估 在本章中，我们将简述大模型开发的一般流程，并结合项目实际需求，逐步分析完成项目开发的工作和步骤。 二、大模型开发的一般流程 结合上述分析，我们一般可以将大模型开发分解为以下几个流程： 1. 确定目标。在进行开发前，我们首先需要确定开发的目标，即要开发的应用的应用场景、目标人群、核心价值。对于个体开发者或小型开发团队而言，一般应先设定最小化目标，从构建一个...",
+          "metadata": {
+            "title": "大模型开发流程与核心步骤解析",
+            "chunk_index": 32,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 5,
+          "chunk_id": "6ea14443_0152_fc0dc691",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.7712,
+          "text_snippet": "课程《Developer》旨在分享使用提示词开发大语言模型应用的最佳实践和技巧。课程将介绍设计高效提示的原则，包括编写清晰、具体的指令以及给予模型充足思考时间等。通过学习这些内容，您可以更好地利用大语言模型的性能，构建出色的语言模型应用。 然后基于答案进行下一个问题“为什么这门课需要教这方面知识？”： 7 / 8",
+          "metadata": {
+            "title": "提示词工程：构建高效大语言模型应用的最佳实践",
+            "chunk_index": 152,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 270,
+        "prompt_tokens": 2458,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2728
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q42",
+      "query": "在构建检索问答链时，如何加载已有的向量数据库？该过程是否涉及使用特定的Embedding模型？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "在构建检索问答链时，加载已有的向量数据库需要使用与构建时相同的 Embedding 模型。具体步骤如下：\n\n1. **定义 Embedding 模型**：加载向量数据库时，必须使用与创建数据库时一致的 Embedding 模型。例如，在资料[1]和[2]中均使用了 `ZhipuAIEmbeddings` 作为 Embedding 模型。\n\n2. **指定持久化路径**：通过 `persist_directory` 参数指定向量数据库的本地存储路径，如 `../C3 搭建知识库/data_base/vector_db/chroma`。\n\n3. **加载数据库**：使用 `Chroma` 类加载持久化的向量数据库，并传入对应的 `embedding_function`，确保嵌入模型的一致性。\n\n因此，该过程**涉及使用特定的 Embedding 模型**，且必须与构建数据库时使用的模型保持一致，以保证向量表示的兼容性[1]。",
+      "reference_answer": "加载时先实例化与建库时相同的Embedding模型，然后将持久化目录和该Embedding实例传给Chroma。示例使用ZhipuAIEmbeddings，并通过 `Chroma(persist_directory=..., embedding_function=embedding)` 加载已有数据库。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0141_af1ef833",
+        "6ea14443_0159_975f3384",
+        "6ea14443_0167_4d5f6bbb",
+        "6ea14443_0238_9eceaad7",
+        "6ea14443_0035_76f0c88d"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "6ea14443_0141_af1ef833",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 1.0,
+          "text_snippet": "4.2 构建检索问答链 正文涉及到的源文件可从如下路径获取： C3 搭建知识库 在 C3 搭建数据库 章节，我们已经介绍了如何根据自己的本地知识文档，搭建一个向量知识库。 在接下来的内容里，我们将使用搭建好的向量数据库，对 query 查询问题进行召回，并将召回结果和 query 结合起来构建 prompt，输入到大模型中进行问答。 1. 加载向量数据库...",
+          "metadata": {
+            "title": "构建基于向量数据库的检索问答链",
+            "chunk_index": 141,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 2,
+          "chunk_id": "6ea14443_0159_975f3384",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.9655,
+          "text_snippet": "3. 部署知识库助手.md 2024-04-12 if prompt := st.chat_input(\"Say something\"): # 将用户输入添加到对话历史中 st.session_state.messages.append({\"role\": \"user\", \"text\": prompt}) # 调用 respond 函数获取回答 answer =...",
+          "metadata": {
+            "title": "部署知识库助手与检索问答链集成",
+            "chunk_index": 159,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 0.9230769230769231,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 208,
+        "prompt_tokens": 2145,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2353
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q43",
+      "query": "人情世故大模型系统-天机项目是如何利用RAG模型回答‘如何给长辈敬酒？’这一问题的？该系统是否依赖于预先提供的聊天历史？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "人情世故大模型系统-天机项目在回答“如何给长辈敬酒？”这一问题时，利用RAG模型结合检索（Retrieval）与生成（Generation）的能力，通过检索相关文档中的具体知识来增强回答的上下文，从而提供更准确、更丰富的答案[1]。该系统在处理此问题时，并未依赖预先提供的聊天历史，因为调用`qa_chain_self_answer`方法时，`chat_history`为一个空列表[1]。系统通过角色扮演Prompt设计，设定模型为“一个精通言语表达、具有同理心、热爱他人、尊重长辈、情绪稳定的中国晚辈”，并基于具体场景（如称谓、长辈特点、具体场景、演讲时间）生成简洁、真诚、适合场合的敬酒词[4]。此外，系统从结构化JSON数据中读取示例对话，用于指导生成过程[5]。因此，其回答机制主要依赖于RAG的检索增强和角色化Prompt设计，而非聊天历史。",
+      "reference_answer": "示例先通过 `model_center()` 初始化模型，再以“如何给长辈敬酒？”为问题调用 `qa_chain_self_answer`。RAG先检索相关文档以增强上下文，再生成回答；此次调用把 `chat_history` 设为空列表，因此不依赖预先提供的聊天历史。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0284_bcac8189",
+        "6ea14443_0275_4e942ef5",
+        "6ea14443_0259_9fb14258",
+        "6ea14443_0257_04421f64",
+        "6ea14443_0263_8c3af1a0"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "6ea14443_0284_bcac8189",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 1.0,
+          "text_snippet": "案例2：人情世故大模型系统-天机.md 2024-04-12 通过model_center函数初始化一个模型实例，然后使用这个模型来处理一个特定的问题（在这里是“如何给长辈敬酒？”），并且没有预先提供聊天历史（chat_history为空列表）。然后，调用qa_chain_self_answer方法处理问题，并打印出回答。...",
+          "metadata": {
+            "title": "利用RAG模型解决敬酒礼仪的文化习俗问题",
+            "chunk_index": 284,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 4,
+          "chunk_id": "6ea14443_0257_04421f64",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.6162,
+          "text_snippet": "案例2：人情世故大模型系统-天机.md 2024-04-12 获取数据此后参考tools/prompt_factory下脚本，将每一个md格式的文档转换成json格式。转换后的json文件中包含了id、name、test_system、input和output等字段，结构化地保存了原Markdown文件中的信息。 脚本作用：...",
+          "metadata": {
+            "title": "人情世故大模型系统：Prompt角色扮演与文档结构化处理",
+            "chunk_index": 257,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 5,
+          "chunk_id": "6ea14443_0263_8c3af1a0",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.6104,
+          "text_snippet": "案例2：人情世故大模型系统-天机.md 2024-04-12 import random from dotenv import load_dotenv load_dotenv() # 加载环境变量 from zhipuai import ZhipuAI # 智谱AI的Python客户端 import os # 设置文件路径和API密钥 file_path =...",
+          "metadata": {
+            "title": "人情世故大模型系统：天机场景提示词处理与对话生成",
+            "chunk_index": 263,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 0.9230769230769231,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 219,
+        "prompt_tokens": 2612,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2831
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q44",
+      "query": "Ragas框架的主要功能是什么？它是否能够评估大模型在处理罕见知识时的表现？",
+      "answerability": "partial",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "Ragas框架的主要功能是为检索增强生成（Retrieval Augmented Generation, RAG）系统提供自动化评估能力，尤其在缺乏参考答案的场景下，能够估计多种正确性的代理指标，并评估检索片段的有用性[2]。该框架支持与LlamaIndex和LangChain等主流框架集成，用于全面评估RAG系统的性能[2]。\n\n关于是否能够评估大模型在处理罕见知识时的表现，资料中提到LLM难以记忆训练语料中提及较少的知识（如Kandpal et al., 2022; Mallen et al., 2023），而Ragas通过评估检索和生成部分的性能，有助于识别因知识稀疏或信息偏差导致的错误输出[1]。因此，Ragas可通过分析生成结果与检索内容的相关性，间接评估大模型在处理罕见知识时的表现，尤其是在其依赖外部检索来补充知识的情况下[1][2]。但资料未明确说明Ragas具备专门针对“罕见知识”表现的独立评估指标或机制。\n\n综上，Ragas能通过评估检索与生成质量间接反映大模型在罕见知识上的表现，但无直接证据表明其具备专门为此设计的功能[1][2]。",
+      "reference_answer": "Ragas用于自动评估RAG系统，在没有参考答案的情况下估计正确性的代理指标以及检索片段的有用性，并可集成LangChain和LlamaIndex。资料提到罕见知识是LLM面临的困难，但没有说明Ragas提供了专门评估模型处理罕见知识能力的指标，因此后一部分无法根据资料确认。",
+      "retrieved_chunk_ids": [
+        "fcf98471_0000_d012e1b6",
+        "fcf98471_0012_021bb363",
+        "6ea14443_0022_7c8b764b",
+        "6ea14443_0166_f056bf86",
+        "fcf98471_0011_3d1250a3"
+      ],
+      "citations": [
+        {
+          "index": 2,
+          "chunk_id": "fcf98471_0012_021bb363",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 0.8272,
+          "text_snippet": "of retrieval augmented generation systems. We focus on settings where reference answers may not be available, and where we want to estimate different proxies for correctness, in addition to the...",
+          "metadata": {
+            "title": "Evaluating RAG Systems Without Reference Answers Using RAGAS",
+            "chunk_index": 12,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 1,
+          "chunk_id": "fcf98471_0000_d012e1b6",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 0.9596,
+          "text_snippet": "Ragas: Automated Evaluation of Retrieval Augmented Generation Shahul Es†, Jithin James†, Luis Espinosa-Anke∗♢, Steven Schockaert∗ † Exploding Gradients ∗ Cardiff NLP, Cardiff University, United...",
+          "metadata": {
+            "title": "Ragas: Automated Evaluation Framework for Retrieval Augmented Generation",
+            "chunk_index": 0,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 0.8125,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 262,
+        "prompt_tokens": 1445,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1707
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q45",
+      "query": "Chimnabai Clock Tower是在哪一年建成的？它的建筑风格是什么？",
+      "answerability": "answerable",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "Chimnabai Clock Tower是在1896年建成的[1]，其建筑风格为 Indo-Saracenic architecture style[1]。",
+      "reference_answer": "Chimnabai Clock Tower于1896年建成，采用印度-萨拉森式（Indo-Saracenic）建筑风格。",
+      "retrieved_chunk_ids": [
+        "fcf98471_0082_328f2430",
+        "fcf98471_0081_0b5e2b8e",
+        "6ea14443_0146_b73647d0",
+        "6ea14443_0244_42d833b5",
+        "6ea14443_0222_1853e7be"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "fcf98471_0082_328f2430",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 1.0,
+          "text_snippet": "and who was it named after in 1896 and named in memory of Chimnabai I (1864–1885), a queen and the first wife of Sayajirao Gaekwad III of Baroda State. The Chimnabai Clock Tower, also known as the...",
+          "metadata": {
+            "title": "Chimnabai Clock Tower, Vadodara – Memorial to Queen Chimnabai I",
+            "chunk_index": 82,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 34,
+        "prompt_tokens": 2232,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2266
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q46",
+      "query": "公司2026年国庆节的值班安排是什么？",
+      "answerability": "unanswerable",
+      "expected_status": "refused",
+      "status": "refused",
+      "status_correct": true,
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "reference_answer": "知识库没有关于这个问题的记录，无法回答。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0140_dbc2d125",
+        "6ea14443_0099_28d1eeaf",
+        "6ea14443_0282_f77f2cd0",
+        "6ea14443_0107_03dadc1c",
+        "6ea14443_0066_28f977ea"
+      ],
+      "citations": [],
+      "citation_valid": null,
+      "faithfulness": null,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 6,
+        "prompt_tokens": 2039,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2045
+      },
+      "stop_reason": "insufficient_evidence",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q47",
+      "query": "员工出差住宿费的报销上限是多少？",
+      "answerability": "unanswerable",
+      "expected_status": "refused",
+      "status": "refused",
+      "status_correct": true,
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "reference_answer": "知识库没有关于这个问题的记录，无法回答。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0079_588ff6ce",
+        "6ea14443_0060_21446d93",
+        "6ea14443_0061_9bbcfc28",
+        "6ea14443_0010_97f1de33",
+        "6ea14443_0069_d46f692f"
+      ],
+      "citations": [],
+      "citation_valid": null,
+      "faithfulness": null,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 6,
+        "prompt_tokens": 2059,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2065
+      },
+      "stop_reason": "insufficient_evidence",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q48",
+      "query": "项目负责人的手机号码和家庭住址是什么？",
+      "answerability": "unanswerable",
+      "expected_status": "refused",
+      "status": "refused",
+      "status_correct": true,
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "reference_answer": "知识库没有关于这个问题的记录，无法回答。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0003_52f5ff7d",
+        "6ea14443_0005_49e61143",
+        "6ea14443_0220_016e581c",
+        "6ea14443_0001_a6b054ec",
+        "6ea14443_0000_babdea98"
+      ],
+      "citations": [],
+      "citation_valid": null,
+      "faithfulness": null,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 6,
+        "prompt_tokens": 2606,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2612
+      },
+      "stop_reason": "insufficient_evidence",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q49",
+      "query": "今天北京的实时天气和空气质量如何？",
+      "answerability": "unanswerable",
+      "expected_status": "refused",
+      "status": "refused",
+      "status_correct": true,
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "reference_answer": "知识库没有关于这个问题的记录，无法回答。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0053_b0865488",
+        "6ea14443_0074_3cf9259d",
+        "6ea14443_0228_9267bc18",
+        "6ea14443_0219_f856bf43",
+        "6ea14443_0259_9fb14258"
+      ],
+      "citations": [],
+      "citation_valid": null,
+      "faithfulness": null,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 6,
+        "prompt_tokens": 1705,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1711
+      },
+      "stop_reason": "insufficient_evidence",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q50",
+      "query": "生产服务器的 root 密码是什么？",
+      "answerability": "unanswerable",
+      "expected_status": "refused",
+      "status": "refused",
+      "status_correct": true,
+      "answer": "当前知识库中没有足够的相关资料，无法可靠回答这个问题。",
+      "reference_answer": "知识库没有关于这个问题的记录，无法回答。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0039_920048b8",
+        "6ea14443_0038_3c1d6bbf",
+        "6ea14443_0002_bfcd7a15",
+        "6ea14443_0036_05371918",
+        "6ea14443_0043_8b38e992"
+      ],
+      "citations": [],
+      "citation_valid": null,
+      "faithfulness": null,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 6,
+        "prompt_tokens": 2550,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2556
+      },
+      "stop_reason": "insufficient_evidence",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q51",
+      "query": "Chimnabai Clock Tower是哪一年建成的，采用什么建筑风格？资料是否记录了它目前每天对游客开放的具体时间？",
+      "answerability": "partial",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "Chimnabai Clock Tower于1896年建成，采用的是 Indo-Saracenic 建筑风格[1]。资料中未记录它目前每天对游客开放的具体时间。",
+      "reference_answer": "Chimnabai Clock Tower于1896年建成，采用印度-萨拉森式（Indo-Saracenic）建筑风格。资料没有记录它目前每天对游客开放的具体时间，因此无法回答这一部分。",
+      "retrieved_chunk_ids": [
+        "fcf98471_0082_328f2430",
+        "fcf98471_0081_0b5e2b8e",
+        "6ea14443_0053_b0865488",
+        "6ea14443_0124_9c73fdfa",
+        "6ea14443_0174_0dc40fbe"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "fcf98471_0082_328f2430",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 0.9978,
+          "text_snippet": "and who was it named after in 1896 and named in memory of Chimnabai I (1864–1885), a queen and the first wife of Sayajirao Gaekwad III of Baroda State. The Chimnabai Clock Tower, also known as the...",
+          "metadata": {
+            "title": "Chimnabai Clock Tower, Vadodara – Memorial to Queen Chimnabai I",
+            "chunk_index": 82,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 0.6666666666666666,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 44,
+        "prompt_tokens": 1825,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1869
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q52",
+      "query": "加载已有的Chroma向量数据库时应该使用什么Embedding？资料是否给出了改用不同Embedding后Hit@5提升了多少？",
+      "answerability": "partial",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "加载已有的Chroma向量数据库时，应该使用与构建时相同的Embedding[1]。资料中未提供改用不同Embedding后Hit@5提升的具体数值，因此无法回答Hit@5提升了多少。INSUFFICIENT_EVIDENCE",
+      "reference_answer": "加载已有Chroma向量数据库时，应使用与构建数据库时相同的Embedding；示例使用ZhipuAIEmbeddings，并把它作为embedding_function传给Chroma。资料没有给出改用不同Embedding后的Hit@5提升数值，因此无法回答这一部分。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0141_af1ef833",
+        "6ea14443_0167_4d5f6bbb",
+        "6ea14443_0113_08aed22b",
+        "6ea14443_0186_4ab2af9a",
+        "6ea14443_0238_9eceaad7"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "6ea14443_0141_af1ef833",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.7478,
+          "text_snippet": "4.2 构建检索问答链 正文涉及到的源文件可从如下路径获取： C3 搭建知识库 在 C3 搭建数据库 章节，我们已经介绍了如何根据自己的本地知识文档，搭建一个向量知识库。 在接下来的内容里，我们将使用搭建好的向量数据库，对 query 查询问题进行召回，并将召回结果和 query 结合起来构建 prompt，输入到大模型中进行问答。 1. 加载向量数据库...",
+          "metadata": {
+            "title": "构建基于向量数据库的检索问答链",
+            "chunk_index": 141,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 54,
+        "prompt_tokens": 1863,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1917
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q53",
+      "query": "LangServe的主要用途是什么？资料是否给出了LangChain应用部署到阿里云后的平均QPS？",
+      "answerability": "partial",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "LangServe的主要用途是将LangChain应用程序部署到云端，提供可扩展、高可用的托管解决方案，并带有监控和日志功能，从而简化部署流程，让开发者可以专注于应用程序的开发，而不必担心底层的基础设施和运维工作[1]。\n\n资料中未提及LangChain应用部署到阿里云后的平均QPS，因此无法提供相关信息。INSUFFICIENT_EVIDENCE",
+      "reference_answer": "LangServe用于把LangChain应用部署到云端，提供可扩展、高可用并带监控和日志的托管方案，以简化部署和运维。资料没有给出部署到阿里云后的平均QPS，因此无法回答这一部分。",
+      "retrieved_chunk_ids": [
+        "6ea14443_0030_d148b07f",
+        "6ea14443_0029_509427a5",
+        "6ea14443_0027_093b36d4",
+        "6ea14443_0000_babdea98",
+        "6ea14443_0222_1853e7be"
+      ],
+      "citations": [
+        {
+          "index": 1,
+          "chunk_id": "6ea14443_0030_d148b07f",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.7744,
+          "text_snippet": "库。 LangChain CLI: 命令行工具，使开发者能够通过终端与 LangChain 框架交互，执行项目初始化、测试、部署等任务。提高开发效率，让开发者能够通过简单的命令来管理整个应用程序的生命周期。 LangServe: 部署服务，用于将 LangChain...",
+          "metadata": {
+            "title": "LangChain 开发工具与大模型应用开发流程入门",
+            "chunk_index": 30,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 1.0,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 83,
+        "prompt_tokens": 2355,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2438
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    },
+    {
+      "case_id": "portfolio_q54",
+      "query": "Ragas主要从哪些维度评估RAG系统？论文是否报告了它在中文法律问答数据集上的具体准确率？",
+      "answerability": "partial",
+      "expected_status": "answered",
+      "status": "answered",
+      "status_correct": true,
+      "answer": "Ragas主要从以下维度评估RAG系统：  \n1. **检索正确性**（知识查找正确性）：评估系统从向量数据库中查找到的知识片段是否能够对问题做出回答，采用0-1评分制[2]。  \n2. **回答一致性**：评估系统回答是否针对用户问题展开，是否存在偏题或错误理解题意的情况，同样采用0-1评分制[2]。  \n3. **回答幻觉比例**：评估系统回答中出现幻觉的比例，0表示全部为幻觉，1表示无幻觉，采用0-1评分制[2]。  \n4. **回答正确性**：评估系统回答是否正确、是否充分解答了用户问题，是核心评估指标之一，可在0-1之间打分[2]。  \n5. **检索准确率**：基于给定query，若正确答案存在于系统检索出的K个文本片段中，则视为检索成功，计算整体检索准确率[3]。  \n\n此外，Ragas框架还支持在无参考答案的情况下，通过LLM自动评估生成文本的多个方面，如正确性代理指标和检索段落的有用性[1]。\n\n关于论文是否报告了Ragas在中文法律问答数据集上的具体准确率：  \n**INSUFFICIENT_EVIDENCE**",
+      "reference_answer": "Ragas主要评估忠实度、答案相关性和上下文相关性，分别关注答案是否以检索上下文为依据、是否直接回应问题，以及上下文是否聚焦于回答所需信息。论文没有报告其在中文法律问答数据集上的具体准确率，因此无法回答这一部分。",
+      "retrieved_chunk_ids": [
+        "fcf98471_0012_021bb363",
+        "6ea14443_0192_b0a4b27d",
+        "6ea14443_0215_4a402d3a",
+        "6ea14443_0199_d21f207a",
+        "6ea14443_0166_f056bf86"
+      ],
+      "citations": [
+        {
+          "index": 2,
+          "chunk_id": "6ea14443_0192_b0a4b27d",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.5001,
+          "text_snippet": "则版本 B 优于版本 A。 准则二 多维评估...",
+          "metadata": {
+            "title": "多维评估框架在大模型问答系统中的应用",
+            "chunk_index": 192,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 3,
+          "chunk_id": "6ea14443_0215_4a402d3a",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\datawhale_llm_universe.pdf",
+          "score": 0.278,
+          "text_snippet": "3. 评估并优化检索部分 2024-04-12 评估并优化检索部分 在上一章，我们讲解了如何针对生成部分评估优化 Prompt Engineering，来提高大模型的生成质量。但生成的前提是检索，只有当我们应用的检索部分能够根据用户 query...",
+          "metadata": {
+            "title": "评估与优化RAG系统中的检索部分",
+            "chunk_index": 215,
+            "doc_type": "pdf"
+          }
+        },
+        {
+          "index": 1,
+          "chunk_id": "fcf98471_0012_021bb363",
+          "source": "D:\\PyCharm\\pytest\\实习\\MODULAR-RAG-MCP-SERVER-main\\data\\documents\\portfolio\\ragas_evaluation_en.pdf",
+          "score": 0.5648,
+          "text_snippet": "of retrieval augmented generation systems. We focus on settings where reference answers may not be available, and where we want to estimate different proxies for correctness, in addition to the...",
+          "metadata": {
+            "title": "Evaluating RAG Systems Without Reference Answers Using RAGAS",
+            "chunk_index": 12,
+            "doc_type": "pdf"
+          }
+        }
+      ],
+      "citation_valid": true,
+      "faithfulness": 0.8235294117647058,
+      "judge_error": null,
+      "model": "qwen-flash",
+      "usage": {
+        "completion_tokens": 282,
+        "prompt_tokens": 2438,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2720
+      },
+      "stop_reason": "answered",
+      "system_error": null
+    }
+  ]
+}

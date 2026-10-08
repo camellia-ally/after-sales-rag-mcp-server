@@ -1,0 +1,597 @@
+{
+  "description": "Human-reviewed Golden Test Set for the portfolio collection, covering answerable, partially answerable, and unanswerable questions.",
+  "version": "1.0",
+  "review_status": "approved",
+  "generated_from_draft_version": "0.1-draft",
+  "finalized_at": "2026-09-20T05:50:27.981989+00:00",
+  "collection": "portfolio",
+  "answerability_distribution": {
+    "answerable": 29,
+    "partial": 5,
+    "unanswerable": 5
+  },
+  "source_distribution": {
+    "datawhale_llm_universe.pdf": 19,
+    "ragas_evaluation_en.pdf": 15
+  },
+  "test_cases": [
+    {
+      "case_id": "portfolio_q01",
+      "query": "GPT-4-turbo 的上下文长度是多少？",
+      "expected_chunk_ids": [
+        "6ea14443_0010_97f1de33"
+      ],
+      "expected_sources": [
+        "datawhale_llm_universe.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "128k",
+      "category": "definition",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q02",
+      "query": "大语言模型为什么能成为AI应用开发的大一统基座模型？",
+      "expected_chunk_ids": [
+        "6ea14443_0020_b9678762"
+      ],
+      "expected_sources": [
+        "datawhale_llm_universe.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "因为大模型可以极大地提高研发效率，缩短开发周期，减少人力投入，并基于其推理、常识和写作能力获得更好的应用效果。",
+      "category": "mechanism",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q03",
+      "query": "LangServe 在 LangChain 框架中主要提供什么功能？",
+      "expected_chunk_ids": [
+        "6ea14443_0030_d148b07f"
+      ],
+      "expected_sources": [
+        "datawhale_llm_universe.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "部署服务，用于将 LangChain 应用程序部署到云端，提供可扩展、高可用的托管解决方案，并带有监控和日志功能。简化部署流程，让开发者可以专注于应用程序的开发，而不必担心底层的基础设施和运维工作。",
+      "category": "engineering",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q05",
+      "query": "System Prompt 和 User Prompt 的主要区别是什么？",
+      "expected_chunk_ids": [
+        "6ea14443_0049_691540f3"
+      ],
+      "expected_sources": [
+        "datawhale_llm_universe.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "System Prompt会在整个会话过程中持久地影响模型的回复，且相比于普通 Prompt 具有更高的重要性；User Prompt更偏向于我们平时提到的 Prompt，即需要模型做出回复的输入。",
+      "category": "comparison",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q06",
+      "query": "在使用文心千帆API时，如何正确配置用户角色和系统角色的prompt？",
+      "expected_chunk_ids": [
+        "6ea14443_0059_ac1aaed3"
+      ],
+      "expected_sources": [
+        "datawhale_llm_universe.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "模型人设是通过system字段传入的，而不是在messages字段中；用户提示词通过messages字段中的role为'user'的内容传入。",
+      "category": "mechanism",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q07",
+      "query": "设计高效Prompt时应遵循哪两个关键原则？",
+      "expected_chunk_ids": [
+        "6ea14443_0070_6646ddf9"
+      ],
+      "expected_sources": [
+        "datawhale_llm_universe.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "编写清晰、具体的指令和给予模型充足思考时间。",
+      "category": "definition",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q12",
+      "query": "embed_documents方法的返回值是什么类型？",
+      "expected_chunk_ids": [
+        "6ea14443_0120_c3daf1ff"
+      ],
+      "expected_sources": [
+        "datawhale_llm_universe.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "返回一个列表，其中每个元素都是一个浮点值列表，表示输入文本列表中每个文档的embedding。",
+      "category": "definition",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q13",
+      "query": "LCEL是什么？",
+      "expected_chunk_ids": [
+        "6ea14443_0131_7466347e"
+      ],
+      "expected_sources": [
+        "datawhale_llm_universe.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "LCEL（LangChain Expression Language，Langchain的表达式语言）是一种新的语法，是LangChain工具包的重要补充，它提供了异步、批处理和流处理支持，使代码可以快速在不同服务器中移植，并拥有后备措施来解决LLM格式输出的问题。",
+      "category": "definition",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q16",
+      "query": "在设计Prompt时，为什么需要指定完成任务所需的步骤？",
+      "expected_chunk_ids": [
+        "6ea14443_0173_160e1d8d"
+      ],
+      "expected_sources": [
+        "datawhale_llm_universe.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "通过给定一个复杂任务，给出完成任务的一系列步骤，可以帮助模型更好地理解任务要求，提高任务完成的效率。",
+      "category": "mechanism",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q18",
+      "query": "评估大模型回答时，逻辑性维度主要考察什么方面？",
+      "expected_chunk_ids": [
+        "6ea14443_0193_aff7e27a"
+      ],
+      "expected_sources": [
+        "datawhale_llm_universe.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "该维度评估系统回答是否逻辑连贯，是否出现前后冲突、逻辑混乱的情况。",
+      "category": "definition",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q20",
+      "query": "知识查找正确性评估的核心目的是什么？",
+      "expected_chunk_ids": [
+        "6ea14443_0214_628771e8"
+      ],
+      "expected_sources": [
+        "datawhale_llm_universe.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "知识查找正确性指对于特定问题，从知识库检索到的知识片段是否正确、是否足够回答问题。",
+      "category": "definition",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q21",
+      "query": "如何获取 DataWhale 总仓库的所有开源项目的 readme？",
+      "expected_chunk_ids": [
+        "6ea14443_0224_bdd75d65"
+      ],
+      "expected_sources": [
+        "datawhale_llm_universe.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "用户可以通过运行 project/database/test_get_all_repo.py 文件来获取 Datawhale 总仓库所有开源项目的 readme。",
+      "category": "engineering",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q22",
+      "query": "在 RAG 流程中，文本分割的 chunk_size 和 chunk_overlap 分别代表什么？",
+      "expected_chunk_ids": [
+        "6ea14443_0234_9dc5a0eb"
+      ],
+      "expected_sources": [
+        "datawhale_llm_universe.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "chunk_size 指每个块包含的字符或 Token 的数量，chunk_overlap 指两个块之间共享的字符数量，用于保持上下文的连贯性，避免分割丢失上下文信息。",
+      "category": "definition",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q25",
+      "query": "在构建天机系统的交互界面时，使用了哪个库来创建 Web 界面？",
+      "expected_chunk_ids": [
+        "6ea14443_0264_f6ef58fe"
+      ],
+      "expected_sources": [
+        "datawhale_llm_universe.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "使用 Gradio 库来构建交互界面。",
+      "category": "engineering",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q27",
+      "query": "为什么需要一个框架来支持RAG策略的实现？",
+      "expected_chunk_ids": [
+        "fcf98471_0005_e8623bc2"
+      ],
+      "expected_sources": [
+        "ragas_evaluation_en.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "因为RAG策略的实现需要一个框架，该框架能显著促进大量调优，且整体性能会受到检索模型、所用语料库、语言模型或提示设计的影响。",
+      "category": "mechanism",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q29",
+      "query": "有哪些方法可以检测大语言模型生成内容中的幻觉？",
+      "expected_chunk_ids": [
+        "fcf98471_0016_7392ac5b",
+        "fcf98471_0014_28b06c63",
+        "fcf98471_0015_f66c1637",
+        "fcf98471_0017_6ff0881b"
+      ],
+      "expected_sources": [
+        "ragas_evaluation_en.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "资料列举的方法包括：用少样本Prompt或直接让ChatGPT评估答案的事实性；把生成内容与外部知识库事实进行关联；检查单个Token的概率，因为幻觉内容通常置信度更低；以及让LLM从多个候选答案中选择最佳答案。使用LLM评分或选择时需要注意Prompt设计和候选顺序可能影响结果。",
+      "category": "evaluation",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q30",
+      "query": "SelfCheckGPT如何解决无法访问模型隐藏状态的问题？",
+      "expected_chunk_ids": [
+        "fcf98471_0021_f7a337cb"
+      ],
+      "expected_sources": [
+        "ragas_evaluation_en.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "SelfCheckGPT通过采样多个答案来估计给定生成答案下参考答案的概率，从而避免依赖模型的隐藏状态。",
+      "category": "engineering",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q31",
+      "query": "什么是答案相关性（Answer Relevance）？",
+      "expected_chunk_ids": [
+        "fcf98471_0026_4c41aaad"
+      ],
+      "expected_sources": [
+        "ragas_evaluation_en.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "答案相关性指的是生成的答案应针对所提供的实际问题。",
+      "category": "definition",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q32",
+      "query": "如何判断一个答案是否忠实于上下文？",
+      "expected_chunk_ids": [
+        "fcf98471_0032_c9e5f030"
+      ],
+      "expected_sources": [
+        "ragas_evaluation_en.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "如果答案中提出的主张可以从上下文中推断出来，则认为该答案忠实于上下文。",
+      "category": "definition",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q33",
+      "query": "在评估上下文相关性时，LLM会执行什么操作？",
+      "expected_chunk_ids": [
+        "fcf98471_0038_e1454109",
+        "fcf98471_0039_fda1168f"
+      ],
+      "expected_sources": [
+        "ragas_evaluation_en.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "LLM会从给定上下文中提取对回答问题至关重要的句子子集；如果没有相关句子，或问题无法根据上下文回答，则返回“InsufficientInformation”。",
+      "category": "mechanism",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q34",
+      "query": "为了评估忠实性，研究者是如何构建数据集的？",
+      "expected_chunk_ids": [
+        "fcf98471_0044_fb556820"
+      ],
+      "expected_sources": [
+        "ragas_evaluation_en.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "研究者首先选择了50个自2022年初以来有更新的维基百科页面，然后让ChatGPT基于每页的引言部分提出一个问题。",
+      "category": "engineering",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q35",
+      "query": "答案相关性衡量的目的是什么？",
+      "expected_chunk_ids": [
+        "fcf98471_0049_a84313ee"
+      ],
+      "expected_sources": [
+        "ragas_evaluation_en.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "答案相关性评分用于衡量响应直接回应问题的程度，并惩罚冗余信息或不完整回答。",
+      "category": "evaluation",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q37",
+      "query": "Ragas框架如何评估答案的忠实度？",
+      "expected_chunk_ids": [
+        "fcf98471_0060_bbbd0a5c",
+        "fcf98471_0032_c9e5f030",
+        "fcf98471_0026_4c41aaad",
+        "fcf98471_0027_ee56334a"
+      ],
+      "expected_sources": [
+        "ragas_evaluation_en.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "Ragas先把答案拆分成更小的陈述，再让LLM判断每条陈述能否由检索上下文推导出来。忠实度分数为被上下文支持的陈述数量除以陈述总数，即 F = |V| / |S|；答案中无法由上下文推出的主张会被惩罚。",
+      "category": "mechanism",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q38",
+      "query": "2022年国际机器学习会议中关于改进语言模型的研究主题是什么？",
+      "expected_chunk_ids": [
+        "fcf98471_0065_d34478cd"
+      ],
+      "expected_sources": [
+        "ragas_evaluation_en.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "研究主题是通过从万亿个标记中检索来改进语言模型。",
+      "category": "application",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q40",
+      "query": "WikiEval数据集中的表格2主要展示什么内容？",
+      "expected_chunk_ids": [
+        "fcf98471_0077_d49f5d67"
+      ],
+      "expected_sources": [
+        "ragas_evaluation_en.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "表格2展示了高忠实度和低忠实度的答案示例。",
+      "category": "definition",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q41",
+      "query": "如何通过动手学大模型应用开发项目快速入门大模型应用开发？该项目是否提供了关于Prompt Engineering的具体实践方法？",
+      "expected_chunk_ids": [
+        "6ea14443_0000_babdea98",
+        "6ea14443_0033_6e6b57a6"
+      ],
+      "expected_sources": [
+        "datawhale_llm_universe.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "该项目以个人知识库助手为主线，把大模型简介、API调用、知识库搭建、RAG构建和验证迭代放进实际项目，帮助初学者快速完成开发闭环。它也提供Prompt Engineering实践方法：明确设计原则，建立小型验证集，发现Bad Case并持续迭代Prompt。",
+      "category": "application",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q42",
+      "query": "在构建检索问答链时，如何加载已有的向量数据库？该过程是否涉及使用特定的Embedding模型？",
+      "expected_chunk_ids": [
+        "6ea14443_0141_af1ef833"
+      ],
+      "expected_sources": [
+        "datawhale_llm_universe.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "加载时先实例化与建库时相同的Embedding模型，然后将持久化目录和该Embedding实例传给Chroma。示例使用ZhipuAIEmbeddings，并通过 `Chroma(persist_directory=..., embedding_function=embedding)` 加载已有数据库。",
+      "category": "engineering",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q43",
+      "query": "人情世故大模型系统-天机项目是如何利用RAG模型回答‘如何给长辈敬酒？’这一问题的？该系统是否依赖于预先提供的聊天历史？",
+      "expected_chunk_ids": [
+        "6ea14443_0284_bcac8189",
+        "6ea14443_0283_ea17e27b"
+      ],
+      "expected_sources": [
+        "datawhale_llm_universe.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "示例先通过 `model_center()` 初始化模型，再以“如何给长辈敬酒？”为问题调用 `qa_chain_self_answer`。RAG先检索相关文档以增强上下文，再生成回答；此次调用把 `chat_history` 设为空列表，因此不依赖预先提供的聊天历史。",
+      "category": "mechanism",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q44",
+      "query": "Ragas框架的主要功能是什么？它是否能够评估大模型在处理罕见知识时的表现？",
+      "expected_chunk_ids": [
+        "fcf98471_0000_d012e1b6",
+        "fcf98471_0012_021bb363"
+      ],
+      "expected_sources": [
+        "ragas_evaluation_en.pdf"
+      ],
+      "answerability": "partial",
+      "reference_answer": "Ragas用于自动评估RAG系统，在没有参考答案的情况下估计正确性的代理指标以及检索片段的有用性，并可集成LangChain和LlamaIndex。资料提到罕见知识是LLM面临的困难，但没有说明Ragas提供了专门评估模型处理罕见知识能力的指标，因此后一部分无法根据资料确认。",
+      "category": "evaluation",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q45",
+      "query": "Chimnabai Clock Tower是在哪一年建成的？它的建筑风格是什么？",
+      "expected_chunk_ids": [
+        "fcf98471_0082_328f2430"
+      ],
+      "expected_sources": [
+        "ragas_evaluation_en.pdf"
+      ],
+      "answerability": "answerable",
+      "reference_answer": "Chimnabai Clock Tower于1896年建成，采用印度-萨拉森式（Indo-Saracenic）建筑风格。",
+      "category": "definition",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q46",
+      "query": "公司2026年国庆节的值班安排是什么？",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "answerability": "unanswerable",
+      "reference_answer": "知识库没有关于这个问题的记录，无法回答。",
+      "category": "out_of_scope_company_policy",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q47",
+      "query": "员工出差住宿费的报销上限是多少？",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "answerability": "unanswerable",
+      "reference_answer": "知识库没有关于这个问题的记录，无法回答。",
+      "category": "out_of_scope_company_policy",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q48",
+      "query": "项目负责人的手机号码和家庭住址是什么？",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "answerability": "unanswerable",
+      "reference_answer": "知识库没有关于这个问题的记录，无法回答。",
+      "category": "out_of_scope_personal_information",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q49",
+      "query": "今天北京的实时天气和空气质量如何？",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "answerability": "unanswerable",
+      "reference_answer": "知识库没有关于这个问题的记录，无法回答。",
+      "category": "out_of_scope_realtime_information",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q50",
+      "query": "生产服务器的 root 密码是什么？",
+      "expected_chunk_ids": [],
+      "expected_sources": [],
+      "answerability": "unanswerable",
+      "reference_answer": "知识库没有关于这个问题的记录，无法回答。",
+      "category": "out_of_scope_secret",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q51",
+      "query": "Chimnabai Clock Tower是哪一年建成的，采用什么建筑风格？资料是否记录了它目前每天对游客开放的具体时间？",
+      "expected_chunk_ids": [
+        "fcf98471_0082_328f2430"
+      ],
+      "expected_sources": [
+        "ragas_evaluation_en.pdf"
+      ],
+      "answerability": "partial",
+      "reference_answer": "Chimnabai Clock Tower于1896年建成，采用印度-萨拉森式（Indo-Saracenic）建筑风格。资料没有记录它目前每天对游客开放的具体时间，因此无法回答这一部分。",
+      "category": "partial_fact_and_current_information",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q52",
+      "query": "加载已有的Chroma向量数据库时应该使用什么Embedding？资料是否给出了改用不同Embedding后Hit@5提升了多少？",
+      "expected_chunk_ids": [
+        "6ea14443_0141_af1ef833"
+      ],
+      "expected_sources": [
+        "datawhale_llm_universe.pdf"
+      ],
+      "answerability": "partial",
+      "reference_answer": "加载已有Chroma向量数据库时，应使用与构建数据库时相同的Embedding；示例使用ZhipuAIEmbeddings，并把它作为embedding_function传给Chroma。资料没有给出改用不同Embedding后的Hit@5提升数值，因此无法回答这一部分。",
+      "category": "partial_engineering_and_metric",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q53",
+      "query": "LangServe的主要用途是什么？资料是否给出了LangChain应用部署到阿里云后的平均QPS？",
+      "expected_chunk_ids": [
+        "6ea14443_0030_d148b07f"
+      ],
+      "expected_sources": [
+        "datawhale_llm_universe.pdf"
+      ],
+      "answerability": "partial",
+      "reference_answer": "LangServe用于把LangChain应用部署到云端，提供可扩展、高可用并带监控和日志的托管方案，以简化部署和运维。资料没有给出部署到阿里云后的平均QPS，因此无法回答这一部分。",
+      "category": "partial_definition_and_benchmark",
+      "language": "zh",
+      "review_status": "approved"
+    },
+    {
+      "case_id": "portfolio_q54",
+      "query": "Ragas主要从哪些维度评估RAG系统？论文是否报告了它在中文法律问答数据集上的具体准确率？",
+      "expected_chunk_ids": [
+        "fcf98471_0003_e4003aee",
+        "fcf98471_0057_619ab3bb",
+        "fcf98471_0026_4c41aaad",
+        "fcf98471_0027_ee56334a"
+      ],
+      "expected_sources": [
+        "ragas_evaluation_en.pdf"
+      ],
+      "answerability": "partial",
+      "reference_answer": "Ragas主要评估忠实度、答案相关性和上下文相关性，分别关注答案是否以检索上下文为依据、是否直接回应问题，以及上下文是否聚焦于回答所需信息。论文没有报告其在中文法律问答数据集上的具体准确率，因此无法回答这一部分。",
+      "category": "partial_evaluation_and_dataset_result",
+      "language": "zh",
+      "review_status": "approved"
+    }
+  ]
+}
