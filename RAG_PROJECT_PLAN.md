@@ -1,6 +1,6 @@
 # RAG 项目落地计划表
 
-> 状态说明：本文件保留早期规划供回顾，阶段进度和简历模板不作为当前实现证据。实际运行命令及售后场景结果见 [README.md](README.md) 与 [JD_AFTER_SALES_EVAL.md](JD_AFTER_SALES_EVAL.md)。
+> 状态说明：本文件保留早期规划供回顾，阶段进度和简历模板不作为当前实现证据。实际运行命令及售后场景结果见 [README.md](README.md)。
 
 **项目名称**：客服知识库 RAG 检索服务  
 **项目目标**：将通用 RAG 框架落地到客服知识库检索场景，支持 PDF/Word/Markdown 多格式文档，建立多 Collection 管理，完成评估测试，生成简历数据。
